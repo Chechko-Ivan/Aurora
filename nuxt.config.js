@@ -1,6 +1,4 @@
 export default {
-  mode: 'spa',
-
   head: {
     title: 'АВРОРАПЛАСТ',
     meta: [
@@ -56,7 +54,18 @@ export default {
 
   css: ['~/assets/style/index.scss'],
 
-  plugins: ['~/plugins/antd.js'],
+  plugins: ['~/plugins/baseComponents.js', '~/plugins/antd.js'],
+
+  /*
+   ** Nuxt.js modules
+   */
+  modules: ['@nuxtjs/svg-sprite', '@nuxtjs/sitemap'],
+  svgSprite: {
+    input: '~/static/sourceIcons/',
+    output: '~/static/icons/',
+    defaultSprite: 'sprite-svg'
+  },
+
   /*
    ** Nuxt.js dev-modules
    */
@@ -64,14 +73,11 @@ export default {
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module'
   ],
-  /*
-   ** Nuxt.js modules
-   */
-  modules: [],
+
   /*
    ** Build configuration
    */
   build: {
     extend(config, ctx) {}
   }
-}
+};

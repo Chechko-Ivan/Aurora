@@ -1,9 +1,9 @@
-import Vue from 'vue'
+import Vue from 'vue';
 
-import { Row, Col, notification } from 'ant-design-vue'
-import 'ant-design-vue/lib/layout/style/index.css'
+import { Row, Col, notification } from 'ant-design-vue';
+import 'ant-design-vue/lib/layout/style/index.css';
 
-Vue.use(Row)
-Vue.use(Col)
+Vue.use(Row);
+Vue.use(Col);
 
-Vue.prototype.$notification = notification
+Vue.prototype.$notification = notification;

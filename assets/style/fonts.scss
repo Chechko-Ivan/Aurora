@@ -4,8 +4,10 @@
   font-weight: 400;
   font-display: swap;
   src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'),
-    url('../../static/fonts/source-sans-pro-v13-cyrillic_latin-regular.woff2') format('woff2'),
-    url('../../static/fonts/source-sans-pro-v13-cyrillic_latin-regular.woff') format('woff');
+    url('../../static/fonts/source-sans-pro-v13-cyrillic_latin-regular.woff2')
+      format('woff2'),
+    url('../../static/fonts/source-sans-pro-v13-cyrillic_latin-regular.woff')
+      format('woff');
 }
 
 @font-face {
@@ -14,6 +16,17 @@
   font-weight: 600;
   font-display: swap;
   src: local('Source Sans Pro SemiBold'), local('SourceSansPro-SemiBold'),
-    url('../../static/fonts/source-sans-pro-v13-cyrillic_latin-600.woff2') format('woff2'),
-    url('../../static/fonts/source-sans-pro-v13-cyrillic_latin-600.woff') format('woff');
+    url('../../static/fonts/source-sans-pro-v13-cyrillic_latin-600.woff2')
+      format('woff2'),
+    url('../../static/fonts/source-sans-pro-v13-cyrillic_latin-600.woff')
+      format('woff');
+}
+
+@font-face {
+  font-family: 'Lazurski';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Lazurski Regular'), local('SourceSansPro-Regular'),
+    url('../../static/fonts/Lazurski.ttf') format('truetype');
 }
