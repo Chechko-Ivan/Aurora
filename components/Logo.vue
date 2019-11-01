@@ -1,10 +1,6 @@
 <template>
   <nuxt-link class="logo" to="/">
-    <picture>
-      <source type="image/webp" srcset="~/static/images/logo.webp" />
-      <source type="image/png" srcset="~/static/images/logo.png" />
-      <img src="image.png" alt="Логотип" />
-    </picture>
+    <img src="~/static/images/Logo.svg" alt="Логотип" />
   </nuxt-link>
 </template>
 

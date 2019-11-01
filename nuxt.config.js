@@ -48,9 +48,8 @@ export default {
     ]
   },
 
-  loading: {
-    color: '#F16922'
-  },
+  // loading: '~/components/Loading.vue',
+  loading: false,
 
   css: ['~/assets/style/index.scss'],
 

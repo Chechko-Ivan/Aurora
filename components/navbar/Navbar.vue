@@ -5,7 +5,8 @@
         <Logo></Logo>
       </div>
 
-      <div class="navbar-burger"></div>
+      <slot name="burger"></slot>
+      <slot name="lang-switcher"></slot>
     </div>
   </nav>
 </template>
@@ -29,8 +30,12 @@ export default {
   left: 0;
   width: 100%;
   height: 125px;
-  padding: 0 40px;
+  padding-left: 40px;
   box-sizing: border-box;
+
+  .burger {
+    margin-left: auto;
+  }
 }
 
 .navbar-inner {
