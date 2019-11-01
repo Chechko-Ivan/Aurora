@@ -1,14 +1,42 @@
 <template>
-  <nav class="navbar">navbar</nav>
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <div class="navbar-logo">
+        <Logo></Logo>
+      </div>
+
+      <div class="navbar-burger"></div>
+    </div>
+  </nav>
 </template>
 
 <script>
+import Logo from '~/components/Logo.vue';
+
 export default {
-  name: 'Navbar'
+  name: 'Navbar',
+
+  components: {
+    Logo
+  }
 };
 </script>
 
 <style lang="scss" scoped>
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 125px;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 </style>

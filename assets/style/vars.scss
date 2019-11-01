@@ -1,26 +1,40 @@
 // COLORS
 $color-white: #ffffff;
+$color-white-blue: #FAFBFF;
+$color-lighten-blue: #EBEFFC;
+$color-light-blue: #CFD4E9;
+$color-gray: #D8D8D8;
 $color-from-hell: #666666;
+$color-orange: #F16922;
+$color-dark-blue: #09143C;
 $color-black: #000000;
 
 // TYPOGRAPHY
 $font-size: 16px;
 $line-height: 1.25;
-$sans-serif: -apple-system, SF Pro Text, SF UI Text, system-ui, Helvetica Neue,
-  Helvetica, Arial, sans-serif;
+$sans-serif: -apple-system,
+SF Pro Text,
+SF UI Text,
+system-ui,
+Helvetica Neue,
+Helvetica,
+Arial,
+sans-serif;
 
 // H1
 $h1-font-size: 65px;
 $h1-font-weight: 400;
 $h1-line-height: 1.23;
 $h1-color: $color-black;
-$h1-font-family: 'Lazurski', $sans-serif;
+$h1-font-family: 'Lazurski',
+$sans-serif;
 
 $h2-font-size: 40px;
 $h2-font-weight: 400;
 $h2-line-height: 1.12;
 $h2-color: $color-black;
-$h2-font-family: 'Lazurski', $sans-serif;
+$h2-font-family: 'Lazurski',
+$sans-serif;
 
 // TRANSITION
 $base-easing: ease;

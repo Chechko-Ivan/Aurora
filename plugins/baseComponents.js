@@ -1,18 +1,18 @@
 import Vue from 'vue';
 
 const requireComponent = require.context(
-  '../components/baseComponents/',
+  '~/components/baseComponents/',
   // Do not look in subdirectories
   false,
   // Include .vue files
-  /\w.vue$/
+  /[A-Z]\w+\.(vue)$/
 );
 
 // For each matching file name...
 requireComponent.keys().forEach((fileName) => {
   const componentConfig = requireComponent(fileName);
   const componentName = fileName
-    .replace(/^\.\/_/, '')
+    .replace(/\.\w+$/, '')
     .replace(/^.\//, '')
     .split('-')
     .map((kebab) => kebab.charAt(0).toUpperCase() + kebab.slice(1))

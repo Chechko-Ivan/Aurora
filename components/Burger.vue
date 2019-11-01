@@ -1,14 +1,14 @@
 <template>
-  <div class="button">awdawd</div>
+  <button class="burger">burger</button>
 </template>
 
 <script>
 export default {
-  name: 'BaseButton'
+  name: 'Burger'
 };
 </script>
 
 <style lang="scss" scoped>
-.button {
+.burger {
 }
 </style>

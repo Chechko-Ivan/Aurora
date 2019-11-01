@@ -1,14 +1,14 @@
 <template>
-  <nuxt-link to="/">logo</nuxt-link>
+  <div class="button">awdawd</div>
 </template>
 
 <script>
 export default {
-  name: 'Logo'
+  name: 'Button'
 };
 </script>
 
 <style lang="scss" scoped>
-.logo {
+.button {
 }
 </style>
