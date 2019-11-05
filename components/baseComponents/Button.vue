@@ -1,5 +1,7 @@
 <template>
-  <div class="button">awdawd</div>
+  <button class="button" v-on="$listeners">
+    <slot></slot>
+  </button>
 </template>
 
 <script>
