@@ -27,6 +27,7 @@
   "vendor-prefix-align": true,
   "sort-order": [
     [
+      "@include",
       "$block-name",
       "content",
       "position",

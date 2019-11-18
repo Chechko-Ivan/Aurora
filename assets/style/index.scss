@@ -8,14 +8,15 @@ head {
 }
 
 body {
-  padding: 0;
-  margin: 0;
   min-height: 100%;
-  word-break: break-word;
+  margin: 0;
+  padding: 0;
+  font-size: $text-size-base;
+  line-height: $text-line-height-base;
   font-family: 'Source Sans Pro', $sans-serif;
-  font-size: $font-size;
-  line-height: $line-height;
   color: $color-text-primary;
+  word-break: break-word;
+  background-color: $body-bg;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -26,24 +27,125 @@ body {
 }
 
 // HEADING
-h1 {
-  font-family: $h1-font-family;
+h1,
+.title-h1 {
+  margin: 0;
+  font-weight: $h1-font-weight;
   font-size: $h1-font-size;
   line-height: $h1-line-height;
-  font-weight: $h1-font-weight;
+  font-family: $h1-font-family;
   color: $h1-color;
+
+  @media (max-width: $xl) {
+    font-size: $h1-font-size - 10px;
+  }
+
+  @media (max-width: $lg) {
+    font-size: $h1-font-size - 15px;
+    line-height: $h1-line-height - 0.13;
+  }
+
+  @media (max-width: $md) {
+    font-size: $h1-font-size - 30px;
+  }
 }
 
 h2 {
-  font-family: $h2-font-family;
+  margin: 0;
+  font-weight: $h2-font-weight;
   font-size: $h2-font-size;
   line-height: $h2-line-height;
-  font-weight: $h2-font-weight;
+  font-family: $h2-font-family;
   color: $h2-color;
+}
+
+.title-top {
+  display: block;
+  font-weight: 700;
+  font-size: 20px;
+  color: #f16922;
+
+  @media (max-width: $xl) {
+    margin-bottom: 5px;
+  }
+}
+
+// TEXT
+.text-s {
+  font-size: $text-size-s;
+  line-height: $text-line-height-s;
+}
+
+.text-xl {
+  font-size: $text-size-xl;
+  line-height: $text-line-height-xl;
+}
+
+.text-xxl {
+  font-size: $text-size-xxl;
+  line-height: $text-line-height-xxl;
+
+  @media (max-width: $xl) {
+    font-size: $text-size-xxl - 4px;
+  }
+}
+
+.text-xxxl {
+  font-size: $text-size-xxxl;
+  line-height: $text-line-height-xxxl;
+}
+
+// TRANSITION
+a,
+button,
+svg {
+  transition: all 0.25s $base-easing;
 }
 
 // IMAGES
 img {
   max-width: 100%;
   height: auto;
+}
+
+// MARGINS
+.my-0 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+// Swiper bullet
+.swiper-pagination {
+  width: auto;
+  display: flex;
+
+  .swiper-pagination-bullet {
+    width: 6px;
+    height: 6px;
+    background-color: #a1a8c2;
+    opacity: 1;
+    margin: 0 !important;
+
+    &:not(:last-of-type) {
+      margin-right: 10px !important;
+    }
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: $color-primary;
+  }
 }

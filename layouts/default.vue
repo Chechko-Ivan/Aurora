@@ -6,23 +6,22 @@
         :opened="drawerOpend"
         @toggleDrawer="drawerOpend = !drawerOpend"
       ></Burger>
-      <LangSwitcher slot="switcher"></LangSwitcher>
+      <LangSwitcher slot="lang-switcher"></LangSwitcher>
     </Navbar>
-    <Container>
+
+    <div class="layout-offset">
       <nuxt />
-    </Container>
+    </div>
   </div>
 </template>
 
 <script>
-import Container from '~/components/Container.vue';
 import Navbar from '~/components/navbar/Navbar.vue';
 import Burger from '~/components/Burger.vue';
 import LangSwitcher from '~/components/LangSwitcher.vue';
 
 export default {
   components: {
-    Container,
     Navbar,
     Burger,
     LangSwitcher
@@ -36,4 +35,22 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.layout-offset {
+  margin-top: 125px;
+  padding-top: 80px;
+
+  @media (max-width: $osx) {
+    margin-top: 105px;
+  }
+
+  @media (max-width: $md) {
+    margin-top: 80px;
+  }
+
+  @media (max-width: $sm) {
+    margin-top: 70px;
+    padding-top: 50px;
+  }
+}
+</style>

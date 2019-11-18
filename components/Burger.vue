@@ -26,15 +26,14 @@ export default {
   computed: {
     label() {
       return this.opened
-        ? 'Закрыть меню «о компании»'
-        : 'Узнать больше о компании';
+        ? this.$t('navbar.burger.open_text')
+        : this.$t('navbar.burger.close_text');
     }
   }
 };
 </script>
 
 <style lang="scss" scoped>
-@import '../assets/style/vars.scss';
 $burger-bg-color: $color-primary;
 $burger-bg-color-hover: $color-primary-hover;
 $burger-text-color: $color-white;
@@ -50,6 +49,27 @@ $burger-text-color: $color-white;
   background-color: $burger-bg-color;
   border: 0;
   transition: background-color 0.25s $base-easing;
+
+  @media (max-width: $osx) {
+    max-width: 345px;
+    padding: 0 30px;
+  }
+
+  @media (max-width: $xl) {
+    justify-content: center;
+    width: 100px;
+    max-width: none;
+  }
+
+  @media (max-width: $md) {
+    width: 90px;
+    padding: 0 25px;
+  }
+
+  @media (max-width: $sm) {
+    width: 70px;
+    padding: 0 15px;
+  }
 
   &:hover {
     background-color: $burger-bg-color-hover;
@@ -80,12 +100,24 @@ $burger-text-color: $color-white;
   font-size: 18px;
   color: $burger-text-color;
   text-transform: uppercase;
+
+  @media (max-width: $osx) {
+    font-size: 16px;
+  }
+
+  @media (max-width: $xl) {
+    display: none;
+  }
 }
 
 .burger-lines {
   position: relative;
   width: 45px;
   height: 14px;
+
+  @media (max-width: $osx) {
+    width: 40px;
+  }
 }
 
 .burger-line {

@@ -7,6 +7,7 @@ $color-gray: #d8d8d8;
 $color-from-hell: #666666;
 $color-orange: #f16922;
 $color-light-orange: #ff8935;
+$color-blue: #132b84;
 $color-dark-blue: #09143c;
 $color-black: #000000;
 
@@ -14,6 +15,8 @@ $color-primary: $color-orange;
 $color-primary-hover: $color-light-orange;
 
 $color-text-primary: $color-from-hell;
+
+$body-bg: $color-white-blue;
 
 // TYPOGRAPHY
 $font-size: 16px;
@@ -34,5 +37,30 @@ $h2-line-height: 1.12;
 $h2-color: $color-black;
 $h2-font-family: 'Lazurski', $sans-serif;
 
+// TEXT
+$text-size-base: $font-size;
+$text-line-height-base: $line-height;
+
+$text-size-s: $text-size-base - 2px;
+$text-line-height-s: $text-line-height-base + 0.03;
+
+$text-size-xl: $text-size-base + 2px;
+$text-line-height-xl: $text-line-height-base + 0.02;
+
+$text-size-xxl: $text-size-base + 4px;
+$text-line-height-xxl: $text-line-height-base + 0.05;
+
+$text-size-xxxl: $text-size-base + 8px;
+$text-line-height-xxxl: $text-line-height-base + 0.04;
+
 // TRANSITION
-$base-easing: ease;
+$base-easing: cubic-bezier(0.77, 0, 0.175, 1);
+
+// Z-INDEX
+$navbar-z-index: 10;
+
+$osx: 1439px;
+$xl: 1200px;
+$lg: 992px;
+$md: 768px;
+$sm: 576px;

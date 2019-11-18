@@ -1,4 +1,6 @@
 export default {
+  mode: 'spa',
+
   head: {
     title: 'АВРОРАПЛАСТ',
     meta: [
@@ -51,18 +53,35 @@ export default {
   // loading: '~/components/Loading.vue',
   loading: false,
 
-  css: ['~/assets/style/index.scss'],
+  router: {
+    middleware: 'i18n'
+  },
 
-  plugins: ['~/plugins/baseComponents.js', '~/plugins/antd.js'],
+  css: ['~/assets/style/index.scss', 'swiper/dist/css/swiper.css'],
+
+  plugins: [
+    '~/plugins/baseComponents.js',
+    {
+      src: '~/plugins/swiper.js',
+      ssr: false
+    },
+    '~/plugins/antd.js',
+    '~/plugins/i18n.js'
+  ],
 
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/svg-sprite', '@nuxtjs/sitemap'],
+  modules: ['@nuxtjs/svg-sprite', '@nuxtjs/style-resources', '@nuxtjs/sitemap'],
+
   svgSprite: {
     input: '~/static/sourceIcons/',
     output: '~/static/icons/',
     defaultSprite: 'sprite-svg'
+  },
+
+  styleResources: {
+    scss: ['~/assets/style/vars.scss', '~/assets/style/mixins.scss']
   },
 
   /*

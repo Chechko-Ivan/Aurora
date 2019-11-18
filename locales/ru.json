@@ -1,0 +1,20 @@
+{
+  "navbar": {
+    "links": {
+      "products": "Продукция",
+      "to_partners": "Партнерам",
+      "to_suppliers": "Поставщикам",
+      "contacts": "Контакты"
+    },
+
+    "burger": {
+      "close_text": "Узнать больше о компании",
+      "open_text": "Закрыть меню «о компании»"
+    },
+
+    "locales": {
+      "ru": "рус",
+      "en": "eng"
+    }
+  }
+}
