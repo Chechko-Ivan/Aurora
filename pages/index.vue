@@ -37,18 +37,41 @@
           <a-col span="24">
             <round-animation class="product-type-animation">
               <round-animation-circle>
-                <round-animation-item>
+                <!-- Gear -->
+                <round-animation-item class="first">
                   <img
                     slot="icon"
-                    src="@/static/images/Medal.svg"
-                    alt="Medal"
+                    src="@/static/images/Gear.svg"
+                    alt="Gear Icon"
                   />
                   <template slot="text">
                     Мы подходим к каждому клиенту индивидуально
                   </template>
                 </round-animation-item>
                 <round-animation-circle>
+                  <!-- Medal -->
+                  <round-animation-item class="second">
+                    <img
+                      slot="icon"
+                      src="@/static/images/Medal.svg"
+                      alt="Medal Icon"
+                    />
+                    <template slot="text">
+                      Мы подходим к каждому клиенту индивидуально
+                    </template>
+                  </round-animation-item>
                   <round-animation-circle>
+                    <!-- Honeycombs -->
+                    <round-animation-item class="third">
+                      <img
+                        slot="icon"
+                        src="@/static/images/Honeycombs.svg"
+                        alt="Honeycombs Icon"
+                      />
+                      <template slot="text">
+                        Мы подходим к каждому клиенту индивидуально
+                      </template>
+                    </round-animation-item>
                     <round-animation-inner>
                       <img
                         src="@/static/images/contentImage/Windowsill.png"
@@ -80,16 +103,39 @@
         </div>
       </div>
     </section>
+
+    <section class="s-products">
+      <container>
+        <a-row :gutter="20">
+          <a-col
+            v-for="(product, index) in $t('products')"
+            :key="index"
+            class="s-products-col"
+            :lg="{ span: 8 }"
+          >
+            <product-card
+              :to="`/products/${product.link}`"
+              :title="product.title"
+              :image-src="product.summary.summaryImage"
+              :text="product.summary.summaryText"
+              :list-items="product.summary.summaryList"
+            >
+            </product-card>
+          </a-col>
+        </a-row>
+      </container>
+    </section>
   </div>
 </template>
 
 <script>
-import Container from '~/components/Container.vue';
-import RoundAnimation from '~/components/roundAnimation/RoundAnimation.vue';
-import roundAnimationCircle from '~/components/roundAnimation/roundAnimationCircle.vue';
-import RoundAnimationInner from '~/components/roundAnimation/RoundAnimationInner.vue';
-import RoundAnimationItem from '~/components/roundAnimation/RoundAnimationItem.vue';
-import ProductCardBase from '~/components/ProductCard/ProductCardBase.vue';
+import Container from '@/components/Container.vue';
+import RoundAnimation from '@/components/roundAnimation/RoundAnimation.vue';
+import roundAnimationCircle from '@/components/roundAnimation/roundAnimationCircle.vue';
+import RoundAnimationInner from '@/components/roundAnimation/RoundAnimationInner.vue';
+import RoundAnimationItem from '@/components/roundAnimation/RoundAnimationItem.vue';
+import ProductCardBase from '@/components/ProductCard/ProductCardBase.vue';
+import ProductCard from '@/components/ProductCard/ProductCard.vue';
 
 export default {
   components: {
@@ -98,13 +144,14 @@ export default {
     roundAnimationCircle,
     RoundAnimationInner,
     RoundAnimationItem,
-    ProductCardBase
+    ProductCardBase,
+    ProductCard
   },
 
   data() {
     return {
       productSwiperOption: {
-        slidesPerView: 1.5,
+        slidesPerView: 'auto',
         spaceBetween: 20,
         pagination: {
           el: '.swiper-pagination',
@@ -239,11 +286,50 @@ export default {
   }
 }
 
+.round-animation-item.first {
+  top: 22%;
+  left: 0;
+
+  @media (max-width: $lg) {
+    top: 10%;
+    left: 3%;
+  }
+}
+
+.round-animation-item.second {
+  top: 27%;
+  right: -3%;
+  flex-direction: row-reverse;
+
+  @media (max-width: $osx) {
+    right: -5%;
+  }
+
+  @media (max-width: $lg) {
+    top: calc(50% - 30px);
+    right: -10%;
+  }
+}
+
+.round-animation-item.third {
+  bottom: 17%;
+  left: 0;
+
+  @media (max-width: $osx) {
+    left: -4%;
+  }
+
+  @media (max-width: $lg) {
+    bottom: -10%;
+  }
+}
+
 .product-type-swiper {
   position: absolute;
   right: 0;
   bottom: 140px;
-  width: 500px;
+  // width: 500px;
+  width: 40%;
   padding: 30px 20px;
   overflow: hidden;
   box-sizing: border-box;
@@ -267,6 +353,8 @@ export default {
   }
 
   .swiper-slide {
+    width: auto;
+
     @media (max-width: $md) {
       width: 325px;
     }
@@ -294,6 +382,16 @@ export default {
     @media (max-width: $sm) {
       margin-bottom: 20px;
     }
+  }
+}
+
+.s-products {
+  padding: 90px 0;
+}
+
+.s-products-col {
+  &:nth-child(n + 4) {
+    margin-top: 50px;
   }
 }
 </style>

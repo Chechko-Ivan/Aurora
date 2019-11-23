@@ -33,6 +33,18 @@ export default {
   cursor: pointer;
   transition: all 0.25s ease;
 
+  @media (max-width: $osx) {
+    min-width: 70px;
+    max-width: 70px;
+    height: 70px;
+  }
+
+  @media (max-width: $xl) {
+    min-width: 60px;
+    max-width: 60px;
+    height: 60px;
+  }
+
   &:hover,
   &:focus {
     max-width: 360px;
@@ -50,6 +62,14 @@ export default {
   flex-shrink: 0;
   width: 48px;
 
+  @media (max-width: $osx) {
+    width: 37px;
+  }
+
+  @media (max-width: $xl) {
+    width: 30px;
+  }
+
   img {
     width: 100%;
     height: auto;
@@ -64,5 +84,15 @@ export default {
   color: $color-black;
   opacity: 0;
   visibility: hidden;
+
+  @media (max-width: $xl) {
+    font-size: 17px;
+    padding-left: 20px;
+  }
+
+  @media (max-width: $lg) {
+    font-size: 14px;
+    padding-left: 15px;
+  }
 }
 </style>

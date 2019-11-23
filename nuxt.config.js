@@ -1,5 +1,5 @@
 export default {
-  mode: 'spa',
+  mode: 'universal',
 
   head: {
     title: 'АВРОРАПЛАСТ',
@@ -60,13 +60,13 @@ export default {
   css: ['~/assets/style/index.scss', 'swiper/dist/css/swiper.css'],
 
   plugins: [
-    '~/plugins/baseComponents.js',
+    // '~/plugins/baseComponents.js',
     {
       src: '~/plugins/swiper.js',
       ssr: false
     },
-    '~/plugins/antd.js',
-    '~/plugins/i18n.js'
+    '~/plugins/i18n.js',
+    '~/plugins/antd.js'
   ],
 
   /*

@@ -16,5 +16,73 @@
       "ru": "рус",
       "en": "eng"
     }
-  }
+  },
+  "products": [{
+      "link": "sandwich_panel",
+      "title": "Сэндвич панели ПВХ",
+      "summary": {
+        "summaryImage": "images/contentImage/PVCSandwichPanel.png",
+        "summaryText": "",
+        "summaryList": [
+          "Предназначены для устройства оконных откосов.",
+          "Заполнения неостекленных фрагментов дверных полотен, алюминиевых перегородок.",
+          "Оформление балконных и подсобных помещений.",
+          "Возведение небольших помещений, выставочных площадей."
+        ]
+      }
+    },
+    {
+      "link": "pvc_sheet",
+      "title": "Лист ПВХ",
+      "summary": {
+        "summaryImage": "images/contentImage/PVCSheet.png",
+        "summaryText": "",
+        "summaryList": [
+          "Изготовление сэндвич-панелей из ПВХ.",
+          "Изготовление рекламных щитов и вывесок.",
+          "Внутренняя облицовка стен."
+        ]
+      }
+    },
+    {
+      "link": "pvc_window_sill",
+      "title": "Подоконник ПВХ",
+      "summary": {
+        "summaryImage": "images/contentImage/Windowsill.png",
+        "summaryText": "Является неотъемлемой частью окна, помогает создать комфортную атмосферу внутри помещения.",
+        "summaryList": []
+      }
+    },
+    {
+      "link": "stand_profile",
+      "title": "Подставочный профиль",
+      "summary": {
+        "summaryImage": "images/contentImage/StandProfile.png",
+        "summaryText": "Используется при установке окон ПВХ и обеспечивает:",
+        "summaryList": [
+          "Ровность и устойчивость конструкции.",
+          "Поддержку ПВХ системы.",
+          "Долговечность ПВХ конструкции."
+        ]
+      }
+    },
+    {
+      "link": "start_and_finish_profiles",
+      "title": "Стартовый и финишный профили",
+      "summary": {
+        "summaryImage": "images/contentImage/StartFinishProfiles.png",
+        "summaryText": "Для монтажа панелей потребуются профили, чтобы результат процесса принес радость.",
+        "summaryList": []
+      }
+    },
+    {
+      "link": "pvc_thermal_inserts",
+      "title": "Термовставки ПВХ",
+      "summary": {
+        "summaryImage": "images/contentImage/PVCThermalInserts.png",
+        "summaryText": "Используются в алюминиевых профильных системах стоечно – ригельного фасада.",
+        "summaryList": []
+      }
+    }
+  ]
 }
