@@ -2,7 +2,7 @@
   <div class="page-home">
     <header class="page-home-header">
       <container>
-        <a-row type="flex" align="middle" :gutter="{ md: 20 }">
+        <a-row :gutter="{ md: 20 }" type="flex" align="middle">
           <a-col
             :xl="{ offset: 2, span: 14 }"
             :lg="{ span: 18 }"
@@ -33,7 +33,7 @@
 
     <section class="product-type-animation-wrapper overflow-hidden">
       <container>
-        <a-row type="flex" align="bottom" :gutter="20">
+        <a-row :gutter="20" type="flex" align="bottom">
           <a-col span="24">
             <round-animation class="product-type-animation">
               <round-animation-circle>
@@ -110,8 +110,8 @@
           <a-col
             v-for="(product, index) in $t('products')"
             :key="index"
-            class="s-products-col"
             :lg="{ span: 8 }"
+            class="s-products-col"
           >
             <product-card
               :to="`/products/${product.link}`"

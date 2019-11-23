@@ -64,7 +64,7 @@ export default {
 <style lang="scss" scoped>
 .product-card {
   display: block;
-  min-height: 350px;
+  min-height: 1000px;
   margin-top: 105px;
   background: $color-white;
   border-radius: 8px;
