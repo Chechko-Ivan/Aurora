@@ -1,6 +1,6 @@
 <template>
   <nuxt-link to="/" class="product-card">
-    <div class="product-card-inner">
+    <div class="product-card-info">
       <div class="product-card-image">
         <img :src="imageSrc" :alt="title" />
       </div>
@@ -16,8 +16,13 @@
       >
         <li>{{ `- ${item}` }}</li>
       </ul>
+    </div>
 
-      <base-button>Посмотреть</base-button>
+    <div class="product-card-button">
+      <base-button collapsed>
+        Посмотреть
+        <svg-icon slot="icon" name="ArrowRight" />
+      </base-button>
     </div>
   </nuxt-link>
 </template>
@@ -63,13 +68,25 @@ export default {
 
 <style lang="scss" scoped>
 .product-card {
-  display: block;
-  min-height: 1000px;
-  margin-top: 105px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin-top: 95px;
+  padding: 0 30px 30px;
   background: $color-white;
   border-radius: 8px;
   box-shadow: 0 8px 20px 0 rgba(13, 28, 84, 0.25);
   transition: box-shadow 0.25s $base-easing;
+
+  @media (max-width: $xl) {
+    margin-top: 80px;
+    padding: 0 20px 20px;
+  }
+
+  @media (max-width: $md) {
+    margin-top: 70px;
+  }
 
   &:hover,
   &:focus {
@@ -82,39 +99,61 @@ export default {
   }
 }
 
-.product-card-inner {
-  position: relative;
-  display: flex;
-  height: 100%;
-  flex-direction: column;
-  justify-content: flex-end;
-  box-sizing: border-box;
-  padding: 110px 30px 30px 30px;
-}
-
 .product-card-image {
   position: absolute;
   top: 0;
   left: 50%;
   display: inline-block;
-  width: 240px;
+  width: 220px;
   transform: translate(-50%, -50%);
   filter: grayscale(1);
   transition: filter 0.25s $base-easing;
+
+  @media (max-width: $xl) {
+    width: 180px;
+  }
+
+  @media (max-width: $md) {
+    width: 150px;
+  }
+}
+
+.product-card-info {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
 }
 
 .product-card-title {
-  margin: 0;
+  margin-top: 100px;
   margin-bottom: 20px;
   font-weight: 600;
   font-size: 20px;
   color: $color-black;
   text-transform: uppercase;
+
+  @media (max-width: $xl) {
+    font-size: 18px;
+    margin-top: 90px;
+    margin-bottom: 15px;
+  }
+
+  @media (max-width: $md) {
+    font-size: 16px;
+  }
 }
 
 .product-card-text {
   margin: 0;
   color: $color-text-primary;
+
+  @media (max-width: $xl) {
+    font-size: 15px;
+  }
+
+  @media (max-width: $md) {
+    font-size: 14px;
+  }
 }
 
 .product-card-list {
@@ -122,6 +161,20 @@ export default {
 
   li {
     color: $color-text-primary;
+
+    @media (max-width: $xl) {
+      font-size: 15px;
+    }
+
+    @media (max-width: $md) {
+      font-size: 14px;
+    }
   }
+}
+
+.product-card-button {
+  margin-top: auto;
+  display: flex;
+  justify-content: flex-end;
 }
 </style>

@@ -1,0 +1,51 @@
+.s-partner-program {
+  position: relative;
+  margin: 90px 0;
+  padding: 140px 0 200px 0;
+  background-color: #ffffff;
+  background-color: $color-dark-blue;
+
+  @media (max-width: $osx) {
+    padding: 100px 0 160px 0;
+  }
+
+  @media (max-width: $sm) {
+    margin: 45px 0;
+    padding: 100px 0 100px 0;
+  }
+}
+
+.s-partner-program-icon {
+  margin-bottom: 30px;
+}
+
+.s-partner-program-title {
+  margin-bottom: 40px;
+  color: $color-white;
+
+  @media (max-width: $sm) {
+    margin-bottom: 20px;
+  }
+}
+
+.s-partner-program-text {
+  max-width: 440px;
+  margin-bottom: 40px;
+  color: #9ca1b1;
+}
+
+.s-partner-program-bg-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 61%;
+  max-width: 1160px;
+
+  @media (max-width: $lg) {
+    width: 80%;
+  }
+
+  @media (max-width: $sm) {
+    width: 90%;
+  }
+}

@@ -26,6 +26,11 @@ body {
   min-height: 100%;
 }
 
+.page {
+  display: flex;
+  flex-direction: column;
+}
+
 // HEADING
 h1,
 .title-h1 {
@@ -50,13 +55,18 @@ h1,
   }
 }
 
-h2 {
+h2,
+.title-h2 {
   margin: 0;
   font-weight: $h2-font-weight;
   font-size: $h2-font-size;
   line-height: $h2-line-height;
   font-family: $h2-font-family;
   color: $h2-color;
+
+  @media (max-width: $sm) {
+    font-size: $h2-font-size - 10;
+  }
 }
 
 .title-top {
@@ -93,6 +103,27 @@ h2 {
 .text-xxxl {
   font-size: $text-size-xxxl;
   line-height: $text-line-height-xxxl;
+
+  @media (max-width: $lg) {
+    font-size: $text-size-xxxl - 4;
+  }
+
+  @media (max-width: $sm) {
+    font-size: $text-size-xxxl - 6;
+  }
+}
+
+p {
+  margin: 20px 0;
+
+  @media (max-width: $md) {
+    margin: 15px 0;
+  }
+}
+
+// TEXT_COLOR
+.text-black {
+  color: $color-black;
 }
 
 // TRANSITION
@@ -100,6 +131,10 @@ a,
 button,
 svg {
   transition: all 0.25s $base-easing;
+}
+
+.link-wrapper {
+  display: flex;
 }
 
 // IMAGES
@@ -149,3 +184,8 @@ img {
     background-color: $color-primary;
   }
 }
+
+@import './s-title.scss';
+@import './s-partner-program.scss';
+@import './s-advantages.scss';
+@import './s-form.scss';

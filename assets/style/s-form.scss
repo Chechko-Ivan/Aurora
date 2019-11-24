@@ -1,0 +1,15 @@
+.s-form {
+  margin: 90px 0;
+
+  @media (max-width: $sm) {
+    margin: 45px 0;
+  }
+
+  .application-form {
+    margin-top: 80px;
+
+    @media (max-width: $sm) {
+      margin-top: 50px;
+    }
+  }
+}

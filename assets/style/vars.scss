@@ -7,12 +7,15 @@ $color-gray: #d8d8d8;
 $color-from-hell: #666666;
 $color-orange: #f16922;
 $color-light-orange: #ff8935;
+$color-light-yellow: #ffcf84;
 $color-blue: #132b84;
 $color-dark-blue: #09143c;
 $color-black: #000000;
 
 $color-primary: $color-orange;
 $color-primary-hover: $color-light-orange;
+
+$button-box-shadow: 0 0 2px 0 $color-light-orange, 0 0 8px 0 $color-light-yellow;
 
 $color-text-primary: $color-from-hell;
 

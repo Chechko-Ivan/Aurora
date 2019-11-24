@@ -1,5 +1,5 @@
 <template>
-  <div class="page-home">
+  <div class="page page-home">
     <header class="page-home-header">
       <container>
         <a-row :gutter="{ md: 20 }" type="flex" align="middle">
@@ -111,6 +111,7 @@
             v-for="(product, index) in $t('products')"
             :key="index"
             :lg="{ span: 8 }"
+            :sm="{ span: 12 }"
             class="s-products-col"
           >
             <product-card
@@ -125,6 +126,112 @@
         </a-row>
       </container>
     </section>
+
+    <section class="s-partner-program">
+      <img
+        class="s-partner-program-bg-image"
+        src="../static/images/PartnerProgramBg.png"
+        alt="alt"
+      />
+      <container>
+        <a-row :gutter="{ md: 20 }">
+          <a-col :xl="{ offset: 2, span: 22 }">
+            <img
+              class="s-partner-program-icon"
+              src="@/static/images/Network.svg"
+              alt="Network Icon"
+              width="55px"
+            />
+            <h2 class="s-partner-program-title title-h2">
+              Партнерская программа
+            </h2>
+            <div class="s-partner-program-text">
+              <p class="text-xxl">
+                Мы заинтересованы в территориальном расширении нашей сети и
+                увеличения круга наших покупателей.
+              </p>
+              <p class="text-xxl">
+                Приглашаем к сотрудничеству дилеров по регионам в странах
+                Российской Федерации, Украины и стран ЕС.
+              </p>
+            </div>
+
+            <div class="link-wrapper">
+              <base-nuxt-link to="/contacts">
+                Отправить заявку
+                <svg-icon slot="icon" name="ArrowRight" />
+              </base-nuxt-link>
+            </div>
+          </a-col>
+        </a-row>
+      </container>
+    </section>
+
+    <section class="s-advantages s-advantages-text">
+      <container>
+        <a-row :gutter="{ md: 20 }">
+          <a-col :xl="{ offset: 2, span: 22 }">
+            <a-tabs
+              :tabPosition="windowWidth > 575 ? 'left' : 'top'"
+              v-model="activeAdvanatagePaneKey"
+            >
+              <a-tab-pane
+                v-for="(advantage, index) in $t('p_home_advantages')"
+                :key="index"
+                :tab="advantage.title"
+              >
+                <h2>{{ advantage.title }}</h2>
+                <p class="text-xxxl text-black">
+                  Чтобы обеспечить бесперебойную работу нашего предприятия, мы
+                  заинтересованы в сотрудничестве с поставщиками качественных
+                  товаров.
+                </p>
+                <p class="text-xxl">
+                  На постоянной основе ведём закупку: защитной пленки для
+                  сэндвич панелей и подоконника, ламинационной пленки для
+                  подоконника, ПВХ-С, добавки для переработки ПВХ в широком
+                  ассортименте,микрокальциты,однослойный полиуретанновый клей
+                  для сэндвич панелей, рециклат.
+                </p>
+
+                <div class="link-wrapper">
+                  <base-nuxt-link to="/contacts">
+                    Прислать коммерческое предложение
+                    <svg-icon slot="icon" name="ArrowRight" />
+                  </base-nuxt-link>
+                </div>
+              </a-tab-pane>
+            </a-tabs>
+          </a-col>
+        </a-row>
+      </container>
+    </section>
+
+    <section class="s-form">
+      <container>
+        <a-row :gutter="{ md: 20 }">
+          <a-col>
+            <div class="s-title center">
+              <h2>Остались вопросы?</h2>
+              <span class="s-title-sub text-xxl">
+                Оставьте свой номер телефона и мы свяжемся с вами
+              </span>
+            </div>
+
+            <application-form small>
+              <application-form-row>
+                <application-form-field placeholder="Введите номер телефона">
+                  <base-button slot="root" type="submit" collapsed>
+                    Отправить
+                    <svg-icon slot="icon" name="ArrowRight" />
+                  </base-button>
+                </application-form-field>
+              </application-form-row>
+            </application-form>
+          </a-col>
+        </a-row>
+      </container>
+    </section>
   </div>
 </template>
 
@@ -135,7 +242,12 @@ import roundAnimationCircle from '@/components/roundAnimation/roundAnimationCirc
 import RoundAnimationInner from '@/components/roundAnimation/RoundAnimationInner.vue';
 import RoundAnimationItem from '@/components/roundAnimation/RoundAnimationItem.vue';
 import ProductCardBase from '@/components/ProductCard/ProductCardBase.vue';
-import ProductCard from '@/components/ProductCard/ProductCard.vue';
+import ProductCard from '@/components/productCard/ProductCard.vue';
+import BaseButton from '@/components/baseComponents/BaseButton.vue';
+import BaseNuxtLink from '@/components/baseComponents/BaseNuxtLink.vue';
+import ApplicationForm from '@/components/form/ApplicationForm.vue';
+import ApplicationFormRow from '@/components/form/ApplicationFormRow.vue';
+import ApplicationFormField from '@/components/form/ApplicationFormField.vue';
 
 export default {
   components: {
@@ -145,7 +257,12 @@ export default {
     RoundAnimationInner,
     RoundAnimationItem,
     ProductCardBase,
-    ProductCard
+    ProductCard,
+    BaseButton,
+    BaseNuxtLink,
+    ApplicationForm,
+    ApplicationFormRow,
+    ApplicationFormField
   },
 
   data() {
@@ -162,8 +279,44 @@ export default {
             slidesPerView: 'auto'
           }
         }
-      }
+      },
+      windowWidth: null,
+      activeAdvanatagePaneKey: 0,
+      productCardNodeList: null
     };
+  },
+
+  mounted() {
+    this.windowWidth = window.innerWidth;
+
+    this.productCardNodeList = document.querySelectorAll('.product-card');
+    this.calculateProductCardHeight();
+
+    this.$nextTick().then(() => {
+      window.addEventListener('resize', this.resizeHandler);
+    });
+  },
+
+  methods: {
+    resizeHandler() {
+      this.calculateProductCardHeight();
+    },
+
+    calculateProductCardHeight() {
+      let maxHeight = 0;
+
+      for (const node of this.productCardNodeList) {
+        const nodeHeight = node.clientHeight;
+
+        if (nodeHeight > maxHeight) {
+          maxHeight = nodeHeight;
+
+          for (const node of this.productCardNodeList) {
+            node.style.height = `${nodeHeight}px`;
+          }
+        }
+      }
+    }
   }
 };
 </script>
@@ -386,12 +539,32 @@ export default {
 }
 
 .s-products {
-  padding: 90px 0;
+  margin: 90px 0;
+
+  @media (max-width: $sm) {
+    margin: 45px 0;
+  }
 }
 
 .s-products-col {
   &:nth-child(n + 4) {
     margin-top: 50px;
+
+    @media (max-width: $xl) {
+      margin-top: 40px;
+    }
+  }
+
+  @media (max-width: $lg) {
+    &:nth-child(n + 3) {
+      margin-top: 40px;
+    }
+  }
+
+  @media (max-width: $sm) {
+    &:not(:first-of-type) {
+      margin-top: 120px;
+    }
   }
 }
 </style>
