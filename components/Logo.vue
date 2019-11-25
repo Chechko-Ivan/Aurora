@@ -1,12 +1,21 @@
 <template>
   <nuxt-link class="logo" to="/">
-    <img src="~/static/images/Logo.svg" alt="Логотип" />
+    <img :src="src" alt="Логотип" />
   </nuxt-link>
 </template>
 
 <script>
+import Logo from '~/static/images/Logo.svg';
+
 export default {
-  name: 'Logo'
+  name: 'Logo',
+
+  props: {
+    src: {
+      type: String,
+      default: Logo
+    }
+  }
 };
 </script>
 

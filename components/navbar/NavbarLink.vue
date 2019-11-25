@@ -27,7 +27,8 @@ export default {
     font-size: 16px;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: $color-primary;
   }
 }

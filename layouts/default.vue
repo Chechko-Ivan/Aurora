@@ -1,13 +1,18 @@
 <template>
   <div class="root">
-    <Navbar>
+    <navbar :drawerOpend="drawerOpend">
       <Burger
         slot="burger"
         :opened="drawerOpend"
         @toggleDrawer="drawerOpend = !drawerOpend"
       ></Burger>
-      <LangSwitcher slot="lang-switcher"></LangSwitcher>
-    </Navbar>
+      <LangSwitcher
+        slot="lang-switcher"
+        :drawerOpend="drawerOpend"
+      ></LangSwitcher>
+    </navbar>
+
+    <navbar-drawer :opened="drawerOpend"></navbar-drawer>
 
     <div class="layout-offset">
       <nuxt />
@@ -18,6 +23,7 @@
 
 <script>
 import Navbar from '~/components/navbar/Navbar.vue';
+import NavbarDrawer from '~/components/navbar/NavbarDrawer.vue';
 import Footer from '~/components/footer/Footer.vue';
 import Burger from '~/components/Burger.vue';
 import LangSwitcher from '~/components/LangSwitcher.vue';
@@ -25,6 +31,7 @@ import LangSwitcher from '~/components/LangSwitcher.vue';
 export default {
   components: {
     Navbar,
+    NavbarDrawer,
     Footer,
     Burger,
     LangSwitcher

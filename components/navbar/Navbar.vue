@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar">
+  <nav :class="['navbar', { 'drawer-opend': drawerOpend }]">
     <div class="navbar-inner">
       <div class="navbar-logo">
         <Logo></Logo>
@@ -7,24 +7,24 @@
 
       <ul class="navbar-list">
         <li>
-          <NavbarLink to="/products">{{
-            $t('navbar.links.products')
-          }}</NavbarLink>
+          <NavbarLink to="/products">
+            {{ $t('navbar.links.products') }}
+          </NavbarLink>
         </li>
         <li>
-          <NavbarLink to="/partners">{{
-            $t('navbar.links.to_partners')
-          }}</NavbarLink>
+          <NavbarLink to="/partners">
+            {{ $t('navbar.links.to_partners') }}
+          </NavbarLink>
         </li>
         <li>
-          <NavbarLink to="/suppliers">{{
-            $t('navbar.links.to_suppliers')
-          }}</NavbarLink>
+          <NavbarLink to="/suppliers">
+            {{ $t('navbar.links.to_suppliers') }}
+          </NavbarLink>
         </li>
         <li>
-          <NavbarLink to="/contacts">{{
-            $t('navbar.links.contacts')
-          }}</NavbarLink>
+          <NavbarLink to="/contacts">
+            {{ $t('navbar.links.contacts') }}
+          </NavbarLink>
         </li>
       </ul>
 
@@ -44,6 +44,13 @@ export default {
   components: {
     Logo,
     NavbarLink
+  },
+
+  props: {
+    drawerOpend: {
+      type: Boolean,
+      default: false
+    }
   }
 };
 </script>
@@ -73,6 +80,27 @@ export default {
   @media (max-width: $sm) {
     height: 70px;
     padding-left: 15px;
+  }
+
+  &.drawer-opend {
+    @media (max-width: $xl) {
+      .navbar-list {
+        display: none;
+      }
+
+      .burger {
+        margin-left: auto;
+      }
+    }
+
+    @media (max-width: $md) {
+      padding-left: 0;
+
+      .logo {
+        width: 0;
+        opacity: 0;
+      }
+    }
   }
 
   .logo {

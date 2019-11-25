@@ -48,7 +48,7 @@ $burger-text-color: $color-white;
   font-family: inherit;
   background-color: $burger-bg-color;
   border: 0;
-  transition: background-color 0.25s $base-easing;
+  transition: all 0.3s cubic-bezier(0.9, 0, 0.3, 0.7);
 
   @media (max-width: $osx) {
     max-width: 345px;
@@ -71,11 +71,27 @@ $burger-text-color: $color-white;
     padding: 0 15px;
   }
 
-  &:hover {
-    background-color: $burger-bg-color-hover;
-  }
+  // &:hover {
+  //   background-color: $burger-bg-color-hover;
+
+  //   @media (max-width: $xl) {
+  //     background-color: $burger-bg-color;
+  //   }
+  // }
 
   &.opened {
+    @media (max-width: $xl) {
+      width: 395px;
+    }
+
+    @media (max-width: $md) {
+      width: calc(100% - 115.88px);
+    }
+
+    @media (max-width: $sm) {
+      width: calc(100% - 87.39px);
+    }
+
     .burger-lines {
       width: 18px;
     }
@@ -89,6 +105,21 @@ $burger-text-color: $color-white;
       &:last-of-type {
         bottom: 50%;
         transform: translateY(50%) rotate(-45deg);
+      }
+    }
+
+    .burger-text {
+      @media (max-width: $xl) {
+        opacity: 1;
+        visibility: visible;
+        font-size: 18px;
+        margin-right: 15px;
+        transition-delay: 0.3s;
+        transition-duration: 0.25s $base-easing;
+      }
+
+      @media (max-width: $sm) {
+        font-size: 10px;
       }
     }
   }
@@ -106,7 +137,10 @@ $burger-text-color: $color-white;
   }
 
   @media (max-width: $xl) {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 0;
+    margin-right: 0;
   }
 }
 

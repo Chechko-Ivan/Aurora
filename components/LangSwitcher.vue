@@ -1,5 +1,5 @@
 <template>
-  <div class="lang-switcher">
+  <div :class="['lang-switcher', { 'drawer-opend': drawerOpend }]">
     <nuxt-link
       :to="`/ru${$route.fullPath}`"
       class="lang-switcher-link active"
@@ -9,23 +9,55 @@
     <nuxt-link :to="`/en${$route.fullPath}`" class="lang-switcher-link" exact>{{
       $t('navbar.locales.en')
     }}</nuxt-link>
+
+    <round-animation class="lang-switcher-round-animation first">
+      <round-animation-circle>
+        <round-animation-circle></round-animation-circle>
+      </round-animation-circle>
+    </round-animation>
+
+    <round-animation class="lang-switcher-round-animation second">
+      <round-animation-circle>
+        <round-animation-circle></round-animation-circle>
+      </round-animation-circle>
+    </round-animation>
   </div>
 </template>
 
 <script>
+import RoundAnimation from '@/components/roundAnimation/RoundAnimation.vue';
+import roundAnimationCircle from '@/components/roundAnimation/roundAnimationCircle.vue';
+
 export default {
-  name: 'LangSwitcher'
+  name: 'LangSwitcher',
+
+  components: {
+    RoundAnimation,
+    roundAnimationCircle
+  },
+
+  props: {
+    drawerOpend: {
+      type: Boolean,
+      default: false
+    }
+  }
 };
 </script>
 
 <style lang="scss" scoped>
 .lang-switcher {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
   padding: 0 40px;
+  flex-shrink: 0;
   background-color: $color-blue;
+  transition: all 0.25s cubic-bezier(0.9, 0, 0.3, 0.7);
+  transition-delay: 0.25s;
+  overflow: hidden;
 
   @media (max-width: $osx) {
     padding: 0 30px;
@@ -37,6 +69,27 @@ export default {
 
   @media (max-width: $sm) {
     padding: 0 15px;
+  }
+
+  &.drawer-opend {
+    height: 250vh;
+    transition-delay: 0s;
+
+    .lang-switcher-round-animation {
+      &.first {
+        opacity: 1;
+        visibility: visible;
+        transition: all 0.5s $base-easing;
+        transition-delay: 0.2s;
+      }
+
+      &.second {
+        opacity: 1;
+        visibility: visible;
+        transition: all 0.5s $base-easing;
+        transition-delay: 0.4s;
+      }
+    }
   }
 }
 
@@ -69,6 +122,39 @@ export default {
 
   &.active {
     color: $color-white;
+  }
+}
+
+.lang-switcher-round-animation {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+
+  &.first {
+    top: 53%;
+    right: 0;
+    transform: translateX(50%);
+    width: 128px;
+    height: 128px;
+    transition: all 0.25s $base-easing;
+    transition-delay: 0.25s $base-easing;
+
+    .round-animation-circle {
+      padding: 28px;
+    }
+  }
+
+  &.second {
+    top: 67%;
+    right: 30px;
+    width: 330px;
+    height: 330px;
+    transition: all 0.25s $base-easing;
+    transition-delay: 0.5s $base-easing;
+
+    .round-animation-circle {
+      padding: 45px;
+    }
   }
 }
 </style>

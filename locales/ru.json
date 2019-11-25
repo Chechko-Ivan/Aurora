@@ -4,7 +4,10 @@
       "products": "Продукция",
       "to_partners": "Партнерам",
       "to_suppliers": "Поставщикам",
-      "contacts": "Контакты"
+      "contacts": "Контакты",
+      "about_company": "О компании",
+      "jobs_in_avrora": "Работа в Аврорапласт",
+      "component_parts": "Комплектующие на заказ"
     },
     "burger": {
       "close_text": "Узнать больше о компании",
@@ -13,6 +16,9 @@
     "locales": {
       "ru": "рус",
       "en": "eng"
+    },
+    "search_bar": {
+      "input_placeholder": "Что будем искать?"
     }
   },
   "products": [
