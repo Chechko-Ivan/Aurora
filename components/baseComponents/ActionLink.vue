@@ -34,7 +34,7 @@ export default {
 
     rel: {
       type: String,
-      default: 'noreferrer'
+      default: 'nofollow noreferrer noopener'
     }
   }
 };

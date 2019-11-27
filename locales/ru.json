@@ -2,11 +2,11 @@
   "navbar": {
     "links": {
       "products": "Продукция",
-      "to_partners": "Партнерам",
-      "to_suppliers": "Поставщикам",
+      "partners": "Партнерам",
+      "suppliers": "Поставщикам",
       "contacts": "Контакты",
-      "about_company": "О компании",
-      "jobs_in_avrora": "Работа в Аврорапласт",
+      "about": "О компании",
+      "jobs": "Работа в Аврорапласт",
       "component_parts": "Комплектующие на заказ"
     },
     "burger": {

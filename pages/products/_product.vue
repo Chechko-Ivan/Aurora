@@ -1,6 +1,6 @@
 <template>
   <div>
-    contacts
+    123123123123123123
   </div>
 </template>
 

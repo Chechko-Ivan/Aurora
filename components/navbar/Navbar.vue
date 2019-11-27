@@ -7,22 +7,22 @@
 
       <ul class="navbar-list">
         <li>
-          <NavbarLink to="/products">
+          <NavbarLink :to="localePath('products')">
             {{ $t('navbar.links.products') }}
           </NavbarLink>
         </li>
         <li>
-          <NavbarLink to="/partners">
-            {{ $t('navbar.links.to_partners') }}
+          <NavbarLink :to="localePath('partners')">
+            {{ $t('navbar.links.partners') }}
           </NavbarLink>
         </li>
         <li>
-          <NavbarLink to="/suppliers">
-            {{ $t('navbar.links.to_suppliers') }}
+          <NavbarLink :to="localePath('suppliers')">
+            {{ $t('navbar.links.suppliers') }}
           </NavbarLink>
         </li>
         <li>
-          <NavbarLink to="/contacts">
+          <NavbarLink :to="localePath('contacts')">
             {{ $t('navbar.links.contacts') }}
           </NavbarLink>
         </li>

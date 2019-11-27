@@ -115,7 +115,11 @@
             class="s-products-col"
           >
             <product-card
-              :to="`/products/${product.link}`"
+              :to="
+                localePath({
+                  path: `products/${product.link}`
+                })
+              "
               :title="product.title"
               :image-src="product.summary.summaryImage"
               :text="product.summary.summaryText"
@@ -130,7 +134,7 @@
     <section class="s-partner-program">
       <img
         class="s-partner-program-bg-image"
-        src="../static/images/PartnerProgramBg.png"
+        src="@/static/images/PartnerProgramBg.png"
         alt="alt"
       />
       <container>
@@ -157,7 +161,7 @@
             </div>
 
             <div class="link-wrapper">
-              <base-nuxt-link to="/contacts">
+              <base-nuxt-link :to="localePath('contacts')">
                 Отправить заявку
                 <svg-icon slot="icon" name="ArrowRight" />
               </base-nuxt-link>
@@ -195,7 +199,7 @@
                 </p>
 
                 <div class="link-wrapper">
-                  <base-nuxt-link to="/contacts">
+                  <base-nuxt-link :to="localePath('contacts')">
                     Прислать коммерческое предложение
                     <svg-icon slot="icon" name="ArrowRight" />
                   </base-nuxt-link>

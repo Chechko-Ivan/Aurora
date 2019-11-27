@@ -9,37 +9,37 @@
 
     <ul class="navbar-drawer-list">
       <li>
-        <NavbarLink to="/products">
+        <NavbarLink :to="localePath('products')">
           {{ $t('navbar.links.products') }}
         </NavbarLink>
       </li>
       <li>
-        <NavbarLink to="/partners">
-          {{ $t('navbar.links.to_partners') }}
+        <NavbarLink :to="localePath('partners')">
+          {{ $t('navbar.links.partners') }}
         </NavbarLink>
       </li>
       <li>
-        <NavbarLink to="/suppliers">
-          {{ $t('navbar.links.to_suppliers') }}
+        <NavbarLink :to="localePath('suppliers')">
+          {{ $t('navbar.links.suppliers') }}
         </NavbarLink>
       </li>
       <li>
-        <NavbarLink to="/contacts">
+        <NavbarLink :to="localePath('contacts')">
           {{ $t('navbar.links.contacts') }}
         </NavbarLink>
       </li>
       <li>
-        <navbar-link to="/about">
-          {{ $t('navbar.links.about_company') }}
+        <navbar-link :to="localePath('about')">
+          {{ $t('navbar.links.about') }}
         </navbar-link>
       </li>
       <li>
-        <navbar-link to="/jobs">
-          {{ $t('navbar.links.jobs_in_avrora') }}
+        <navbar-link :to="localePath('jobs')">
+          {{ $t('navbar.links.jobs') }}
         </navbar-link>
       </li>
       <li>
-        <navbar-link to="/component_parts">
+        <navbar-link :to="localePath('component_parts')">
           {{ $t('navbar.links.component_parts') }}
         </navbar-link>
       </li>
@@ -168,6 +168,10 @@ export default {
     padding: 0 40px 40px 40px;
 
     @media (max-width: $lg) {
+      height: auto !important;
+    }
+
+    @media (max-height: 610px) {
       height: auto !important;
     }
 

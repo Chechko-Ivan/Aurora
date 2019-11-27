@@ -54,25 +54,49 @@ export default {
   loading: false,
 
   router: {
-    middleware: 'i18n'
+    // middleware: 'i18n'
   },
 
   css: ['~/assets/style/index.scss', 'swiper/dist/css/swiper.css'],
 
   plugins: [
-    // '~/plugins/baseComponents.js',
+    // '~/plugins/i18n.js',
+    '~/plugins/antd.js',
     {
       src: '~/plugins/swiper.js',
       ssr: false
-    },
-    '~/plugins/i18n.js',
-    '~/plugins/antd.js'
+    }
   ],
 
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/svg-sprite', '@nuxtjs/style-resources', '@nuxtjs/sitemap'],
+  modules: [
+    '@nuxtjs/svg-sprite',
+    '@nuxtjs/style-resources',
+    [
+      'nuxt-i18n',
+      {
+        defaultLocale: 'ru',
+        locales: [
+          {
+            code: 'ru',
+            name: 'рус',
+            file: 'ru.js'
+          },
+          {
+            code: 'en',
+            name: 'eng',
+            file: 'en.js'
+          }
+        ],
+        routesNameSeparator: '-',
+        lazy: true,
+        langDir: 'locales/'
+      }
+    ],
+    '@nuxtjs/sitemap'
+  ],
 
   svgSprite: {
     input: '~/static/sourceIcons/',

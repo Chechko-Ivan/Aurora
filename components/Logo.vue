@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link class="logo" to="/">
+  <nuxt-link :to="localePath('index')" class="logo">
     <img :src="src" alt="Логотип" />
   </nuxt-link>
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link to="/" class="product-card">
+  <nuxt-link :to="to" class="product-card">
     <div class="product-card-info">
       <div class="product-card-image">
         <img :src="imageSrc" :alt="title" />
@@ -40,7 +40,7 @@ export default {
   props: {
     to: {
       type: String,
-      default: ''
+      default: '/products'
     },
 
     // eslint-disable-next-line vue/require-default-prop

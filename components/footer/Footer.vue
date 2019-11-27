@@ -12,10 +12,20 @@
               <h3 class="footer-list-title">О нас</h3>
 
               <ul>
-                <li><nuxt-link to="/about">О компании</nuxt-link></li>
-                <li><nuxt-link to="/partners">Партнерам</nuxt-link></li>
-                <li><nuxt-link to="/jobs">Работа в Аврорапласт</nuxt-link></li>
-                <li><nuxt-link to="/contacts">Контакты</nuxt-link></li>
+                <li>
+                  <nuxt-link :to="localePath('about')">О компании</nuxt-link>
+                </li>
+                <li>
+                  <nuxt-link :to="localePath('partners')">Партнерам</nuxt-link>
+                </li>
+                <li>
+                  <nuxt-link :to="localePath('jobs')"
+                    >Работа в Аврорапласт</nuxt-link
+                  >
+                </li>
+                <li>
+                  <nuxt-link :to="localePath('contacts')">Контакты</nuxt-link>
+                </li>
               </ul>
             </div>
           </a-col>
@@ -58,13 +68,19 @@
               <h3 class="footer-list-title">Производство</h3>
 
               <ul>
-                <li><nuxt-link to="/products">Продукция</nuxt-link></li>
                 <li>
-                  <nuxt-link to="/component_parts">
+                  <nuxt-link :to="localePath('products')">Продукция</nuxt-link>
+                </li>
+                <li>
+                  <nuxt-link :to="localePath('component_parts')">
                     Комплектующие на заказ
                   </nuxt-link>
                 </li>
-                <li><nuxt-link to="/suppliers">Поставщикам</nuxt-link></li>
+                <li>
+                  <nuxt-link :to="localePath('suppliers')"
+                    >Поставщикам</nuxt-link
+                  >
+                </li>
               </ul>
             </div>
           </a-col>

@@ -1,6 +1,6 @@
 <template>
   <div :class="['lang-switcher', { 'drawer-opend': drawerOpend }]">
-    <nuxt-link
+    <!-- <nuxt-link
       :to="`/ru${$route.fullPath}`"
       class="lang-switcher-link active"
       exact
@@ -8,7 +8,15 @@
     >
     <nuxt-link :to="`/en${$route.fullPath}`" class="lang-switcher-link" exact>{{
       $t('navbar.locales.en')
-    }}</nuxt-link>
+    }}</nuxt-link> -->
+
+    <nuxt-link
+      v-for="locale in availableLocales"
+      :key="locale.code"
+      :to="switchLocalePath(locale.code)"
+      class="lang-switcher-link"
+      >{{ locale.name }}</nuxt-link
+    >
 
     <round-animation class="lang-switcher-round-animation first">
       <round-animation-circle>
@@ -40,6 +48,12 @@ export default {
     drawerOpend: {
       type: Boolean,
       default: false
+    }
+  },
+
+  computed: {
+    availableLocales() {
+      return this.$i18n.locales;
     }
   }
 };
@@ -120,7 +134,8 @@ export default {
     }
   }
 
-  &.active {
+  &.active,
+  &.nuxt-link-exact-active {
     color: $color-white;
   }
 }
