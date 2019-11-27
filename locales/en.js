@@ -31,7 +31,7 @@ export default (context) => {
           link: 'sandwich_panel',
           title: 'Сэндвич панели ПВХ',
           summary: {
-            summaryImage: 'images/contentImage/PVCSandwichPanel.png',
+            summaryImage: 'PVCSandwichPanel.png',
             summaryText: '',
             summaryList: [
               'Предназначены для устройства оконных откосов.',
@@ -45,7 +45,7 @@ export default (context) => {
           link: 'pvc_sheet',
           title: 'Лист ПВХ',
           summary: {
-            summaryImage: 'images/contentImage/PVCSheet.png',
+            summaryImage: 'PVCSheet.png',
             summaryText: '',
             summaryList: [
               'Изготовление сэндвич-панелей из ПВХ.',
@@ -58,7 +58,7 @@ export default (context) => {
           link: 'pvc_window_sill',
           title: 'Подоконник ПВХ',
           summary: {
-            summaryImage: 'images/contentImage/Windowsill.png',
+            summaryImage: 'Windowsill.png',
             summaryText:
               'Является неотъемлемой частью окна, помогает создать комфортную атмосферу внутри помещения.',
             summaryList: []
@@ -68,7 +68,7 @@ export default (context) => {
           link: 'stand_profile',
           title: 'Подставочный профиль',
           summary: {
-            summaryImage: 'images/contentImage/StandProfile.png',
+            summaryImage: 'StandProfile.png',
             summaryText: 'Используется при установке окон ПВХ и обеспечивает:',
             summaryList: [
               'Ровность и устойчивость конструкции.',
@@ -81,7 +81,7 @@ export default (context) => {
           link: 'start_and_finish_profiles',
           title: 'Стартовый и финишный профили',
           summary: {
-            summaryImage: 'images/contentImage/StartFinishProfiles.png',
+            summaryImage: 'StartFinishProfiles.png',
             summaryText:
               'Для монтажа панелей потребуются профили, чтобы результат процесса принес радость.',
             summaryList: []
@@ -91,7 +91,7 @@ export default (context) => {
           link: 'pvc_thermal_inserts',
           title: 'Термовставки ПВХ',
           summary: {
-            summaryImage: 'images/contentImage/PVCThermalInserts.png',
+            summaryImage: 'PVCThermalInserts.png',
             summaryText:
               'Используются в алюминиевых профильных системах стоечно – ригельного фасада.',
             summaryList: []

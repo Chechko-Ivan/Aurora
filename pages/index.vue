@@ -44,9 +44,9 @@
                     src="@/static/images/Gear.svg"
                     alt="Gear Icon"
                   />
-                  <template slot="text">
-                    Мы подходим к каждому клиенту индивидуально
-                  </template>
+                  <template slot="text"
+                    >Мы подходим к каждому клиенту индивидуально</template
+                  >
                 </round-animation-item>
                 <round-animation-circle>
                   <!-- Medal -->
@@ -56,9 +56,9 @@
                       src="@/static/images/Medal.svg"
                       alt="Medal Icon"
                     />
-                    <template slot="text">
-                      Мы подходим к каждому клиенту индивидуально
-                    </template>
+                    <template slot="text"
+                      >Мы подходим к каждому клиенту индивидуально</template
+                    >
                   </round-animation-item>
                   <round-animation-circle>
                     <!-- Honeycombs -->
@@ -68,9 +68,9 @@
                         src="@/static/images/Honeycombs.svg"
                         alt="Honeycombs Icon"
                       />
-                      <template slot="text">
-                        Мы подходим к каждому клиенту индивидуально
-                      </template>
+                      <template slot="text"
+                        >Мы подходим к каждому клиенту индивидуально</template
+                      >
                     </round-animation-item>
                     <round-animation-inner>
                       <img
@@ -121,11 +121,10 @@
                 })
               "
               :title="product.title"
-              :image-src="product.summary.summaryImage"
+              :image-src="`images/contentImage/${product.summary.summaryImage}`"
               :text="product.summary.summaryText"
               :list-items="product.summary.summaryList"
-            >
-            </product-card>
+            ></product-card>
           </a-col>
         </a-row>
       </container>
@@ -217,9 +216,9 @@
           <a-col>
             <div class="s-title center">
               <h2>Остались вопросы?</h2>
-              <span class="s-title-sub text-xxl">
-                Оставьте свой номер телефона и мы свяжемся с вами
-              </span>
+              <span class="s-title-sub text-xxl"
+                >Оставьте свой номер телефона и мы свяжемся с вами</span
+              >
             </div>
 
             <application-form small>

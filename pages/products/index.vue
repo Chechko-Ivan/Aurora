@@ -27,11 +27,10 @@
                 })
               "
               :title="product.title"
-              :image-src="product.summary.summaryImage"
+              :image-src="`images/contentImage/${product.summary.summaryImage}`"
               :text="product.summary.summaryText"
               :list-items="product.summary.summaryList"
-            >
-            </product-card>
+            ></product-card>
           </a-col>
         </a-row>
       </container>

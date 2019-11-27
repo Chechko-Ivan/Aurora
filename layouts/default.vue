@@ -17,17 +17,15 @@
         v-if="breadcrumbsWithoutIndex.length"
         :style="{ zIndex: breadcrumbs.length + 2 }"
         :to="localePath('index')"
+        >{{ $t('navbar.links.index') }}</breadcrumb-item
       >
-        {{ $t('navbar.links.index') }}
-      </breadcrumb-item>
 
       <breadcrumb-item
         v-if="breadcrumbsWithParams.length"
         :style="{ zIndex: breadcrumbs.length + 1 }"
         :to="localePath('products')"
+        >{{ $t('navbar.links.products') }}</breadcrumb-item
       >
-        {{ $t('navbar.links.products') }}
-      </breadcrumb-item>
 
       <breadcrumb-item
         v-for="breadcrumb in breadcrumbsWithoutIndex"
@@ -90,6 +88,8 @@ export default {
   computed: {
     breadcrumbs() {
       const breadcrumbs = [];
+      // eslint-disable-next-line no-console
+      console.log(this.$route, 'this.$route');
       this.$route.matched.map((item, i, { length }) => {
         const breadcrumb = {};
         breadcrumb.path = item.path.replace(/\//g, '');
@@ -101,22 +101,6 @@ export default {
           breadcrumb.path = this.$route.path.replace(/\//, '');
           breadcrumb.name = this.$route.params.product;
         }
-
-        // is last item?
-        // if (i === length - 1) {
-        //   // is param route? .../.../:id
-        //   if (item.regex.keys.length > 0) {
-        //     breadcrumb.push({
-        //       path: item.path.replace(/\/:[^/:]*$/, ''),
-        //       name: this.$t(`navbar.links.${item.name.replace(/-[^-]*$/, '')}`)
-        //     });
-        //     breadcrumb.path = this.$route.path;
-        //     breadcrumb.name = this.$i18n.t(`navbar.links.${this.$route.name}`, [
-        //       breadcrumb.path.match(/[^/]*$/)[0]
-        //     ]);
-        //   }
-        //   breadcrumb.classes = 'is-active';
-        // }
         breadcrumbs.push(breadcrumb);
       });
       return breadcrumbs;
