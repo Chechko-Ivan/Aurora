@@ -185,6 +185,28 @@ img {
   }
 }
 
+.list-style-dots {
+  list-style: none;
+
+  li {
+    position: relative;
+    padding-left: 20px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 3.5px;
+      left: 0;
+      width: 16px;
+      height: 16px;
+      background-image: url('../../static/images/ListDot.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100%;
+    }
+  }
+}
+
 @import './s-title.scss';
 @import './s-partner-program.scss';
 @import './s-advantages.scss';

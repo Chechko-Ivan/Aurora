@@ -90,7 +90,7 @@ export default {
             file: 'en.js'
           }
         ],
-        routesNameSeparator: '-',
+        strategy: 'prefix_except_default',
         lazy: true,
         langDir: 'locales/'
       }

@@ -23,7 +23,7 @@
             <product-card
               :to="
                 localePath({
-                  path: `products/${product.link}`
+                  path: `/products/${product.link}`
                 })
               "
               :title="product.title"

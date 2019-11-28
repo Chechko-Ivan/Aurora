@@ -30,7 +30,7 @@
       <breadcrumb-item
         v-for="breadcrumb in breadcrumbsWithoutIndex"
         :key="breadcrumb.name"
-        :to="localePath(breadcrumb.path)"
+        :to="localePath({ path: `/${breadcrumb.path}` })"
         :style="{ zIndex: 0 }"
         :long="breadcrumbsWithParams.length ? true : false"
       >
@@ -88,17 +88,25 @@ export default {
   computed: {
     breadcrumbs() {
       const breadcrumbs = [];
-      // eslint-disable-next-line no-console
-      console.log(this.$route, 'this.$route');
       this.$route.matched.map((item, i, { length }) => {
+        // eslint-disable-next-line no-console
+        console.log(item.path);
+        // eslint-disable-next-line no-console
+        console.log(item.path.substring(0, 4) === '/en/', 'this.$route');
         const breadcrumb = {};
-        breadcrumb.path = item.path.replace(/\//g, '');
+        breadcrumb.path =
+          item.path.substring(0, 4) === '/en/'
+            ? item.path.replace(/\/en\//g, '')
+            : item.path.replace(/\//g, '');
         breadcrumb.name = this.$t(
           `navbar.links.${breadcrumb.path.length ? breadcrumb.path : 'index'}`
         );
 
         if (this.$route.params.product) {
-          breadcrumb.path = this.$route.path.replace(/\//, '');
+          breadcrumb.path =
+            this.$route.path.substring(0, 4) === '/en/'
+              ? this.$route.path.replace(/\/en\//g, '')
+              : this.$route.path.replace(/\//g, '');
           breadcrumb.name = this.$route.params.product;
         }
         breadcrumbs.push(breadcrumb);
@@ -108,7 +116,9 @@ export default {
 
     breadcrumbsWithoutIndex() {
       return this.breadcrumbs.filter(
-        (breadcrumb) => breadcrumb.name !== this.$t('navbar.links.index')
+        (breadcrumb) =>
+          breadcrumb.name !== this.$t('navbar.links.index') &&
+          breadcrumb.path !== 'en'
       );
     },
 
