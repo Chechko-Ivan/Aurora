@@ -1,6 +1,6 @@
 <template>
   <div class="page page-products-inner">
-    <section>
+    <section class="s-product-detail">
       <container>
         <a-row :gutter="20">
           <a-col :lg="{ span: 10 }" class="page-products-inner-preview">
@@ -64,14 +64,68 @@
         </a-row>
       </container>
     </section>
+
+    <section class="s-form">
+      <container>
+        <a-row :gutter="{ md: 20 }">
+          <a-col>
+            <application-form accent>
+              <h2 slot="title">Напишите нам</h2>
+
+              <application-form-row>
+                <application-form-field
+                  placeholder="Представьтесь"
+                ></application-form-field>
+              </application-form-row>
+
+              <application-form-row>
+                <application-form-field
+                  type="tel"
+                  placeholder="Контактный телефон"
+                ></application-form-field>
+
+                <application-form-field
+                  type="email"
+                  placeholder="Контактный e-mail"
+                ></application-form-field>
+              </application-form-row>
+
+              <application-form-row>
+                <application-form-textarea
+                  placeholder="Сообщение"
+                ></application-form-textarea>
+              </application-form-row>
+
+              <div class="button-wrapper">
+                <base-button color="light" large>
+                  Отправить
+                  <svg-icon slot="icon" name="ArrowRight" />
+                </base-button>
+              </div>
+            </application-form>
+          </a-col>
+        </a-row>
+      </container>
+    </section>
   </div>
 </template>
 
 <script>
 import Container from '@/components/Container.vue';
+import BaseButton from '@/components/baseComponents/BaseButton.vue';
+import ApplicationForm from '@/components/form/ApplicationForm.vue';
+import ApplicationFormRow from '@/components/form/ApplicationFormRow.vue';
+import ApplicationFormField from '@/components/form/ApplicationFormField.vue';
+import ApplicationFormTextarea from '@/components/form/ApplicationFormTextarea.vue';
+
 export default {
   components: {
-    Container
+    Container,
+    BaseButton,
+    ApplicationForm,
+    ApplicationFormRow,
+    ApplicationFormField,
+    ApplicationFormTextarea
   },
 
   data() {
@@ -96,6 +150,14 @@ export default {
 <style lang="scss" scoped>
 .page-products-inner {
   padding: 10px;
+
+  .s-form {
+    margin-top: 40px;
+
+    .button-wrapper {
+      margin-top: 40px;
+    }
+  }
 }
 
 .page-products-inner-preview {

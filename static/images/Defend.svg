@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="58px" viewBox="0 0 50 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>Path 7</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="96.649195%" y1="5.0308922%" x2="15.5726187%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#F9A247" offset="0%"></stop>
+            <stop stop-color="#F16922" offset="100%"></stop>
+        </linearGradient>
+        <path d="M0.11808,14.67036 L28.76928,43.3842 C26.06556,45.2862 23.11188,46.80516 19.99212,47.89812 C1.68552,41.37792 0.05544,27.20916 0.11808,14.67036 L0.11808,14.67036 Z M9.58488,6.0186 L36.91944,33.35316 C35.50236,36.5826 33.40692,39.4692 30.77544,41.81688 L30.77544,41.81688 L0.18084,11.22228 L0.18084,10.53264 C0.18084,9.52944 0.24348,8.46372 0.24348,7.52328 C3.40944,7.43004 6.54972,6.92412 9.58488,6.0186 L9.58488,6.0186 Z M19.99212,0 C25.38372,4.89012 31.71588,7.27248 39.74076,7.52316 C39.74076,8.52636 39.8034,9.52944 39.8034,10.53252 C39.9288,17.05272 40.05408,24.26256 37.85988,30.78264 L37.85988,30.78264 L12.1554,5.07816 C15.042,3.852 17.69364,2.13372 19.99212,0 Z" id="path-2"></path>
+        <filter x="-18.9%" y="-15.7%" width="137.7%" height="131.3%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 0.403921569   0 0 0 0 0  0 0 0 0.501475087 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter2"></feOffset>
+            <feGaussianBlur stdDeviation="2.5" in="shadowOffsetOuter2" result="shadowBlurOuter2"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 0.485195436   0 0 0 0 0.301276677  0 0 0 0.295536495 0" type="matrix" in="shadowBlurOuter2" result="shadowMatrixOuter2"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter2"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="web" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="5-О-компании" transform="translate(-1077.000000, -4207.000000)">
+            <g id="Partners" transform="translate(0.000000, 3705.000000)">
+                <g id="Group-9" transform="translate(992.000000, 491.000000)">
+                    <g id="Prod-3" transform="translate(70.000000, 0.000000)">
+                        <g id="005-shield" transform="translate(20.000000, 16.000000)">
+                            <g id="Path-7">
+                                <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                                <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

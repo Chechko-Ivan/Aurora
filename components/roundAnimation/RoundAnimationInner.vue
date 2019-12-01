@@ -18,6 +18,7 @@ export default {
   align-items: center;
   width: 100%;
   height: 100%;
+  box-sizing: border-box;
   border-radius: 50%;
   background-color: transparent;
 }

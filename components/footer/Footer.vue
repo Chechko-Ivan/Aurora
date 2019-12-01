@@ -91,10 +91,10 @@
         <span class="copyright">
           {{ `&copy; ${new Date().getFullYear()} ООО «Секвойя»` }}
         </span>
-        <span class="delimiter">|</span>
+        <!-- <span class="delimiter">|</span>
         <a href="/">
           Политика обработки персональных данных
-        </a>
+        </a> -->
         <span class="delimiter bullet">&bull;</span>
         <a href="https://maksis.by">
           Разработано студией Maksis

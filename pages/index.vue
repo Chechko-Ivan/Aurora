@@ -219,7 +219,10 @@
 
             <application-form small>
               <application-form-row>
-                <application-form-field placeholder="Введите номер телефона">
+                <application-form-field
+                  type="tel"
+                  placeholder="Введите номер телефона"
+                >
                   <base-button slot="root" type="submit" collapsed>
                     Отправить
                     <svg-icon slot="icon" name="ArrowRight" />
@@ -237,7 +240,7 @@
 <script>
 import Container from '@/components/Container.vue';
 import RoundAnimation from '@/components/roundAnimation/RoundAnimation.vue';
-import roundAnimationCircle from '@/components/roundAnimation/roundAnimationCircle.vue';
+import RoundAnimationCircle from '@/components/roundAnimation/RoundAnimationCircle.vue';
 import RoundAnimationInner from '@/components/roundAnimation/RoundAnimationInner.vue';
 import RoundAnimationItem from '@/components/roundAnimation/RoundAnimationItem.vue';
 import ProductCardBase from '@/components/ProductCard/ProductCardBase.vue';
@@ -252,7 +255,7 @@ export default {
   components: {
     Container,
     RoundAnimation,
-    roundAnimationCircle,
+    RoundAnimationCircle,
     RoundAnimationInner,
     RoundAnimationItem,
     ProductCardBase,

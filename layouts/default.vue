@@ -89,10 +89,6 @@ export default {
     breadcrumbs() {
       const breadcrumbs = [];
       this.$route.matched.map((item, i, { length }) => {
-        // eslint-disable-next-line no-console
-        console.log(item.path);
-        // eslint-disable-next-line no-console
-        console.log(item.path.substring(0, 4) === '/en/', 'this.$route');
         const breadcrumb = {};
         breadcrumb.path =
           item.path.substring(0, 4) === '/en/'

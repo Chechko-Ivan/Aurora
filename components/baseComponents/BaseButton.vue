@@ -1,7 +1,7 @@
 <template>
   <button
     v-on="$listeners"
-    :class="['base-button', color, { collapsed: collapsed }]"
+    :class="['base-button', color, { collapsed: collapsed, large: large }]"
   >
     <div class="base-button-text">
       <slot></slot>
@@ -25,6 +25,11 @@ export default {
     },
 
     collapsed: {
+      type: Boolean,
+      default: false
+    },
+
+    large: {
       type: Boolean,
       default: false
     }
@@ -71,6 +76,12 @@ $button-height: 50px;
     }
   }
 
+  &.light {
+    svg {
+      fill: $color-primary;
+    }
+  }
+
   &.collapsed {
     width: 55px;
     transition: all 0.4s ease;
@@ -103,6 +114,10 @@ $button-height: 50px;
     svg {
       margin-left: 0;
     }
+  }
+
+  &.large {
+    padding: 0 40px;
   }
 }
 </style>

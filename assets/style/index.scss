@@ -126,6 +126,10 @@ p {
   color: $color-black;
 }
 
+.text-light {
+  color: $color-white;
+}
+
 // TRANSITION
 a,
 button,
@@ -133,7 +137,8 @@ svg {
   transition: all 0.25s $base-easing;
 }
 
-.link-wrapper {
+.link-wrapper,
+.button-wrapper {
   display: flex;
 }
 
@@ -165,15 +170,15 @@ img {
 
 // Swiper bullet
 .swiper-pagination {
-  width: auto;
   display: flex;
+  width: auto;
 
   .swiper-pagination-bullet {
     width: 6px;
     height: 6px;
+    margin: 0 !important;
     background-color: #a1a8c2;
     opacity: 1;
-    margin: 0 !important;
 
     &:not(:last-of-type) {
       margin-right: 10px !important;
@@ -185,6 +190,7 @@ img {
   }
 }
 
+// Styled dots for list
 .list-style-dots {
   list-style: none;
 
@@ -207,7 +213,37 @@ img {
   }
 }
 
+.accent-border {
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  padding: 40px 25px;
+  border: 6px solid #f16922;
+  border-radius: 21px;
+
+  @media (max-width: $md) {
+    padding: 20px 15px;
+    max-width: calc(100% - 70px);
+  }
+
+  @media (max-width: $md) {
+    max-width: calc(100% - 50px);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -7px;
+    width: 9px;
+    height: 45%;
+    background-color: $body-bg;
+    transform: translateY(-50%);
+  }
+}
+
 @import './s-title.scss';
 @import './s-partner-program.scss';
 @import './s-advantages.scss';
 @import './s-form.scss';
+@import './dot.scss';
