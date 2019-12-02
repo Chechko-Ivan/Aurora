@@ -399,6 +399,9 @@ export default (context) => {
       },
       p_suppliers: {
         title: 'Поставщикам'
+      },
+      p_about: {
+        title: 'О компании Аврорапласт'
       }
     });
   });

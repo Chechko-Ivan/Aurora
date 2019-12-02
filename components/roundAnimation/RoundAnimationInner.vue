@@ -21,5 +21,8 @@ export default {
   box-sizing: border-box;
   border-radius: 50%;
   background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 </style>

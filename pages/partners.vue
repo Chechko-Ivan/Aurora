@@ -151,7 +151,7 @@
 <script>
 import Container from '@/components/Container.vue';
 import RoundAnimation from '@/components/roundAnimation/RoundAnimation.vue';
-import RoundAnimationCircle from '@/components/roundAnimation/roundAnimationCircle.vue';
+import RoundAnimationCircle from '@/components/roundAnimation/RoundAnimationCircle.vue';
 import RoundAnimationInner from '@/components/roundAnimation/RoundAnimationInner.vue';
 import Adventages from '@/components/adventages/Adventages.vue';
 import AdventagesItem from '@/components/adventages/AdventagesItem.vue';

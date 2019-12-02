@@ -109,7 +109,7 @@
 <script>
 import Container from '@/components/Container.vue';
 import RoundAnimation from '@/components/roundAnimation/RoundAnimation.vue';
-import RoundAnimationCircle from '@/components/roundAnimation/roundAnimationCircle.vue';
+import RoundAnimationCircle from '@/components/roundAnimation/RoundAnimationCircle.vue';
 import RoundAnimationInner from '@/components/roundAnimation/RoundAnimationInner.vue';
 import BaseButton from '@/components/baseComponents/BaseButton.vue';
 import BaseNuxtLink from '@/components/baseComponents/BaseNuxtLink.vue';

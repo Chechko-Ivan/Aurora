@@ -34,14 +34,14 @@
 
 <script>
 import RoundAnimation from '@/components/roundAnimation/RoundAnimation.vue';
-import roundAnimationCircle from '@/components/roundAnimation/roundAnimationCircle.vue';
+import RoundAnimationCircle from '@/components/roundAnimation/RoundAnimationCircle.vue';
 
 export default {
   name: 'LangSwitcher',
 
   components: {
     RoundAnimation,
-    roundAnimationCircle
+    RoundAnimationCircle
   },
 
   props: {
