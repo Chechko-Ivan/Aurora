@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="51px" height="68px" viewBox="0 0 51 68" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="83.1975664%" y1="5.0308922%" x2="25.5%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#F9A247" offset="0%"></stop>
+            <stop stop-color="#F16922" offset="100%"></stop>
+        </linearGradient>
+        <path d="M52.5,23.3333333 C52.5,13.6791667 44.6541667,5.83333333 35,5.83333333 C25.3458333,5.83333333 17.5,13.6791667 17.5,23.3333333 C17.5,36.4583333 35,55.4166667 35,55.4166667 C35,55.4166667 52.5,36.4583333 52.5,23.3333333 L52.5,23.3333333 Z M29.1666667,23.3333333 C29.1666667,20.125 31.7916667,17.5 35,17.5 C38.2083333,17.5 40.8333333,20.125 40.8333333,23.3333333 C40.8333333,26.5416667 38.2375,29.1666667 35,29.1666667 C31.7916667,29.1666667 29.1666667,26.5416667 29.1666667,23.3333333 L29.1666667,23.3333333 Z M14.5833333,58.3333333 L14.5833333,64.1666667 L55.4166667,64.1666667 L55.4166667,58.3333333 L14.5833333,58.3333333 L14.5833333,58.3333333 Z" id="path-2"></path>
+        <filter x="-18.4%" y="-12.9%" width="136.7%" height="125.7%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 0.403921569   0 0 0 0 0  0 0 0 0.501475087 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter2"></feOffset>
+            <feGaussianBlur stdDeviation="2.5" in="shadowOffsetOuter2" result="shadowBlurOuter2"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 0.485195436   0 0 0 0 0.301276677  0 0 0 0.295536495 0" type="matrix" in="shadowBlurOuter2" result="shadowMatrixOuter2"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter2"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="web" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="9-контакты" transform="translate(-166.000000, -446.000000)">
+            <g id="Group-5" transform="translate(156.000000, 445.000000)">
+                <g id="ic_pin_drop">
+                    <g id="Icon-24px">
+                        <g id="Shape">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                            <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

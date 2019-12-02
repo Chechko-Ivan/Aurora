@@ -355,6 +355,52 @@ export default (context) => {
           5: 'Выгодное сотрудничество',
           6: 'Программа лояльности клиентов'
         }
+      },
+      component_parts: {
+        title: 'Accessories to order',
+        component_list: [
+          {
+            title: 'Extruders',
+            subtitle: ''
+          },
+          {
+            title: 'Gearboxes',
+            subtitle: ''
+          },
+          {
+            title: 'Screw pairs',
+            subtitle: '(conical and parallel)'
+          },
+          {
+            title: 'Profile and flat slot dies',
+            subtitle: ''
+          },
+          {
+            title: 'Calenders',
+            subtitle: ''
+          },
+          {
+            title: 'Pulverizers',
+            subtitle: ''
+          },
+          {
+            title: 'Crushers',
+            subtitle: ''
+          },
+          {
+            title: 'Gluing',
+            subtitle: ''
+          }
+        ],
+        advantages: {
+          title: 'Оказывает услуги',
+          1: 'Консультации по подбору оптимального комплекта оборудования под требования заказчика, исходя из требуемой производительности и технического задания',
+          2: 'Консультации по ремонту и обслуживанию всего спектра экструзионного оборудования',
+          3: 'Пусконаладочные работы для приобретенного оборудования'
+        }
+      },
+      p_suppliers: {
+        title: 'Suppliers'
       }
     });
   });

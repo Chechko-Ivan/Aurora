@@ -10,7 +10,7 @@
     <header class="page-partners-header">
       <container>
         <a-row :gutter="20">
-          <a-col :span="24">
+          <a-col :xl="{ offset: 2, span: 22 }">
             <h1 class="title-h1">{{ $t('p_partners.title') }}</h1>
           </a-col>
         </a-row>
