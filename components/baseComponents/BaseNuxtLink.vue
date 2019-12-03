@@ -1,9 +1,11 @@
 <template>
   <nuxt-link :to="to" v-bind="$attrs" :class="['base-nuxt-link', color]">
+    <div class="icon-before">
+      <slot name="icon-before"></slot>
+    </div>
     <div class="base-nuxt-link-text">
       <slot></slot>
     </div>
-
     <slot name="icon"></slot>
   </nuxt-link>
 </template>
@@ -41,11 +43,20 @@ $button-height: 50px;
   padding: 0 20px;
   font-weight: 600;
   font-size: 14px;
+  font-family: inherit;
   text-transform: uppercase;
   border: 0;
-  font-family: inherit;
   border-radius: 4px;
   transition: all 0.25s $base-easing;
+
+  &:not(:last-of-type) {
+    margin-right: 10px;
+
+    @media (max-width: $sm) {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
 
   &.primary {
     color: $color-white;
@@ -57,12 +68,23 @@ $button-height: 50px;
     }
   }
 
-  svg {
+  .icon {
+    flex-shrink: 0;
     width: 15px;
     height: 15px;
     margin-left: 15px;
-    flex-shrink: 0;
     fill: $color-white;
+  }
+
+  .icon-before {
+    flex-shrink: 0;
+
+    svg {
+      width: 24px;
+      height: auto;
+      margin-right: 15px;
+      margin-left: 0;
+    }
   }
 }
 </style>

@@ -1,5 +1,23 @@
 export default {
-  mode: 'universal',
+  mode: 'spa',
+
+  // generate: {
+  //   routes: [
+  //     "/services/ERP",
+  //     "/services/software-development",
+  //     "/services/software-development/web&mobile",
+  //     "/services/software-development/enterprise-software",
+  //     "/services/ERP/CRM",
+  //     "/services/ERP/R&D",
+  //     "/services/ERP/MRP-APS-MES",
+  //     "/services/ERP/Сontrolling",
+  //     "/services/ERP/EAM",
+  //     "/services/ERP-системы/WMS-TMS-PMS-SCM",
+  //     "/services/ERP/FI",
+  //     "/services/ERP/BPM",
+  //     "/services/ERP/PM"
+  //   ]
+  // },
 
   head: {
     title: 'АВРОРАПЛАСТ',
@@ -94,8 +112,8 @@ export default {
         lazy: true,
         langDir: 'locales/'
       }
-    ],
-    '@nuxtjs/sitemap'
+    ]
+    // '@nuxtjs/sitemap'
   ],
 
   svgSprite: {
