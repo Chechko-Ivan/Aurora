@@ -38,8 +38,10 @@
 
     <section class="s-partner-program">
       <img
+        :src="
+          this.$i18n.locale === 'ru' ? PartnerProgramBg : PartnerProgramBgEn
+        "
         class="s-partner-program-bg-image"
-        src="@/static/images/PartnerProgramBg.png"
         alt="alt"
       />
       <container>
@@ -83,11 +85,21 @@ import Container from '@/components/Container.vue';
 import ProductCard from '@/components/productCard/ProductCard.vue';
 import BaseNuxtLink from '@/components/baseComponents/BaseNuxtLink.vue';
 
+import PartnerProgramBg from '@/static/images/PartnerProgramBg.png';
+import PartnerProgramBgEn from '@/static/images/PartnerProgramBgEn.png';
+
 export default {
   components: {
     Container,
     ProductCard,
     BaseNuxtLink
+  },
+
+  data() {
+    return {
+      PartnerProgramBg,
+      PartnerProgramBgEn
+    };
   },
 
   mounted() {

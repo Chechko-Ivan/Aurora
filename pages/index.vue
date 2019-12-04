@@ -115,7 +115,11 @@
             class="s-products-col"
           >
             <product-card
-              :to="localePath({ path: `products/${product.link}` })"
+              :to="
+                localePath({
+                  path: `/products/${product.link}`
+                })
+              "
               :title="product.title"
               :image-src="`images/contentImage/${product.summary.summaryImage}`"
               :text="product.summary.summaryText"
@@ -128,8 +132,10 @@
 
     <section class="s-partner-program">
       <img
+        :src="
+          this.$i18n.locale === 'ru' ? PartnerProgramBg : PartnerProgramBgEn
+        "
         class="s-partner-program-bg-image"
-        src="@/static/images/PartnerProgramBg.png"
         alt="alt"
       />
       <container>
@@ -251,6 +257,9 @@ import ApplicationForm from '@/components/form/ApplicationForm.vue';
 import ApplicationFormRow from '@/components/form/ApplicationFormRow.vue';
 import ApplicationFormField from '@/components/form/ApplicationFormField.vue';
 
+import PartnerProgramBg from '@/static/images/PartnerProgramBg.png';
+import PartnerProgramBgEn from '@/static/images/PartnerProgramBgEn.png';
+
 export default {
   components: {
     Container,
@@ -284,7 +293,9 @@ export default {
       },
       windowWidth: null,
       activeAdvanatagePaneKey: 0,
-      productCardNodeList: null
+      productCardNodeList: null,
+      PartnerProgramBg,
+      PartnerProgramBgEn
     };
   },
 
