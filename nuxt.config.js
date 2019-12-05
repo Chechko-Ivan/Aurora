@@ -79,6 +79,7 @@ export default {
 
   plugins: [
     // '~/plugins/i18n.js',
+    '~/plugins/aos.js',
     '~/plugins/antd.js',
     {
       src: '~/plugins/swiper.js',
