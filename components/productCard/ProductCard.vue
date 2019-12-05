@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import BaseButton from '@/components/baseComponents/BaseButton.vue';
+import BaseButton from '~/components/baseComponents/BaseButton.vue';
 
 export default {
   name: 'ProductCard',

@@ -209,18 +209,18 @@
 </template>
 
 <script>
-import Container from '@/components/Container.vue';
-import ProductCard from '@/components/productCard/ProductCard.vue';
-import RoundAnimation from '@/components/roundAnimation/RoundAnimation.vue';
-import RoundAnimationCircle from '@/components/roundAnimation/RoundAnimationCircle.vue';
-import RoundAnimationInner from '@/components/roundAnimation/RoundAnimationInner.vue';
-import BaseNuxtLink from '@/components/baseComponents/BaseNuxtLink.vue';
-import Adventages from '@/components/adventages/Adventages.vue';
-import AdventagesItem from '@/components/adventages/AdventagesItem.vue';
+import Container from '~/components/Container.vue';
+import ProductCard from '~/components/productCard/ProductCard.vue';
+import RoundAnimation from '~/components/roundAnimation/RoundAnimation.vue';
+import RoundAnimationCircle from '~/components/roundAnimation/RoundAnimationCircle.vue';
+import RoundAnimationInner from '~/components/roundAnimation/RoundAnimationInner.vue';
+import BaseNuxtLink from '~/components/baseComponents/BaseNuxtLink.vue';
+import Adventages from '~/components/adventages/Adventages.vue';
+import AdventagesItem from '~/components/adventages/AdventagesItem.vue';
 
-import designPicture1 from '@/static/images/designPicture/designPicture1.jpg';
-import designPicture2 from '@/static/images/designPicture/designPicture2.jpg';
-import VideoPreview from '@/static/images/PageAboutVideoPreview.jpg';
+import designPicture1 from '~/static/images/designPicture/designPicture1.jpg';
+import designPicture2 from '~/static/images/designPicture/designPicture2.jpg';
+import VideoPreview from '~/static/images/PageAboutVideoPreview.jpg';
 import MarkSettings from '~/static/images/MarkSettings.svg';
 import CubeMolecule from '~/static/images/CubeMolecule.svg';
 import Roket from '~/static/images/Roket.svg';

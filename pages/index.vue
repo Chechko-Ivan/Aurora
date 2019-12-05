@@ -41,7 +41,7 @@
                 <round-animation-item class="first">
                   <img
                     slot="icon"
-                    src="@/static/images/Gear.svg"
+                    src="~/static/images/Gear.svg"
                     alt="Gear Icon"
                   />
                   <template slot="text">
@@ -53,7 +53,7 @@
                   <round-animation-item class="second">
                     <img
                       slot="icon"
-                      src="@/static/images/Medal.svg"
+                      src="~/static/images/Medal.svg"
                       alt="Medal Icon"
                     />
                     <template slot="text">
@@ -65,7 +65,7 @@
                     <round-animation-item class="third">
                       <img
                         slot="icon"
-                        src="@/static/images/Honeycombs.svg"
+                        src="~/static/images/Honeycombs.svg"
                         alt="Honeycombs Icon"
                       />
                       <template slot="text">
@@ -74,7 +74,7 @@
                     </round-animation-item>
                     <round-animation-inner>
                       <img
-                        src="@/static/images/contentImage/Windowsill.png"
+                        src="~/static/images/contentImage/Windowsill.png"
                         alt="Windowsill"
                       />
                     </round-animation-inner>
@@ -143,7 +143,7 @@
           <a-col :xl="{ offset: 2, span: 22 }">
             <img
               class="s-partner-program-icon"
-              src="@/static/images/Network.svg"
+              src="~/static/images/Network.svg"
               alt="Network Icon"
               width="55px"
             />
@@ -244,21 +244,21 @@
 </template>
 
 <script>
-import Container from '@/components/Container.vue';
-import RoundAnimation from '@/components/roundAnimation/RoundAnimation.vue';
-import RoundAnimationCircle from '@/components/roundAnimation/RoundAnimationCircle.vue';
-import RoundAnimationInner from '@/components/roundAnimation/RoundAnimationInner.vue';
-import RoundAnimationItem from '@/components/roundAnimation/RoundAnimationItem.vue';
-import ProductCardBase from '@/components/ProductCard/ProductCardBase.vue';
-import ProductCard from '@/components/productCard/ProductCard.vue';
-import BaseButton from '@/components/baseComponents/BaseButton.vue';
-import BaseNuxtLink from '@/components/baseComponents/BaseNuxtLink.vue';
-import ApplicationForm from '@/components/form/ApplicationForm.vue';
-import ApplicationFormRow from '@/components/form/ApplicationFormRow.vue';
-import ApplicationFormField from '@/components/form/ApplicationFormField.vue';
+import Container from '~/components/Container.vue';
+import RoundAnimation from '~/components/roundAnimation/RoundAnimation.vue';
+import RoundAnimationCircle from '~/components/roundAnimation/RoundAnimationCircle.vue';
+import RoundAnimationInner from '~/components/roundAnimation/RoundAnimationInner.vue';
+import RoundAnimationItem from '~/components/roundAnimation/RoundAnimationItem.vue';
+import ProductCardBase from '~/components/ProductCard/ProductCardBase.vue';
+import ProductCard from '~/components/productCard/ProductCard.vue';
+import BaseButton from '~/components/baseComponents/BaseButton.vue';
+import BaseNuxtLink from '~/components/baseComponents/BaseNuxtLink.vue';
+import ApplicationForm from '~/components/form/ApplicationForm.vue';
+import ApplicationFormRow from '~/components/form/ApplicationFormRow.vue';
+import ApplicationFormField from '~/components/form/ApplicationFormField.vue';
 
-import PartnerProgramBg from '@/static/images/PartnerProgramBg.png';
-import PartnerProgramBgEn from '@/static/images/PartnerProgramBgEn.png';
+import PartnerProgramBg from '~/static/images/PartnerProgramBg.png';
+import PartnerProgramBgEn from '~/static/images/PartnerProgramBgEn.png';
 
 export default {
   components: {

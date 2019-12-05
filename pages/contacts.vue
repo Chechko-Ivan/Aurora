@@ -109,12 +109,12 @@
 </template>
 
 <script>
-import Container from '@/components/Container.vue';
-import BaseButton from '@/components/baseComponents/BaseButton.vue';
-import ApplicationForm from '@/components/form/ApplicationForm.vue';
-import ApplicationFormRow from '@/components/form/ApplicationFormRow.vue';
-import ApplicationFormField from '@/components/form/ApplicationFormField.vue';
-import ApplicationFormTextarea from '@/components/form/ApplicationFormTextarea.vue';
+import Container from '~/components/Container.vue';
+import BaseButton from '~/components/baseComponents/BaseButton.vue';
+import ApplicationForm from '~/components/form/ApplicationForm.vue';
+import ApplicationFormRow from '~/components/form/ApplicationFormRow.vue';
+import ApplicationFormField from '~/components/form/ApplicationFormField.vue';
+import ApplicationFormTextarea from '~/components/form/ApplicationFormTextarea.vue';
 
 import MapBg from '~/static/images/Map.jpg';
 

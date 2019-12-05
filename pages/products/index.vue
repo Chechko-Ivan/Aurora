@@ -49,7 +49,7 @@
           <a-col :xl="{ offset: 2, span: 22 }">
             <img
               class="s-partner-program-icon"
-              src="@/static/images/Network.svg"
+              src="~/static/images/Network.svg"
               alt="Network Icon"
               width="55px"
             />
@@ -81,12 +81,12 @@
 </template>
 
 <script>
-import Container from '@/components/Container.vue';
-import ProductCard from '@/components/productCard/ProductCard.vue';
-import BaseNuxtLink from '@/components/baseComponents/BaseNuxtLink.vue';
+import Container from '~/components/Container.vue';
+import ProductCard from '~/components/productCard/ProductCard.vue';
+import BaseNuxtLink from '~/components/baseComponents/BaseNuxtLink.vue';
 
-import PartnerProgramBg from '@/static/images/PartnerProgramBg.png';
-import PartnerProgramBgEn from '@/static/images/PartnerProgramBgEn.png';
+import PartnerProgramBg from '~/static/images/PartnerProgramBg.png';
+import PartnerProgramBgEn from '~/static/images/PartnerProgramBgEn.png';
 
 export default {
   components: {

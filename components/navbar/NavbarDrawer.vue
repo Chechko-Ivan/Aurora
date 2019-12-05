@@ -71,9 +71,9 @@
 </template>
 
 <script>
-import NavbarLink from '@/components/navbar/NavbarLink.vue';
-import NavbarSearchbar from '@/components/navbar/NavbarSearchbar.vue';
-import ActionLink from '@/components/baseComponents/ActionLink.vue';
+import NavbarLink from '~/components/navbar/NavbarLink.vue';
+import NavbarSearchbar from '~/components/navbar/NavbarSearchbar.vue';
+import ActionLink from '~/components/baseComponents/ActionLink.vue';
 
 export default {
   name: 'NavbarDrawer',

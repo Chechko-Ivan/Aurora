@@ -72,9 +72,14 @@ export default {
 
   router: {},
 
-  css: ['~/assets/style/index.scss', 'swiper/dist/css/swiper.css'],
+  css: [
+    '~/assets/style/index.scss',
+    'aos/dist/aos.css',
+    'swiper/dist/css/swiper.css'
+  ],
 
   plugins: [
+    '~/plugins/aos.js',
     '~/plugins/antd.js',
     {
       src: '~/plugins/swiper.js',

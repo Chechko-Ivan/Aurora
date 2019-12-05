@@ -85,7 +85,7 @@
     <section v-if="data.detail.product_types" class="s-types-products">
       <img
         class="s-types-products-bg-image"
-        src="@/static/images/DashedCircle2.png"
+        src="~/static/images/DashedCircle2.png"
         alt="Dashed Circle"
       />
       <container>
@@ -156,12 +156,12 @@
 </template>
 
 <script>
-import Container from '@/components/Container.vue';
-import BaseButton from '@/components/baseComponents/BaseButton.vue';
-import ApplicationForm from '@/components/form/ApplicationForm.vue';
-import ApplicationFormRow from '@/components/form/ApplicationFormRow.vue';
-import ApplicationFormField from '@/components/form/ApplicationFormField.vue';
-import ApplicationFormTextarea from '@/components/form/ApplicationFormTextarea.vue';
+import Container from '~/components/Container.vue';
+import BaseButton from '~/components/baseComponents/BaseButton.vue';
+import ApplicationForm from '~/components/form/ApplicationForm.vue';
+import ApplicationFormRow from '~/components/form/ApplicationFormRow.vue';
+import ApplicationFormField from '~/components/form/ApplicationFormField.vue';
+import ApplicationFormTextarea from '~/components/form/ApplicationFormTextarea.vue';
 
 export default {
   components: {

@@ -149,17 +149,17 @@
 </template>
 
 <script>
-import Container from '@/components/Container.vue';
-import RoundAnimation from '@/components/roundAnimation/RoundAnimation.vue';
-import RoundAnimationCircle from '@/components/roundAnimation/RoundAnimationCircle.vue';
-import RoundAnimationInner from '@/components/roundAnimation/RoundAnimationInner.vue';
-import Adventages from '@/components/adventages/Adventages.vue';
-import AdventagesItem from '@/components/adventages/AdventagesItem.vue';
-import BaseButton from '@/components/baseComponents/BaseButton.vue';
-import ApplicationForm from '@/components/form/ApplicationForm.vue';
-import ApplicationFormRow from '@/components/form/ApplicationFormRow.vue';
-import ApplicationFormField from '@/components/form/ApplicationFormField.vue';
-import ApplicationFormTextarea from '@/components/form/ApplicationFormTextarea.vue';
+import Container from '~/components/Container.vue';
+import RoundAnimation from '~/components/roundAnimation/RoundAnimation.vue';
+import RoundAnimationCircle from '~/components/roundAnimation/RoundAnimationCircle.vue';
+import RoundAnimationInner from '~/components/roundAnimation/RoundAnimationInner.vue';
+import Adventages from '~/components/adventages/Adventages.vue';
+import AdventagesItem from '~/components/adventages/AdventagesItem.vue';
+import BaseButton from '~/components/baseComponents/BaseButton.vue';
+import ApplicationForm from '~/components/form/ApplicationForm.vue';
+import ApplicationFormRow from '~/components/form/ApplicationFormRow.vue';
+import ApplicationFormField from '~/components/form/ApplicationFormField.vue';
+import ApplicationFormTextarea from '~/components/form/ApplicationFormTextarea.vue';
 
 import designPicture1 from '~/static/images/designPicture/designPicture1.jpg';
 

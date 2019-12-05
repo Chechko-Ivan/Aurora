@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import Container from '@/components/Container.vue';
+import Container from '~/components/Container.vue';
 
 import bg from '~/static/images/AdventageBg.png';
 

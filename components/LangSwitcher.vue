@@ -33,8 +33,8 @@
 </template>
 
 <script>
-import RoundAnimation from '@/components/roundAnimation/RoundAnimation.vue';
-import RoundAnimationCircle from '@/components/roundAnimation/RoundAnimationCircle.vue';
+import RoundAnimation from '~/components/roundAnimation/RoundAnimation.vue';
+import RoundAnimationCircle from '~/components/roundAnimation/RoundAnimationCircle.vue';
 
 export default {
   name: 'LangSwitcher',

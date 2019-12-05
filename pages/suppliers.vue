@@ -107,16 +107,16 @@
 </template>
 
 <script>
-import Container from '@/components/Container.vue';
-import RoundAnimation from '@/components/roundAnimation/RoundAnimation.vue';
-import RoundAnimationCircle from '@/components/roundAnimation/RoundAnimationCircle.vue';
-import RoundAnimationInner from '@/components/roundAnimation/RoundAnimationInner.vue';
-import BaseButton from '@/components/baseComponents/BaseButton.vue';
-import BaseNuxtLink from '@/components/baseComponents/BaseNuxtLink.vue';
-import ApplicationForm from '@/components/form/ApplicationForm.vue';
-import ApplicationFormRow from '@/components/form/ApplicationFormRow.vue';
-import ApplicationFormField from '@/components/form/ApplicationFormField.vue';
-import ApplicationFormTextarea from '@/components/form/ApplicationFormTextarea.vue';
+import Container from '~/components/Container.vue';
+import RoundAnimation from '~/components/roundAnimation/RoundAnimation.vue';
+import RoundAnimationCircle from '~/components/roundAnimation/RoundAnimationCircle.vue';
+import RoundAnimationInner from '~/components/roundAnimation/RoundAnimationInner.vue';
+import BaseButton from '~/components/baseComponents/BaseButton.vue';
+import BaseNuxtLink from '~/components/baseComponents/BaseNuxtLink.vue';
+import ApplicationForm from '~/components/form/ApplicationForm.vue';
+import ApplicationFormRow from '~/components/form/ApplicationFormRow.vue';
+import ApplicationFormField from '~/components/form/ApplicationFormField.vue';
+import ApplicationFormTextarea from '~/components/form/ApplicationFormTextarea.vue';
 
 export default {
   components: {
