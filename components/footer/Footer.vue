@@ -9,22 +9,30 @@
             :xs="{ order: 3, offset: 1, span: 11 }"
           >
             <div class="footer-list">
-              <h3 class="footer-list-title">О нас</h3>
+              <h3 class="footer-list-title">
+                {{ $t('footer.about_us') }}
+              </h3>
 
               <ul>
                 <li>
-                  <nuxt-link :to="localePath('about')">О компании</nuxt-link>
+                  <nuxt-link :to="localePath('about')">
+                    {{ $t('navbar.links.about') }}
+                  </nuxt-link>
                 </li>
                 <li>
-                  <nuxt-link :to="localePath('partners')">Партнерам</nuxt-link>
+                  <nuxt-link :to="localePath('partners')">
+                    {{ $t('navbar.links.partners') }}
+                  </nuxt-link>
                 </li>
                 <li>
-                  <nuxt-link :to="localePath('jobs')"
-                    >Работа в Аврорапласт</nuxt-link
-                  >
+                  <nuxt-link :to="localePath('jobs')">
+                    {{ $t('navbar.links.jobs') }}
+                  </nuxt-link>
                 </li>
                 <li>
-                  <nuxt-link :to="localePath('contacts')">Контакты</nuxt-link>
+                  <nuxt-link :to="localePath('contacts')">
+                    {{ $t('navbar.links.contacts') }}
+                  </nuxt-link>
                 </li>
               </ul>
             </div>
@@ -34,7 +42,7 @@
               <logo></logo>
 
               <div>
-                <h3 class="footer-list-title">Контакты</h3>
+                <h3 class="footer-list-title">{{ $t('footer.contacts') }}</h3>
 
                 <ul>
                   <li>
@@ -65,21 +73,25 @@
             :xs="{ order: 3, offset: 1, span: 11 }"
           >
             <div class="footer-list">
-              <h3 class="footer-list-title">Производство</h3>
+              <h3 class="footer-list-title">
+                {{ $t('footer.production') }}
+              </h3>
 
               <ul>
                 <li>
-                  <nuxt-link :to="localePath('products')">Продукция</nuxt-link>
-                </li>
-                <li>
-                  <nuxt-link :to="localePath('component_parts')">
-                    Комплектующие на заказ
+                  <nuxt-link :to="localePath('products')">
+                    {{ $t('navbar.links.products') }}
                   </nuxt-link>
                 </li>
                 <li>
-                  <nuxt-link :to="localePath('suppliers')"
-                    >Поставщикам</nuxt-link
-                  >
+                  <nuxt-link :to="localePath('component_parts')">
+                    {{ $t('navbar.links.component_parts') }}
+                  </nuxt-link>
+                </li>
+                <li>
+                  <nuxt-link :to="localePath('suppliers')">
+                    {{ $t('navbar.links.suppliers') }}
+                  </nuxt-link>
                 </li>
               </ul>
             </div>
@@ -89,15 +101,14 @@
 
       <div class="footer-bottom">
         <span class="copyright">
-          {{ `&copy; ${new Date().getFullYear()} ООО «Секвойя»` }}
+          {{
+            `&copy; ${new Date().getFullYear()} 
+            ${$t('footer.organization_name')}`
+          }}
         </span>
-        <!-- <span class="delimiter">|</span>
-        <a href="/">
-          Политика обработки персональных данных
-        </a> -->
         <span class="delimiter bullet">&bull;</span>
         <a href="https://maksis.by">
-          Разработано студией Maksis
+          {{ $t('footer.developer') }}
         </a>
       </div>
     </container>

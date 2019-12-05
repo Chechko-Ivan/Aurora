@@ -1,23 +1,22 @@
 export default {
   mode: 'spa',
 
-  // generate: {
-  //   routes: [
-  //     "/services/ERP",
-  //     "/services/software-development",
-  //     "/services/software-development/web&mobile",
-  //     "/services/software-development/enterprise-software",
-  //     "/services/ERP/CRM",
-  //     "/services/ERP/R&D",
-  //     "/services/ERP/MRP-APS-MES",
-  //     "/services/ERP/Сontrolling",
-  //     "/services/ERP/EAM",
-  //     "/services/ERP-системы/WMS-TMS-PMS-SCM",
-  //     "/services/ERP/FI",
-  //     "/services/ERP/BPM",
-  //     "/services/ERP/PM"
-  //   ]
-  // },
+  generate: {
+    routes: [
+      '/products/sandwich_panel',
+      '/products/pvc_sheet',
+      '/products/pvc_window_sill',
+      '/products/stand_profile',
+      '/products/start_and_finish_profiles',
+      '/products/pvc_thermal_inserts',
+      '/en/products/sandwich_panel',
+      '/en/products/pvc_sheet',
+      '/en/products/pvc_window_sill',
+      '/en/products/stand_profile',
+      '/en/products/start_and_finish_profiles',
+      '/en/products/pvc_thermal_inserts'
+    ]
+  },
 
   head: {
     title: 'АВРОРАПЛАСТ',
@@ -71,15 +70,11 @@ export default {
   // loading: '~/components/Loading.vue',
   loading: false,
 
-  router: {
-    // middleware: 'i18n'
-  },
+  router: {},
 
   css: ['~/assets/style/index.scss', 'swiper/dist/css/swiper.css'],
 
   plugins: [
-    // '~/plugins/i18n.js',
-    '~/plugins/aos.js',
     '~/plugins/antd.js',
     {
       src: '~/plugins/swiper.js',
@@ -113,8 +108,13 @@ export default {
         lazy: true,
         langDir: 'locales/'
       }
+    ],
+    [
+      '@nuxtjs/sitemap',
+      {
+        hostname: 'http://avroraplast.ru'
+      }
     ]
-    // '@nuxtjs/sitemap'
   ],
 
   svgSprite: {

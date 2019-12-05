@@ -1,5 +1,7 @@
 <template>
-  <nuxt-link :to="to" class="navbar-link"><slot></slot></nuxt-link>
+  <nuxt-link :to="to" class="navbar-link">
+    <slot></slot>
+  </nuxt-link>
 </template>
 
 <script>
