@@ -72,14 +72,14 @@
 
               <application-form-row>
                 <application-form-field
-                  placeholder="Представьтесь"
+                  placeholder="Представьтесь*"
                 ></application-form-field>
               </application-form-row>
 
               <application-form-row>
                 <application-form-field
                   type="tel"
-                  placeholder="Контактный телефон"
+                  placeholder="Контактный телефон*"
                 ></application-form-field>
 
                 <application-form-field
@@ -90,13 +90,13 @@
 
               <application-form-row>
                 <application-form-textarea
-                  placeholder="Сообщение"
+                  placeholder="Сообщение*"
                 ></application-form-textarea>
               </application-form-row>
 
               <div class="button-wrapper">
                 <base-button color="light" large>
-                  Отправить
+                  {{ $t('form.submit') }}
                   <svg-icon slot="icon" name="ArrowRight" />
                 </base-button>
               </div>

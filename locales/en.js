@@ -29,7 +29,7 @@ export default (context) => {
       products: [
         {
           link: 'sandwich_panel',
-          title: 'Pvc sandwich panel',
+          title: 'Сэндвич панели ПВХ',
           summary: {
             summaryImage: 'PVCSandwichPanel.png',
             summaryText: '',
@@ -42,6 +42,7 @@ export default (context) => {
           },
           detail: {
             images: ['PVCSandwichPanel.png', 'PVCSandwichPanel2.png'],
+            characteristics: [],
             description: [
               'Панели поливинилхлоридные трехслойные с утеплителем (далее сэндвич-панель), выпускаемые по ТУ BY790279469.651-2011, представляют конструкцию из двух жестких листов ПВХ, лицевой слой которого защищен полиэтиленовой пленкой, между которыми находится утеплитель -  экструдированный пенополистирол.'
             ],
@@ -62,17 +63,12 @@ export default (context) => {
                 'Для изготовления термокоробов.',
                 'Изготовление рекламных щитов и вывесок.'
               ]
-            },
-            characteristics: [
-              'Толщина листа для лицевой поверхности 0,4-1,4 мм',
-              'Толщина сэндвич панелей 16-100 мм',
-              'Размер панелей 1500*3000, 2000*3000'
-            ]
+            }
           }
         },
         {
           link: 'pvc_sheet',
-          title: 'PVC sheet',
+          title: 'Лист ПВХ',
           summary: {
             summaryImage: 'PVCSheet.png',
             summaryText: '',
@@ -83,7 +79,8 @@ export default (context) => {
             ]
           },
           detail: {
-            images: ['PVCSandwichPanel.png', 'PVCSandwichPanel2.png'],
+            images: ['PVCSheet.png'],
+            characteristics: [],
             description: [
               'Панели поливинилхлоридные трехслойные с утеплителем (далее сэндвич-панель), выпускаемые по ТУ BY790279469.651-2011, представляют конструкцию из двух жестких листов ПВХ, лицевой слой которого защищен полиэтиленовой пленкой, между которыми находится утеплитель -  экструдированный пенополистирол.'
             ],
@@ -104,17 +101,12 @@ export default (context) => {
                 'Для изготовления термокоробов.',
                 'Изготовление рекламных щитов и вывесок.'
               ]
-            },
-            characteristics: [
-              'Толщина листа для лицевой поверхности 0,4-1,4 мм',
-              'Толщина сэндвич панелей 16-100 мм',
-              'Размер панелей 1500*3000, 2000*3000'
-            ]
+            }
           }
         },
         {
           link: 'pvc_window_sill',
-          title: 'PVC window sill',
+          title: 'Подоконник ПВХ',
           summary: {
             summaryImage: 'Windowsill.png',
             summaryText:
@@ -122,7 +114,8 @@ export default (context) => {
             summaryList: []
           },
           detail: {
-            images: ['PVCSandwichPanel.png', 'PVCSandwichPanel2.png'],
+            images: ['Windowsill.png'],
+            characteristics: [],
             description: [
               'Панели поливинилхлоридные трехслойные с утеплителем (далее сэндвич-панель), выпускаемые по ТУ BY790279469.651-2011, представляют конструкцию из двух жестких листов ПВХ, лицевой слой которого защищен полиэтиленовой пленкой, между которыми находится утеплитель -  экструдированный пенополистирол.'
             ],
@@ -143,17 +136,12 @@ export default (context) => {
                 'Для изготовления термокоробов.',
                 'Изготовление рекламных щитов и вывесок.'
               ]
-            },
-            characteristics: [
-              'Толщина листа для лицевой поверхности 0,4-1,4 мм',
-              'Толщина сэндвич панелей 16-100 мм',
-              'Размер панелей 1500*3000, 2000*3000'
-            ]
+            }
           }
         },
         {
           link: 'stand_profile',
-          title: 'Stand profile',
+          title: 'Подставочный профиль',
           summary: {
             summaryImage: 'StandProfile.png',
             summaryText: 'Используется при установке окон ПВХ и обеспечивает:',
@@ -164,7 +152,15 @@ export default (context) => {
             ]
           },
           detail: {
-            images: ['PVCSandwichPanel.png', 'PVCSandwichPanel2.png'],
+            images: [
+              'StandProfile.png',
+              'StandProfile2.png',
+              'StandProfile3.png',
+              'StandProfile4',
+              'StandProfile5.png',
+              'StandProfile6.png'
+            ],
+            characteristics: [],
             description: [
               'Панели поливинилхлоридные трехслойные с утеплителем (далее сэндвич-панель), выпускаемые по ТУ BY790279469.651-2011, представляют конструкцию из двух жестких листов ПВХ, лицевой слой которого защищен полиэтиленовой пленкой, между которыми находится утеплитель -  экструдированный пенополистирол.'
             ],
@@ -185,17 +181,12 @@ export default (context) => {
                 'Для изготовления термокоробов.',
                 'Изготовление рекламных щитов и вывесок.'
               ]
-            },
-            characteristics: [
-              'Толщина листа для лицевой поверхности 0,4-1,4 мм',
-              'Толщина сэндвич панелей 16-100 мм',
-              'Размер панелей 1500*3000, 2000*3000'
-            ]
+            }
           }
         },
         {
           link: 'start_and_finish_profiles',
-          title: 'Start and finish profiles',
+          title: 'Стартовый и финишный профили',
           summary: {
             summaryImage: 'StartFinishProfiles.png',
             summaryText:
@@ -203,7 +194,8 @@ export default (context) => {
             summaryList: []
           },
           detail: {
-            images: ['PVCSandwichPanel.png', 'PVCSandwichPanel2.png'],
+            images: ['StartFinishProfiles.png', 'StartFinishProfiles2.png'],
+            characteristics: [],
             description: [
               'Панели поливинилхлоридные трехслойные с утеплителем (далее сэндвич-панель), выпускаемые по ТУ BY790279469.651-2011, представляют конструкцию из двух жестких листов ПВХ, лицевой слой которого защищен полиэтиленовой пленкой, между которыми находится утеплитель -  экструдированный пенополистирол.'
             ],
@@ -224,17 +216,12 @@ export default (context) => {
                 'Для изготовления термокоробов.',
                 'Изготовление рекламных щитов и вывесок.'
               ]
-            },
-            characteristics: [
-              'Толщина листа для лицевой поверхности 0,4-1,4 мм',
-              'Толщина сэндвич панелей 16-100 мм',
-              'Размер панелей 1500*3000, 2000*3000'
-            ]
+            }
           }
         },
         {
           link: 'pvc_thermal_inserts',
-          title: 'PVC thermal inserts',
+          title: 'Термовставки ПВХ',
           summary: {
             summaryImage: 'PVCThermalInserts.png',
             summaryText:
@@ -242,7 +229,13 @@ export default (context) => {
             summaryList: []
           },
           detail: {
-            images: ['PVCSandwichPanel.png', 'PVCSandwichPanel2.png'],
+            images: [
+              'PVCThermalInserts.png',
+              'PVCThermalInserts2.png',
+              'PVCThermalInserts3.png',
+              'PVCThermalInserts4.png'
+            ],
+            characteristics: [],
             description: [
               'Панели поливинилхлоридные трехслойные с утеплителем (далее сэндвич-панель), выпускаемые по ТУ BY790279469.651-2011, представляют конструкцию из двух жестких листов ПВХ, лицевой слой которого защищен полиэтиленовой пленкой, между которыми находится утеплитель -  экструдированный пенополистирол.'
             ],
@@ -263,12 +256,7 @@ export default (context) => {
                 'Для изготовления термокоробов.',
                 'Изготовление рекламных щитов и вывесок.'
               ]
-            },
-            characteristics: [
-              'Толщина листа для лицевой поверхности 0,4-1,4 мм',
-              'Толщина сэндвич панелей 16-100 мм',
-              'Размер панелей 1500*3000, 2000*3000'
-            ]
+            }
           }
         }
       ],
@@ -401,6 +389,16 @@ export default (context) => {
       },
       p_suppliers: {
         title: 'Suppliers'
+      },
+      footer: {
+        about_us: 'About us',
+        contacts: 'Contacts',
+        production: 'Production',
+        organization_name: 'Sequoia LLC',
+        developer: 'Designed by Maksis'
+      },
+      form: {
+        submit: 'Submit'
       }
     });
   });

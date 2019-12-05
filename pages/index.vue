@@ -230,7 +230,7 @@
                   placeholder="Введите номер телефона"
                 >
                   <base-button slot="root" type="submit" collapsed>
-                    Отправить
+                    {{ $t('form.submit') }}
                     <svg-icon slot="icon" name="ArrowRight" />
                   </base-button>
                 </application-form-field>

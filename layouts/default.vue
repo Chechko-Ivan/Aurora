@@ -43,7 +43,10 @@
       </breadcrumb-item>
     </breadcrumb>
 
-    <navbar-drawer :opened="drawerOpend"></navbar-drawer>
+    <navbar-drawer
+      :opened="drawerOpend"
+      @close-menu="drawerOpend = false"
+    ></navbar-drawer>
 
     <div
       :class="[
@@ -88,6 +91,9 @@ export default {
   computed: {
     breadcrumbs() {
       const breadcrumbs = [];
+
+      this.toggleDrawer();
+
       this.$route.matched.map((item, i, { length }) => {
         const breadcrumb = {};
         breadcrumb.path =
@@ -122,6 +128,12 @@ export default {
       return this.breadcrumbs.filter((breadcrumb) =>
         this.$t('products').find((product) => product.link === breadcrumb.name)
       );
+    }
+  },
+
+  methods: {
+    toggleDrawer() {
+      this.drawerOpend = false;
     }
   }
 };

@@ -9,24 +9,24 @@
 
     <ul class="navbar-drawer-list">
       <li>
-        <NavbarLink :to="localePath('products')">
+        <navbar-link :to="localePath('products')">
           {{ $t('navbar.links.products') }}
-        </NavbarLink>
+        </navbar-link>
       </li>
       <li>
-        <NavbarLink :to="localePath('partners')">
+        <navbar-link :to="localePath('partners')">
           {{ $t('navbar.links.partners') }}
-        </NavbarLink>
+        </navbar-link>
       </li>
       <li>
-        <NavbarLink :to="localePath('suppliers')">
+        <navbar-link :to="localePath('suppliers')">
           {{ $t('navbar.links.suppliers') }}
-        </NavbarLink>
+        </navbar-link>
       </li>
       <li>
-        <NavbarLink :to="localePath('contacts')">
+        <navbar-link :to="localePath('contacts')">
           {{ $t('navbar.links.contacts') }}
-        </NavbarLink>
+        </navbar-link>
       </li>
       <li>
         <navbar-link :to="localePath('about')">

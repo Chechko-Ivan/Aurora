@@ -90,6 +90,7 @@ export default {
 
     .circle {
       display: block;
+      z-index: 0;
     }
   }
 
