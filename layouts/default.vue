@@ -12,20 +12,22 @@
       ></LangSwitcher>
     </navbar>
 
-    <breadcrumb>
+    <breadcrumb data-aos="fade" data-aos-delay="200">
       <breadcrumb-item
         v-if="breadcrumbsWithoutIndex.length"
         :style="{ zIndex: breadcrumbs.length + 2 }"
         :to="localePath('index')"
-        >{{ $t('navbar.links.index') }}</breadcrumb-item
       >
+        {{ $t('navbar.links.index') }}
+      </breadcrumb-item>
 
       <breadcrumb-item
         v-if="breadcrumbsWithParams.length"
         :style="{ zIndex: breadcrumbs.length + 1 }"
         :to="localePath('products')"
-        >{{ $t('navbar.links.products') }}</breadcrumb-item
       >
+        {{ $t('navbar.links.products') }}
+      </breadcrumb-item>
 
       <breadcrumb-item
         v-for="breadcrumb in breadcrumbsWithoutIndex"

@@ -11,7 +11,11 @@
               { collapse: collapseSlider }
             ]"
           >
-            <div class="unidentified-div">
+            <div
+              class="unidentified-div"
+              data-aos="zoom-out"
+              data-aos-delay="200"
+            >
               <div class="page-products-inner-preview-slider">
                 <div v-swiper:mySwiper="swiperOption">
                   <div class="swiper-wrapper">
@@ -41,9 +45,17 @@
             </ul>
           </a-col>
 
-          <a-col :xl="{ span: 12 }" :lg="{ span: 14 }" :md="{ span: 16 }">
+          <a-col
+            :xl="{ span: 12 }"
+            :lg="{ span: 14 }"
+            :md="{ span: 16 }"
+            data-aos="fade"
+            data-aos-delay="400"
+          >
             <div class="page-products-inner-description">
-              <h1 class="title-h1">{{ data.title }}</h1>
+              <h1 class="title-h1">
+                {{ data.title }}
+              </h1>
 
               <p
                 v-for="(text, index) in data.detail.description"
@@ -114,7 +126,7 @@
       <container>
         <a-row :gutter="{ md: 20 }">
           <a-col>
-            <application-form accent>
+            <application-form accent data-aos="zoom-out" data-aos-delay="200">
               <h2 slot="title">Напишите нам</h2>
 
               <application-form-row>

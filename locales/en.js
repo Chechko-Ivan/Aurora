@@ -390,6 +390,9 @@ export default (context) => {
       p_suppliers: {
         title: 'Suppliers'
       },
+      p_about: {
+        title: 'About Auroraplast'
+      },
       footer: {
         about_us: 'About us',
         contacts: 'Contacts',

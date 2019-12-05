@@ -7,16 +7,22 @@
       <container>
         <a-row :gutter="{ md: 20 }" class="page-contacts-top">
           <a-col :xl="{ offset: 2, span: 22 }">
-            <span class="title-top">
+            <span class="title-top" data-aos="fade" data-aos-delay="400">
               Частное производственное унитарное предприятие
             </span>
-            <h1 class="title-h1">Аврорапласт</h1>
+            <h1 class="title-h1" data-aos="fade" data-aos-delay="200">
+              Аврорапласт
+            </h1>
           </a-col>
         </a-row>
 
         <a-row :gutter="{ md: 20 }" class="page-contacts-list">
           <a-col :xl="{ offset: 2, span: 22 }">
-            <div class="page-contacts-item">
+            <div
+              class="page-contacts-item"
+              data-aos="fade"
+              data-aos-delay="200"
+            >
               <div class="page-contacts-item-icon">
                 <img src="~/static/images/Pin.svg" alt="Pin" />
               </div>
@@ -36,7 +42,11 @@
           </a-col>
 
           <a-col :xl="{ offset: 2, span: 22 }">
-            <div class="page-contacts-item">
+            <div
+              class="page-contacts-item"
+              data-aos="fade"
+              data-aos-delay="400"
+            >
               <div class="page-contacts-item-icon">
                 <img src="~/static/images/Phone.svg" alt="Phone" />
               </div>
@@ -49,7 +59,11 @@
           </a-col>
 
           <a-col :xl="{ offset: 2, span: 22 }">
-            <div class="page-contacts-item">
+            <div
+              class="page-contacts-item"
+              data-aos="fade"
+              data-aos-delay="600"
+            >
               <div class="page-contacts-item-icon">
                 <img src="~/static/images/Mail.svg" alt="Mail" />
               </div>
@@ -67,7 +81,7 @@
       <container>
         <a-row :gutter="{ md: 20 }">
           <a-col>
-            <application-form accent>
+            <application-form accent data-aos="zoom-out" data-aos-delay="200">
               <h2 slot="title">Напишите нам</h2>
 
               <application-form-row>

@@ -8,11 +8,20 @@
             :lg="{ span: 18 }"
             :md="{ span: 15 }"
           >
-            <span class="title-top">с 2003 года</span>
-            <h1 class="title-h1">Производим качественные изделия из ПВХ</h1>
+            <span class="title-top" data-aos="fade" data-aos-delay="800">
+              с 2003 года
+            </span>
+            <h1 class="title-h1" data-aos="zoom-out" data-aos-delay="200">
+              Производим качественные изделия из ПВХ
+            </h1>
           </a-col>
 
-          <a-col :lg="{ span: 6 }" :md="{ span: 9 }">
+          <a-col
+            :lg="{ span: 6 }"
+            :md="{ span: 9 }"
+            data-aos="fade"
+            data-aos-delay="400"
+          >
             <p class="text-xxl my-0">
               Специалисты Аврорапласт постоянно работают над обновлением и
               расширением ассортимента, повышением качества производимых изделий
@@ -21,8 +30,13 @@
         </a-row>
       </container>
 
-      <div class="video-line">
-        <div class="video-line-inner">
+      <div
+        class="video-line"
+        data-aos="slide-right"
+        data-aos-delay="1300"
+        data-aos-duration="1300"
+      >
+        <div class="video-line-inner" data-aos="fade" data-aos-delay="2500">
           <a href="/" class="video-line-button">
             Смотреть
             <svg-icon name="Play" />Видео
@@ -35,7 +49,11 @@
       <container>
         <a-row :gutter="20" type="flex" align="bottom">
           <a-col span="24">
-            <round-animation class="product-type-animation">
+            <round-animation
+              class="product-type-animation"
+              data-aos="fade"
+              data-aos-delay="1100"
+            >
               <round-animation-circle>
                 <!-- Gear -->
                 <round-animation-item class="first">
@@ -76,6 +94,9 @@
                       <img
                         src="~/static/images/contentImage/Windowsill.png"
                         alt="Windowsill"
+                        data-aos="zoom-out"
+                        data-aos-duration="1500"
+                        data-aos-delay="1150"
                       />
                     </round-animation-inner>
                   </round-animation-circle>
@@ -86,7 +107,7 @@
         </a-row>
       </container>
 
-      <div class="product-type-swiper">
+      <div class="product-type-swiper" data-aos="fade" data-aos-delay="1300">
         <div v-swiper:mySwiper="productSwiperOption">
           <div class="swiper-pagination swiper-pagination-bullets"></div>
           <div class="swiper-wrapper">
@@ -124,6 +145,16 @@
               :image-src="`images/contentImage/${product.summary.summaryImage}`"
               :text="product.summary.summaryText"
               :list-items="product.summary.summaryList"
+              :data-aos-delay="
+                index === 0 || index === 3
+                  ? 200
+                  : index === 1 || index === 4
+                  ? 300
+                  : index === 2 || index === 5
+                  ? 400
+                  : 200
+              "
+              data-aos="fade"
             ></product-card>
           </a-col>
         </a-row>
@@ -137,6 +168,8 @@
         "
         class="s-partner-program-bg-image"
         alt="alt"
+        data-aos="fade"
+        data-aos-delay="300"
       />
       <container>
         <a-row :gutter="{ md: 20 }">
@@ -146,11 +179,12 @@
               src="~/static/images/Network.svg"
               alt="Network Icon"
               width="55px"
+              data-aos="fade"
             />
-            <h2 class="s-partner-program-title title-h2">
+            <h2 class="s-partner-program-title title-h2" data-aos="fade">
               Партнерская программа
             </h2>
-            <div class="s-partner-program-text">
+            <div class="s-partner-program-text" data-aos="fade">
               <p class="text-xxl">
                 Мы заинтересованы в территориальном расширении нашей сети и
                 увеличения круга наших покупателей.
@@ -172,7 +206,11 @@
       </container>
     </section>
 
-    <section class="s-advantages s-advantages-text">
+    <section
+      class="s-advantages s-advantages-text"
+      data-aos="fade"
+      data-aos-delay="200"
+    >
       <container>
         <a-row :gutter="{ md: 20 }">
           <a-col :xl="{ offset: 2, span: 22 }">
@@ -217,13 +255,17 @@
         <a-row :gutter="{ md: 20 }">
           <a-col>
             <div class="s-title center">
-              <h2>Остались вопросы?</h2>
-              <span class="s-title-sub text-xxl">
+              <h2 data-aos="fade">Остались вопросы?</h2>
+              <span
+                class="s-title-sub text-xxl"
+                data-aos="fade"
+                data-aos-delay="250"
+              >
                 Оставьте свой номер телефона и мы свяжемся с вами
               </span>
             </div>
 
-            <application-form small>
+            <application-form small data-aos="zoom-out" data-aos-delay="200">
               <application-form-row>
                 <application-form-field
                   type="tel"

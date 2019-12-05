@@ -1,8 +1,12 @@
 <template>
   <div class="page page-suppliers">
-    <div class="dot dark-blue first"></div>
-    <div class="dot light-orange second"></div>
-    <round-animation>
+    <div class="dot dark-blue first" data-aos="fade" data-aos-delay="200"></div>
+    <div
+      class="dot light-orange second"
+      data-aos="fade"
+      data-aos-delay="400"
+    ></div>
+    <round-animation data-aos="fade" data-aos-delay="600">
       <round-animation-circle>
         <round-animation-circle>
           <round-animation-inner></round-animation-inner>
@@ -14,11 +18,13 @@
       <container>
         <a-row :gutter="20">
           <a-col :xl="{ offset: 2, span: 22 }">
-            <h1 class="title-h1">{{ $t('p_suppliers.title') }}</h1>
+            <h1 class="title-h1" data-aos="fade" data-aos-delay="200">
+              {{ $t('p_suppliers.title') }}
+            </h1>
           </a-col>
 
           <a-col :xl="{ offset: 2, span: 14 }">
-            <p class="text-xxxl">
+            <p class="text-xxxl" data-aos="fade" data-aos-delay="400">
               Мы всегда готовы к взаимовыгодному сотрудничеству. Если вы можете
               предложить качественные материалы и готовы к долгосрочному
               сотрудничеству - свяжитесь с нами и мы найдем общий язык.
@@ -32,16 +38,28 @@
       <container>
         <a-row :gutter="20">
           <a-col :xl="{ offset: 2, span: 20 }">
-            <p class="text-xxxl text-black">
+            <p
+              class="text-xxxl text-black"
+              data-aos="fade"
+              data-aos-delay="400"
+            >
               Чтобы обеспечить бесперебойную работу нашего предприятия, мы
               заинтересованы в сотрудничестве с поставщиками качественных
               товаров.
             </p>
 
-            <div class="s-suppliers-content-list-title text-xxl">
+            <div
+              class="s-suppliers-content-list-title text-xxl"
+              data-aos="fade"
+              data-aos-delay="600"
+            >
               На постоянной основе ведём закупку:
             </div>
-            <ul class="s-suppliers-content-list list-style-dots">
+            <ul
+              class="s-suppliers-content-list list-style-dots"
+              data-aos="fade"
+              data-aos-delay="600"
+            >
               <li>Защитной пленки для сэндвич панелей и подоконника ПВХ.</li>
               <li>Микрокальциты.</li>
               <li>Ламинационной пленки для подоконника.</li>
@@ -51,7 +69,11 @@
               <li>Добавки для переработки ПВХ в широком ассортименте.</li>
             </ul>
             <div class="link-wrapper">
-              <base-nuxt-link :to="localePath('contacts')">
+              <base-nuxt-link
+                :to="localePath('contacts')"
+                data-aos="zoom-out"
+                data-aos-delay="200"
+              >
                 Прислать коммерческое предложение
                 <svg-icon slot="icon" name="ArrowRight" />
               </base-nuxt-link>
@@ -65,7 +87,7 @@
       <container>
         <a-row :gutter="{ md: 20 }">
           <a-col>
-            <application-form accent>
+            <application-form accent data-aos="zoom-out" data-aos-delay="200">
               <h2 slot="title">Напишите нам</h2>
 
               <application-form-row>

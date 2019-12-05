@@ -1,9 +1,13 @@
 <template>
   <div class="page page-about">
-    <div class="dot dark-blue first"></div>
-    <div class="dot light-orange second"></div>
+    <div class="dot dark-blue first" data-aos="fade" data-aos-delay="200"></div>
+    <div
+      class="dot light-orange second"
+      data-aos="fade"
+      data-aos-delay="600"
+    ></div>
 
-    <div class="round-animation-first">
+    <div class="round-animation-first" data-aos="fade" data-aos-delay="800">
       <round-animation>
         <round-animation-circle class="round-animation-first">
           <round-animation-circle class="round-animation-second">
@@ -21,9 +25,11 @@
       <container>
         <a-row :gutter="20">
           <a-col :xl="{ offset: 2, span: 14 }">
-            <h1 class="title-h1">{{ $t('p_about.title') }}</h1>
+            <h1 class="title-h1" data-aos="fade" data-aos-delay="200">
+              {{ $t('p_about.title') }}
+            </h1>
 
-            <p class="text-xxxl">
+            <p class="text-xxxl" data-aos="fade" data-aos-delay="400">
               Чтобы достичь результатов и доверия наших клиентов, мы должны
               работать в команде, уважать друг друга, выполнять обещания и
               постоянно совершенствоваться
@@ -33,14 +39,24 @@
               <div
                 :style="`background-image: url(${designPicture2});`"
                 class="page-about-header-image"
+                data-aos="fade"
+                data-aos-delay="600"
               ></div>
               <div class="link-wrapper-inner">
-                <base-nuxt-link :to="localePath('jobs')">
+                <base-nuxt-link
+                  :to="localePath('jobs')"
+                  data-aos="fade"
+                  data-aos-delay="600"
+                >
                   <svg-icon slot="icon-before" name="SearchPeople" />
                   Работа в аврорапласт
                 </base-nuxt-link>
 
-                <base-nuxt-link :to="localePath('contacts')">
+                <base-nuxt-link
+                  :to="localePath('contacts')"
+                  data-aos="fade"
+                  data-aos-delay="800"
+                >
                   <svg-icon slot="icon-before" name="UserInfo" />
                   Контакты
                 </base-nuxt-link>
@@ -60,11 +76,15 @@
       <container>
         <a-row :gutter="20">
           <a-col :xl="{ offset: 2, span: 20 }">
-            <h2 class="title-h2">
+            <h2 class="title-h2" data-aos="fade" data-aos-delay="200">
               Аврорапласт является крупнейшим производителем изделий из ПВХ в
               Беларуси уже более <b class="text-accent">15</b> лет.
             </h2>
-            <div class="s-page-about-advantages-message">
+            <div
+              class="s-page-about-advantages-message"
+              data-aos="zoom-out"
+              data-aos-delay="200"
+            >
               <svg-icon slot="icon-before" name="Info" />
               <p class="text-xxxl">
                 С момента создания компании мы сделали ставку на такие аспекты,
@@ -73,7 +93,11 @@
             </div>
 
             <div class="s-page-about-advantages-items">
-              <div class="s-page-about-advantages-item">
+              <div
+                class="s-page-about-advantages-item"
+                data-aos="fade"
+                data-aos-delay="200"
+              >
                 <img src="../static/images/Plant.svg" alt="Icon" />
                 <p class="text-xxl text-black">
                   Производство качественной продукции отвечающей всем
@@ -81,7 +105,11 @@
                 </p>
               </div>
 
-              <div class="s-page-about-advantages-item">
+              <div
+                class="s-page-about-advantages-item"
+                data-aos="fade"
+                data-aos-delay="400"
+              >
                 <img src="../static/images/Gears.svg" alt="Icon" />
                 <p class="text-xxl text-black">
                   Современный технический уровень оснащения предприятия,
@@ -95,8 +123,13 @@
       </container>
     </section>
 
-    <section :style="`background-image: url(${VideoPreview});`" class="s-video">
-      <div class="s-video-informer">
+    <section
+      :style="`background-image: url(${VideoPreview});`"
+      class="s-video"
+      data-aos="fade-up"
+      data-aos-delay="200"
+    >
+      <div class="s-video-informer" data-aos="zoom-left" data-aos-delay="200">
         <span class="s-video-informer-subtitle">
           Основное направление деятельности компании
         </span>
@@ -109,7 +142,7 @@
         <a-row :gutter="20">
           <a-col :span="24">
             <div class="s-title center">
-              <h2>Наши продукты</h2>
+              <h2 data-aos="fade" data-aos-delay="200">Наши продукты</h2>
             </div>
           </a-col>
         </a-row>
@@ -132,6 +165,16 @@
               :image-src="`images/contentImage/${product.summary.summaryImage}`"
               :text="product.summary.summaryText"
               :list-items="product.summary.summaryList"
+              :data-aos-delay="
+                index === 0 || index === 3
+                  ? 200
+                  : index === 1 || index === 4
+                  ? 300
+                  : index === 2 || index === 5
+                  ? 400
+                  : 200
+              "
+              data-aos="fade"
             ></product-card>
           </a-col>
         </a-row>
@@ -139,26 +182,43 @@
     </section>
 
     <adventages>
-      <h2 slot="title" class="title-h2 text-light">
+      <h2
+        slot="title"
+        class="title-h2 text-light"
+        data-aos="fade"
+        data-aos-delay="200"
+      >
         {{ $t('p_partners.advantages.title') }}
       </h2>
 
       <container>
         <a-row :gutter="20">
           <a-col :lg="{ offset: 2, span: 6 }" :md="{ span: 8 }">
-            <adventages-item :iconSrc="MarkSettings">
+            <adventages-item
+              :iconSrc="MarkSettings"
+              data-aos="fade"
+              data-aos-delay="200"
+            >
               {{ $t('p_partners.advantages[1]') }}
             </adventages-item>
           </a-col>
 
           <a-col :lg="{ span: 8 }" :md="{ span: 8 }">
-            <adventages-item :iconSrc="CubeMolecule">
+            <adventages-item
+              :iconSrc="CubeMolecule"
+              data-aos="fade"
+              data-aos-delay="300"
+            >
               {{ $t('p_partners.advantages[2]') }}
             </adventages-item>
           </a-col>
 
           <a-col :lg="{ span: 6 }" :md="{ span: 8 }">
-            <adventages-item :iconSrc="Roket">
+            <adventages-item
+              :iconSrc="Roket"
+              data-aos="fade"
+              data-aos-delay="400"
+            >
               {{ $t('p_partners.advantages[3]') }}
             </adventages-item>
           </a-col>
@@ -166,19 +226,31 @@
 
         <a-row :gutter="20">
           <a-col :lg="{ offset: 2, span: 6 }" :md="{ span: 8 }">
-            <adventages-item :iconSrc="Hearth">
+            <adventages-item
+              :iconSrc="Hearth"
+              data-aos="fade"
+              data-aos-delay="200"
+            >
               {{ $t('p_partners.advantages[4]') }}
             </adventages-item>
           </a-col>
 
           <a-col :lg="{ span: 8 }" :md="{ span: 8 }">
-            <adventages-item :iconSrc="Social">
+            <adventages-item
+              :iconSrc="Social"
+              data-aos="fade"
+              data-aos-delay="300"
+            >
               {{ $t('p_partners.advantages[5]') }}
             </adventages-item>
           </a-col>
 
           <a-col :lg="{ span: 6 }" :md="{ span: 8 }">
-            <adventages-item :iconSrc="Defend">
+            <adventages-item
+              :iconSrc="Defend"
+              data-aos="fade"
+              data-aos-delay="400"
+            >
               {{ $t('p_partners.advantages[6]') }}
             </adventages-item>
           </a-col>
@@ -190,14 +262,18 @@
       <container>
         <a-row :gutter="20">
           <a-col :xl="{ offset: 2, span: 20 }">
-            <p class="text-xxxl text-black">
+            <p
+              class="text-xxxl text-black"
+              data-aos="fade"
+              data-aos-delay="200"
+            >
               Аврорапласт остается надёжным партнёром и поставщиком
               конкурентоспособной продукции для обеспечения бесперебойной
               работы. В своей деятельности наша компания ориентирована на
               производство качественной продукции отвечающей всем требованиям
               заказчика.
             </p>
-            <h2>
+            <h2 data-aos="zoom-out" data-aos-delay="400">
               С надеждой на взаимовыгодное
               <b class="text-accent">сотрудничество!</b>
             </h2>

@@ -1,11 +1,11 @@
 <template>
   <nav :class="['navbar', { 'drawer-opend': drawerOpend }]">
     <div class="navbar-inner">
-      <div class="navbar-logo">
+      <div class="navbar-logo" data-aos="fade" data-aos-delay="800">
         <Logo></Logo>
       </div>
 
-      <ul class="navbar-list">
+      <ul class="navbar-list" data-aos="fade" data-aos-delay="900">
         <li>
           <NavbarLink :to="localePath('products')">
             {{ $t('navbar.links.products') }}

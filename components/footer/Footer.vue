@@ -7,6 +7,8 @@
             :lg="{ offset: 2, span: 6 }"
             :md="{ offset: 1, order: 1, span: 7 }"
             :xs="{ order: 3, offset: 1, span: 11 }"
+            data-aos="fade"
+            data-aos-delay="200"
           >
             <div class="footer-list">
               <h3 class="footer-list-title">
@@ -37,7 +39,12 @@
               </ul>
             </div>
           </a-col>
-          <a-col :md="{ order: 2, span: 8 }" :xs="{ order: 1, span: 24 }">
+          <a-col
+            :md="{ order: 2, span: 8 }"
+            :xs="{ order: 1, span: 24 }"
+            data-aos="fade"
+            data-aos-delay="400"
+          >
             <div class="footer-list center">
               <logo></logo>
 
@@ -71,6 +78,8 @@
             :lg="{ offset: 2, span: 6 }"
             :md="{ offset: 1, order: 3, span: 7 }"
             :xs="{ order: 3, offset: 1, span: 11 }"
+            data-aos="fade"
+            data-aos-delay="600"
           >
             <div class="footer-list">
               <h3 class="footer-list-title">
@@ -102,7 +111,7 @@
       <div class="footer-bottom">
         <span class="copyright">
           {{
-            `&copy; ${new Date().getFullYear()} 
+            `&copy; ${new Date().getFullYear()}
             ${$t('footer.organization_name')}`
           }}
         </span>

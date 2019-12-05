@@ -1,7 +1,7 @@
 <template>
   <div class="page page-component-parts">
-    <div class="dot dark-blue first"></div>
-    <round-animation>
+    <div class="dot dark-blue first" data-aos="fade" data-aos-delay="200"></div>
+    <round-animation data-aos="fade" data-aos-delay="400">
       <round-animation-circle>
         <round-animation-circle>
           <round-animation-inner></round-animation-inner>
@@ -13,7 +13,9 @@
       <container>
         <a-row :gutter="20">
           <a-col :xl="{ offset: 2, span: 22 }">
-            <h1 class="title-h1">{{ $t('component_parts.title') }}</h1>
+            <h1 class="title-h1" data-aos="fade" data-aos-delay="200">
+              {{ $t('component_parts.title') }}
+            </h1>
           </a-col>
         </a-row>
       </container>
@@ -27,8 +29,10 @@
             :lg="{ span: 14 }"
             :md="{ span: 12 }"
           >
-            <h2 class="text-black">Для экструзионных линий</h2>
-            <p class="text-xxxl">
+            <h2 class="text-black" data-aos="fade" data-aos-delay="400">
+              Для экструзионных линий
+            </h2>
+            <p class="text-xxxl" data-aos="fade" data-aos-delay="500">
               Полный спектр оборудования и запасных частей для Ваших
               экструзионных линий по производству изделий из ПВХ
             </p>
@@ -38,6 +42,8 @@
             <img
               src="../static/images/designPicture/Machine.png"
               alt="Линия по производству ПВХ"
+              data-aos="zoom-out"
+              data-aos-delay="500"
             />
           </a-col>
         </a-row>
@@ -50,7 +56,21 @@
             :lg="{ span: 8 }"
             :md="{ span: 12 }"
           >
-            <div class="s-components-card">
+            <div
+              :data-aos-delay="
+                index === 0 || index === 3
+                  ? 200
+                  : index === 1 || index === 4
+                  ? 300
+                  : index === 2 || index === 5
+                  ? 400
+                  : index === 3 || index === 7
+                  ? 500
+                  : 200
+              "
+              class="s-components-card"
+              data-aos="fade"
+            >
               <h3 class="s-components-card-title">{{ item.title }}</h3>
               <span class="s-components-card-subtitle">
                 {{ item.subtitle }}
@@ -69,7 +89,9 @@
             :md="{ span: 14 }"
             :sm="{ span: 24 }"
           >
-            <h2 class="text-black">Системы автоматического смешивания</h2>
+            <h2 class="text-black" data-aos="fade" data-aos-delay="200">
+              Системы автоматического смешивания
+            </h2>
           </a-col>
 
           <a-col
@@ -80,6 +102,8 @@
             <img
               src="~/static/images/designPicture/Machine2.png"
               alt="Система автоматического смешивания"
+              data-aos="zoom-out"
+              data-aos-delay="500"
             />
           </a-col>
         </a-row>
@@ -87,26 +111,46 @@
     </section>
 
     <adventages>
-      <h2 slot="title" class="title-h2 text-light">
+      <h2
+        slot="title"
+        class="title-h2 text-light"
+        data-aos="fade"
+        data-aos-delay="200"
+      >
         {{ $t('component_parts.advantages.title') }}
       </h2>
 
       <container>
         <a-row :gutter="20">
           <a-col :xl="{ offset: 2, span: 20 }">
-            <adventages-item :iconSrc="Server" row>
+            <adventages-item
+              :iconSrc="Server"
+              row
+              data-aos="fade"
+              data-aos-delay="200"
+            >
               {{ $t('component_parts.advantages[1]') }}
             </adventages-item>
           </a-col>
 
           <a-col :xl="{ offset: 2, span: 20 }">
-            <adventages-item :iconSrc="GearSettings" row>
+            <adventages-item
+              :iconSrc="GearSettings"
+              row
+              data-aos="fade"
+              data-aos-delay="300"
+            >
               {{ $t('component_parts.advantages[2]') }}
             </adventages-item>
           </a-col>
 
           <a-col :xl="{ offset: 2, span: 20 }">
-            <adventages-item :iconSrc="Plant" row>
+            <adventages-item
+              :iconSrc="Plant"
+              row
+              data-aos="fade"
+              data-aos-delay="400"
+            >
               {{ $t('component_parts.advantages[3]') }}
             </adventages-item>
           </a-col>
@@ -118,7 +162,7 @@
       <container>
         <a-row :gutter="{ md: 20 }">
           <a-col>
-            <application-form accent>
+            <application-form accent data-aos="zoom-out" data-aos-delay="200">
               <h2 slot="title">Напишите нам</h2>
 
               <application-form-row>

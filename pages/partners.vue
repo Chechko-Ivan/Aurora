@@ -1,17 +1,25 @@
 <template>
   <div class="page page-partners">
-    <div class="dot dark-blue first"></div>
-    <div class="dot light-orange second"></div>
+    <div class="dot dark-blue first" data-aos="fade" data-aos-delay="200"></div>
+    <div
+      class="dot light-orange second"
+      data-aos="fade"
+      data-aos-delay="400"
+    ></div>
     <div
       :style="`background-image: url('${designPicture1}');`"
       class="dot with-images third"
+      data-aos="fade"
+      data-aos-delay="600"
     ></div>
 
     <header class="page-partners-header">
       <container>
         <a-row :gutter="20">
           <a-col :xl="{ offset: 2, span: 22 }">
-            <h1 class="title-h1">{{ $t('p_partners.title') }}</h1>
+            <h1 class="title-h1" data-aos="fade" data-aos-delay="200">
+              {{ $t('p_partners.title') }}
+            </h1>
           </a-col>
         </a-row>
       </container>
@@ -20,27 +28,41 @@
     <section class="s-partners-advantages">
       <round-animation>
         <round-animation-circle class="round-animation-first">
-          <p class="round-animation-text text-xxxl">
+          <p
+            class="round-animation-text text-xxxl"
+            data-aos="fade"
+            data-aos-delay="200"
+          >
             Мы заинтересованы в территориальном расширении нашей сети и
             увеличении круга наших покупателей.
           </p>
           <round-animation-circle class="round-animation-second">
-            <p class="round-animation-text text-xxxl">
+            <p
+              class="round-animation-text text-xxxl"
+              data-aos="fade"
+              data-aos-delay="300"
+            >
               Приглашаем к сотрудничеству дилеров по регионам в странах
               Российской федерации, Украины и стран ЕС.
             </p>
             <round-animation-circle class="round-animation-third">
-              <p class="round-animation-text text-xxxl">
+              <p
+                class="round-animation-text text-xxxl"
+                data-aos="fade"
+                data-aos-delay="400"
+              >
                 Компания Аврорапласт поставляет свою продукцию в
                 товаропроводящие сети, производителям окон ПВХ, другим компаниям
                 рынка ПВХ в Беларуси, России, Украины и стран ЕС уже более 15
                 лет.
               </p>
-              <round-animation-inner>
+              <round-animation-inner data-aos="fade" data-aos-delay="700">
                 <img
                   class="round-animation-logo"
                   src="~/static/images/LogoIcon.svg"
                   alt="Logo"
+                  data-aos="zoom-out"
+                  data-aos-delay="800"
                 />
               </round-animation-inner>
             </round-animation-circle>
@@ -48,7 +70,11 @@
         </round-animation-circle>
       </round-animation>
 
-      <div class="page-partners-message-wrapper">
+      <div
+        class="page-partners-message-wrapper"
+        data-aos="zoom-out"
+        data-aos-delay="200"
+      >
         <span class="page-partners-message accent-border text-black">
           Мы предлагаем взаимовыгодное сотрудничество
         </span>
@@ -56,26 +82,43 @@
     </section>
 
     <adventages>
-      <h2 slot="title" class="title-h2 text-light">
+      <h2
+        slot="title"
+        class="title-h2 text-light"
+        data-aos="fade"
+        data-aos-delay="200"
+      >
         {{ $t('p_partners.advantages.title') }}
       </h2>
 
       <container>
         <a-row :gutter="20">
           <a-col :lg="{ offset: 2, span: 6 }" :md="{ span: 8 }">
-            <adventages-item :iconSrc="MarkSettings">
+            <adventages-item
+              :iconSrc="MarkSettings"
+              data-aos="fade"
+              data-aos-delay="200"
+            >
               {{ $t('p_partners.advantages[1]') }}
             </adventages-item>
           </a-col>
 
           <a-col :lg="{ span: 8 }" :md="{ span: 8 }">
-            <adventages-item :iconSrc="CubeMolecule">
+            <adventages-item
+              :iconSrc="CubeMolecule"
+              data-aos="fade"
+              data-aos-delay="400"
+            >
               {{ $t('p_partners.advantages[2]') }}
             </adventages-item>
           </a-col>
 
           <a-col :lg="{ span: 6 }" :md="{ span: 8 }">
-            <adventages-item :iconSrc="Roket">
+            <adventages-item
+              :iconSrc="Roket"
+              data-aos="fade"
+              data-aos-delay="600"
+            >
               {{ $t('p_partners.advantages[3]') }}
             </adventages-item>
           </a-col>
@@ -83,19 +126,31 @@
 
         <a-row :gutter="20">
           <a-col :lg="{ offset: 2, span: 6 }" :md="{ span: 8 }">
-            <adventages-item :iconSrc="Hearth">
+            <adventages-item
+              :iconSrc="Hearth"
+              data-aos="fade"
+              data-aos-delay="200"
+            >
               {{ $t('p_partners.advantages[4]') }}
             </adventages-item>
           </a-col>
 
           <a-col :lg="{ span: 8 }" :md="{ span: 8 }">
-            <adventages-item :iconSrc="Social">
+            <adventages-item
+              :iconSrc="Social"
+              data-aos="fade"
+              data-aos-delay="400"
+            >
               {{ $t('p_partners.advantages[5]') }}
             </adventages-item>
           </a-col>
 
           <a-col :lg="{ span: 6 }" :md="{ span: 8 }">
-            <adventages-item :iconSrc="Defend">
+            <adventages-item
+              :iconSrc="Defend"
+              data-aos="fade"
+              data-aos-delay="600"
+            >
               {{ $t('p_partners.advantages[6]') }}
             </adventages-item>
           </a-col>
@@ -107,7 +162,7 @@
       <container>
         <a-row :gutter="{ md: 20 }">
           <a-col>
-            <application-form accent>
+            <application-form accent data-aos="zoom-out" data-aos-delay="200">
               <h2 slot="title">Напишите нам</h2>
 
               <application-form-row>

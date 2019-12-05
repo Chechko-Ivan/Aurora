@@ -94,6 +94,7 @@ export default {
     box-shadow: 0 2px 8px 0 rgba(13, 28, 84, 0.25);
 
     .product-card-image {
+      transform: translate(-50%, -50%) scale(1.1);
       filter: grayscale(0);
     }
   }
@@ -107,7 +108,7 @@ export default {
   width: 220px;
   transform: translate(-50%, -50%);
   filter: grayscale(1);
-  transition: filter 0.25s $base-easing;
+  transition: all 0.25s $base-easing;
 
   @media (max-width: $xl) {
     width: 180px;
