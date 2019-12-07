@@ -268,10 +268,18 @@
             <application-form small data-aos="zoom-out" data-aos-delay="200">
               <application-form-row>
                 <application-form-field
+                  :error="phone.error"
+                  :value="phone.value"
+                  @update="(e) => (phone.value = e)"
                   type="tel"
                   placeholder="Введите номер телефона"
                 >
-                  <base-button slot="root" type="submit" collapsed>
+                  <base-button
+                    slot="root"
+                    @click.prevent="sendForm"
+                    type="submit"
+                    collapsed
+                  >
                     {{ $t('form.submit') }}
                     <svg-icon slot="icon" name="ArrowRight" />
                   </base-button>
@@ -286,6 +294,8 @@
 </template>
 
 <script>
+// import validateEmail from '~/assets/js/validateEmail.js';
+
 import Container from '~/components/Container.vue';
 import RoundAnimation from '~/components/roundAnimation/RoundAnimation.vue';
 import RoundAnimationCircle from '~/components/roundAnimation/RoundAnimationCircle.vue';
@@ -337,7 +347,8 @@ export default {
       activeAdvanatagePaneKey: 0,
       productCardNodeList: null,
       PartnerProgramBg,
-      PartnerProgramBgEn
+      PartnerProgramBgEn,
+      phone: { value: '', error: false }
     };
   },
 
@@ -371,6 +382,56 @@ export default {
           }
         }
       }
+    },
+
+    sendForm() {
+      const { phone } = this;
+
+      if (!phone.value) {
+        this.phone.error = true;
+        this.$notification.open({
+          class: 'custome-ant-notification',
+          message: 'АВРОРАПЛАСТ',
+          duration: 7,
+          description:
+            'Проверьте правильность введенных данных и попробуйте еще раз.'
+        });
+        return;
+      }
+
+      this.phone.error = false;
+
+      const body = new FormData();
+      body.append('phone', phone.value);
+
+      const options = {
+        method: 'POST',
+        body
+      };
+
+      fetch('./mail.php', options)
+        .then((data) => {
+          return data.json();
+        })
+        .then((res) => {
+          if (res.success) {
+            this.$notification.open({
+              class: 'custome-ant-notification',
+              message: 'АВРОРАПЛАСТ',
+              duration: 7,
+              description: res.success
+            });
+
+            this.phone.value = '';
+          } else {
+            this.$notification.open({
+              class: 'custome-ant-notification',
+              message: 'АВРОРАПЛАСТ',
+              duration: 7,
+              description: res.error
+            });
+          }
+        });
     }
   }
 };

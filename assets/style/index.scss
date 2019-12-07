@@ -219,16 +219,16 @@ img {
 }
 
 .accent-border {
-  display: inline-block;
   position: relative;
+  display: inline-block;
   box-sizing: border-box;
   padding: 40px 25px;
   border: 6px solid #f16922;
   border-radius: 21px;
 
   @media (max-width: $md) {
-    padding: 20px 15px;
     max-width: calc(100% - 70px);
+    padding: 20px 15px;
   }
 
   @media (max-width: $md) {
@@ -244,6 +244,104 @@ img {
     height: 45%;
     background-color: $body-bg;
     transform: translateY(-50%);
+  }
+}
+
+.custome-progress {
+  position: relative;
+  width: 325px;
+  height: 325px;
+
+  @media (max-width: $md) {
+    width: 270px;
+    height: 270px;
+  }
+
+  @media (max-width: $sm) {
+    margin: 0 auto;
+  }
+
+  .ant-progress-inner {
+    width: 325px !important;
+    height: 325px !important;
+
+    @media (max-width: $md) {
+      width: 270px !important;
+      height: 270px !important;
+    }
+  }
+
+  .ant-progress-circle {
+    path {
+      stroke-width: 0.5px;
+
+      &:first-of-type {
+        stroke: #a1a8c2 !important;
+        stroke-dasharray: 3px !important;
+        stroke-dashoffset: 3px !important;
+      }
+
+      &:last-of-type {
+        stroke: $color-primary !important;
+      }
+    }
+  }
+
+  .ant-progress-text {
+    display: none;
+  }
+
+  &-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 105px;
+    transform: translate(-50%, -50%);
+  }
+
+  &-desc {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 24px;
+    text-align: center;
+    color: $color-text-primary;
+    transform: translate(-50%, -50%);
+
+    &-title {
+      margin: 0;
+      font-weight: 400;
+      font-size: 24px;
+      color: $color-text-primary;
+    }
+
+    &-num {
+      font-size: 50px;
+      color: $color-black;
+      line-height: 1;
+    }
+  }
+}
+
+.ant-notification {
+  max-width: calc(100vw - 30px) !important;
+  margin-right: 15px !important;
+}
+
+.custome-ant-notification {
+  .ant-notification-notice-message {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .ant-notification-notice-description {
+    font-size: 16px;
+    line-height: var(--line-height);
+    color: var(--text-color);
+    font-family: var(--font-family);
   }
 }
 

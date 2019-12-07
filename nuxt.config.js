@@ -37,24 +37,24 @@ export default {
     link: [
       {
         rel: 'apple-touch-icon',
-        href: '/favicon/apple-touch-icon.png'
+        href: '/favicons/apple-touch-icon.png'
       },
       {
         rel: 'icon',
         type: 'image/png',
         sizes: '32x32',
-        href: '/favicon/favicon-32x32.png'
+        href: '/favicons/favicon-32x32.png'
       },
       {
         rel: 'icon',
         type: 'image/png',
         sizes: '16x16',
-        href: '/favicon/favicon-16x16.png'
+        href: '/favicons/favicon-16x16.png'
       },
       {
         rel: 'mask-icon',
         color: '#5bbad5',
-        href: '/favicon/safari-pinned-tab.svg'
+        href: '/favicons/safari-pinned-tab.svg'
       },
       {
         rel: 'msapplication-TileColor',
@@ -67,7 +67,6 @@ export default {
     ]
   },
 
-  // loading: '~/components/Loading.vue',
   loading: false,
 
   router: {},
