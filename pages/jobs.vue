@@ -10,7 +10,7 @@
           >
             <div class="page-jobs-header-title">
               <h1 class="title-h1" data-aos="fade" data-aos-delay="500">
-                Работа в Аврорапласт
+                {{ $t('p_jobs.title') }}
               </h1>
               <p class="text-xxxl" data-aos="fade" data-aos-delay="800">
                 Чтобы достичь результатов и доверия наших клиентов, мы должны
@@ -118,8 +118,8 @@
                     ></div>
                     <div class="s-jobs-advantages-card-desc">
                       <p>
-                        Разработаны профили должности для каждой профессии; все
-                        процессы автоматизированы
+                        Организуем системный подход к работе с персоналом (найм,
+                        адаптация, обучение, перемещение)
                       </p>
                     </div>
                   </div>
@@ -133,8 +133,7 @@
                     ></div>
                     <div class="s-jobs-advantages-card-desc">
                       <p>
-                        Разработаны профили должности для каждой профессии; все
-                        процессы автоматизированы
+                        Поддерживаем комфортный психологический климат
                       </p>
                     </div>
                   </div>
@@ -144,12 +143,11 @@
                   <div class="s-jobs-advantages-card">
                     <div
                       class="s-jobs-advantages-card-image"
-                      style="background-image: url(images/designPicture/JobsAdvantages1.png);"
+                      style="background-image: url(/images/designPicture/JobsAdvantages3.png);"
                     ></div>
                     <div class="s-jobs-advantages-card-desc">
                       <p>
-                        Разработаны профили должности для каждой профессии; все
-                        процессы автоматизированы
+                        Ежегодно проводим тренинги и курсы
                       </p>
                     </div>
                   </div>
@@ -193,9 +191,9 @@
               data-aos-delay="400"
             >
               <a-tab-pane
-                v-for="(advantage, index) in $t('p_home_advantages')"
+                v-for="(statistic, index) in $t('p_jobs.statistic')"
                 :key="index"
-                :tab="advantage.title"
+                :tab="statistic.title"
               >
                 <div class="custome-progress">
                   <img
@@ -204,11 +202,17 @@
                     class="custome-progress-image"
                   />
                   <div class="custome-progress-desc">
-                    <h3 class="custome-progress-desc-title">Средний стаж</h3>
-                    <span class="custome-progress-desc-num">7</span>
-                    <span class="custome-progress-desc-bottom">лет</span>
+                    <h3 class="custome-progress-desc-title">
+                      {{ statistic.shortTitle }}
+                    </h3>
+                    <span class="custome-progress-desc-num">
+                      {{ statistic.num }}
+                    </span>
+                    <span class="custome-progress-desc-bottom">
+                      {{ statistic.subtitle }}
+                    </span>
                   </div>
-                  <a-progress :percent="75" type="circle" />
+                  <a-progress :percent="index * 25" type="circle" />
                 </div>
               </a-tab-pane>
             </a-tabs>
@@ -226,17 +230,44 @@
 
               <application-form-row>
                 <application-form-field
+                  :error="$store.state.name.error"
+                  :value="$store.state.name.value"
+                  @update="
+                    (e) =>
+                      $store.commit('SET_FIELD_VALUE', {
+                        name: 'name',
+                        value: e
+                      })
+                  "
                   placeholder="Представьтесь*"
                 ></application-form-field>
               </application-form-row>
 
               <application-form-row>
                 <application-form-field
+                  :error="$store.state.phone.error"
+                  :value="$store.state.phone.value"
+                  @update="
+                    (e) =>
+                      $store.commit('SET_FIELD_VALUE', {
+                        name: 'phone',
+                        value: e
+                      })
+                  "
                   type="tel"
                   placeholder="Контактный телефон*"
                 ></application-form-field>
 
                 <application-form-field
+                  :error="$store.state.email.error"
+                  :value="$store.state.email.value"
+                  @update="
+                    (e) =>
+                      $store.commit('SET_FIELD_VALUE', {
+                        name: 'email',
+                        value: e
+                      })
+                  "
                   type="email"
                   placeholder="Контактный e-mail"
                 ></application-form-field>
@@ -244,12 +275,21 @@
 
               <application-form-row>
                 <application-form-textarea
+                  :error="$store.state.message.error"
+                  :value="$store.state.message.value"
+                  @update="
+                    (e) =>
+                      $store.commit('SET_FIELD_VALUE', {
+                        name: 'message',
+                        value: e
+                      })
+                  "
                   placeholder="Сообщение*"
                 ></application-form-textarea>
               </application-form-row>
 
               <div class="button-wrapper">
-                <base-button color="light" large>
+                <base-button @click.prevent="sendForm" color="light" large>
                   {{ $t('form.submit') }}
                   <svg-icon slot="icon" name="ArrowRight" />
                 </base-button>
@@ -336,6 +376,10 @@ export default {
     changeSlide(index) {
       this.swiper.slideTo(index);
       this.currentSliderIndex = index;
+    },
+
+    sendForm() {
+      this.$store.dispatch('sendForm', this);
     }
   }
 };

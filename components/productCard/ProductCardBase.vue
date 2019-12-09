@@ -2,14 +2,13 @@
   <nuxt-link :to="to" class="product-card-base">
     <div class="product-card-base-inner">
       <div class="product-card-base-header">
-        <h3 class="product-card-base-title">Подоконник ПВХ</h3>
+        <h3 class="product-card-base-title">{{ title }}</h3>
         <svg-icon name="ArrowRight" />
       </div>
 
       <div class="product-card-base-desc">
         <p class="text-s">
-          Является неотъемлемой частью окна, помогает создать комфортную
-          атмосферу внутри помещения.
+          {{ text }}
         </p>
       </div>
     </div>
@@ -23,7 +22,17 @@ export default {
   props: {
     to: {
       type: String,
-      default: '/'
+      default: '/products'
+    },
+
+    title: {
+      type: String,
+      default: ''
+    },
+
+    text: {
+      type: String,
+      default: ''
     }
   }
 };
@@ -32,13 +41,13 @@ export default {
 <style lang="scss" scoped>
 .product-card-base {
   display: flex;
-  max-width: 325px;
+  width: 325px;
   background-color: $color-white;
   border-radius: 8px;
   box-shadow: 0 8px 20px 0 rgba(13, 28, 84, 0.25);
 
   @media (max-width: $sm) {
-    max-width: 250px;
+    width: 250px;
   }
 }
 
@@ -65,10 +74,11 @@ export default {
   margin-bottom: 10px;
 
   svg {
-    margin-left: 10px;
     width: 16px;
     height: 16px;
+    margin-left: 10px;
     fill: $color-primary;
+    flex-shrink: 0;
   }
 }
 

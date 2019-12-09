@@ -8,10 +8,10 @@
         <a-row :gutter="{ md: 20 }" class="page-contacts-top">
           <a-col :xl="{ offset: 2, span: 22 }">
             <span class="title-top" data-aos="fade" data-aos-delay="400">
-              Частное производственное унитарное предприятие
+              {{ $t('p_contacts.subtitle') }}
             </span>
             <h1 class="title-h1" data-aos="fade" data-aos-delay="200">
-              Аврорапласт
+              {{ $t('p_contacts.title') }}
             </h1>
           </a-col>
         </a-row>
@@ -52,8 +52,9 @@
               </div>
               <div class="page-contacts-item-desc">
                 <span class="page-contacts-item-title">Телефон/факс</span>
-                <a href="tel:+375225485556">(+375 225) 48 55 56</a>
-                <a href="tel:+375225496767">(+375 225) 49 67 67</a>
+                <a href="tel:+74959751214">+7 (495) 975 12 14</a>
+                <a href="tel:+74956404886">+7 (495) 640 48 86</a>
+                <a href="tel:+79206616576">+7 (920) 661 65 76</a>
               </div>
             </div>
           </a-col>
@@ -86,17 +87,44 @@
 
               <application-form-row>
                 <application-form-field
+                  :error="$store.state.name.error"
+                  :value="$store.state.name.value"
+                  @update="
+                    (e) =>
+                      $store.commit('SET_FIELD_VALUE', {
+                        name: 'name',
+                        value: e
+                      })
+                  "
                   placeholder="Представьтесь*"
                 ></application-form-field>
               </application-form-row>
 
               <application-form-row>
                 <application-form-field
+                  :error="$store.state.phone.error"
+                  :value="$store.state.phone.value"
+                  @update="
+                    (e) =>
+                      $store.commit('SET_FIELD_VALUE', {
+                        name: 'phone',
+                        value: e
+                      })
+                  "
                   type="tel"
                   placeholder="Контактный телефон*"
                 ></application-form-field>
 
                 <application-form-field
+                  :error="$store.state.email.error"
+                  :value="$store.state.email.value"
+                  @update="
+                    (e) =>
+                      $store.commit('SET_FIELD_VALUE', {
+                        name: 'email',
+                        value: e
+                      })
+                  "
                   type="email"
                   placeholder="Контактный e-mail"
                 ></application-form-field>
@@ -104,12 +132,21 @@
 
               <application-form-row>
                 <application-form-textarea
+                  :error="$store.state.message.error"
+                  :value="$store.state.message.value"
+                  @update="
+                    (e) =>
+                      $store.commit('SET_FIELD_VALUE', {
+                        name: 'message',
+                        value: e
+                      })
+                  "
                   placeholder="Сообщение*"
                 ></application-form-textarea>
               </application-form-row>
 
               <div class="button-wrapper">
-                <base-button color="light" large>
+                <base-button @click.prevent="sendForm" color="light" large>
                   {{ $t('form.submit') }}
                   <svg-icon slot="icon" name="ArrowRight" />
                 </base-button>
@@ -146,6 +183,12 @@ export default {
     return {
       MapBg
     };
+  },
+
+  methods: {
+    sendForm() {
+      this.$store.dispatch('sendForm', this);
+    }
   }
 };
 </script>

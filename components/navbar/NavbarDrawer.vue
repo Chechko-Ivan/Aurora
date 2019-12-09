@@ -48,15 +48,21 @@
     <div class="navbar-drawer-contact">
       <ul class="navbar-drawer-contact-list">
         <li>
-          <action-link scheme="tel" href="+375225485556">
+          <action-link scheme="tel" href="+74959751214">
             <svg-icon slot="icon" name="Tel" />
-            +375 (225) 48 55 56
+            +7 (495) 975 12 14
           </action-link>
         </li>
         <li>
-          <action-link scheme="tel" href="+375225496767">
+          <action-link scheme="tel" href="+74956404886">
             <svg-icon slot="icon" name="Tel" />
-            +375 (225) 49 67 67
+            +7 (495) 640 48 86
+          </action-link>
+        </li>
+        <li>
+          <action-link scheme="tel" href="+79206616576">
+            <svg-icon slot="icon" name="Tel" />
+            +7 (920) 661 65 76
           </action-link>
         </li>
         <li>
@@ -240,10 +246,10 @@ export default {
 
   li {
     &:not(:last-of-type) {
-      margin-bottom: 35px;
+      margin-bottom: 25px;
 
       @media (max-width: $sm) {
-        margin-bottom: 20px;
+        margin-bottom: 15px;
       }
     }
   }

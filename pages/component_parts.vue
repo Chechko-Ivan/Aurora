@@ -167,17 +167,44 @@
 
               <application-form-row>
                 <application-form-field
+                  :error="$store.state.name.error"
+                  :value="$store.state.name.value"
+                  @update="
+                    (e) =>
+                      $store.commit('SET_FIELD_VALUE', {
+                        name: 'name',
+                        value: e
+                      })
+                  "
                   placeholder="Представьтесь*"
                 ></application-form-field>
               </application-form-row>
 
               <application-form-row>
                 <application-form-field
+                  :error="$store.state.phone.error"
+                  :value="$store.state.phone.value"
+                  @update="
+                    (e) =>
+                      $store.commit('SET_FIELD_VALUE', {
+                        name: 'phone',
+                        value: e
+                      })
+                  "
                   type="tel"
                   placeholder="Контактный телефон*"
                 ></application-form-field>
 
                 <application-form-field
+                  :error="$store.state.email.error"
+                  :value="$store.state.email.value"
+                  @update="
+                    (e) =>
+                      $store.commit('SET_FIELD_VALUE', {
+                        name: 'email',
+                        value: e
+                      })
+                  "
                   type="email"
                   placeholder="Контактный e-mail"
                 ></application-form-field>
@@ -185,12 +212,21 @@
 
               <application-form-row>
                 <application-form-textarea
+                  :error="$store.state.message.error"
+                  :value="$store.state.message.value"
+                  @update="
+                    (e) =>
+                      $store.commit('SET_FIELD_VALUE', {
+                        name: 'message',
+                        value: e
+                      })
+                  "
                   placeholder="Сообщение*"
                 ></application-form-textarea>
               </application-form-row>
 
               <div class="button-wrapper">
-                <base-button color="light" large>
+                <base-button @click.prevent="sendForm" color="light" large>
                   {{ $t('form.submit') }}
                   <svg-icon slot="icon" name="ArrowRight" />
                 </base-button>
@@ -241,6 +277,12 @@ export default {
       GearSettings,
       Plant
     };
+  },
+
+  methods: {
+    sendForm() {
+      this.$store.dispatch('sendForm', this);
+    }
   }
 };
 </script>

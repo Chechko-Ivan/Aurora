@@ -89,8 +89,8 @@ export default {
     }
 
     .circle {
-      display: block;
       z-index: 0;
+      display: block;
     }
   }
 
@@ -146,6 +146,10 @@ export default {
       right: 15px;
       width: 345px;
       height: 345px;
+      animation-name: rotate;
+      animation-duration: 60s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
     }
   }
 }

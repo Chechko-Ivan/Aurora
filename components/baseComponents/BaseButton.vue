@@ -53,7 +53,7 @@ $button-height: 50px;
   border: 0;
   font-family: inherit;
   border-radius: 4px;
-  transition: all 0.25s $base-easing;
+  transition: all 0.25s ease;
 
   svg {
     width: 15px;
@@ -77,6 +77,12 @@ $button-height: 50px;
   }
 
   &.light {
+    background-color: $color-white;
+
+    &:hover {
+      color: $color-primary;
+    }
+
     svg {
       fill: $color-primary;
     }
@@ -84,7 +90,6 @@ $button-height: 50px;
 
   &.collapsed {
     width: 55px;
-    transition: all 0.4s ease;
 
     &:hover,
     &:focus {
@@ -96,7 +101,7 @@ $button-height: 50px;
         width: auto;
         height: auto;
         transition: all 0.25s ease;
-        transition-delay: 0.4s;
+        transition-delay: 0.1s;
       }
 
       svg {

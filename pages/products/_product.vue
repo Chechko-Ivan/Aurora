@@ -65,7 +65,10 @@
                 {{ text }}
               </p>
 
-              <ul class="page-products-inner-adventages-list list-style-dots">
+              <ul
+                v-if="data.detail.advantages.length"
+                class="page-products-inner-adventages-list list-style-dots"
+              >
                 <li
                   v-for="(adventage, index) in data.detail.advantages"
                   :key="index"
@@ -77,9 +80,14 @@
                 </li>
               </ul>
 
-              <h2 class="title-h2">{{ data.detail.applying.title }}</h2>
+              <h2 v-if="data.detail.applying.items.length" class="title-h2">
+                {{ data.detail.applying.title }}
+              </h2>
 
-              <ul class="page-products-inner-applying-list list-style-dots">
+              <ul
+                v-if="data.detail.applying.items.length"
+                class="page-products-inner-applying-list list-style-dots"
+              >
                 <li
                   v-for="(item, index) in data.detail.applying.items"
                   :key="index"
@@ -88,6 +96,20 @@
                   <span>{{ item }}</span>
                 </li>
               </ul>
+
+              <div
+                v-if="data.detail.bigAdvantages.length"
+                class="page-products-inner-big-advantages"
+              >
+                <div
+                  v-for="(item, index) in data.detail.bigAdvantages"
+                  :key="index"
+                  class="page-products-inner-big-advantages-item"
+                >
+                  <h2>{{ item.title }}</h2>
+                  <p>{{ item.text }}</p>
+                </div>
+              </div>
             </div>
           </a-col>
         </a-row>
@@ -131,17 +153,44 @@
 
               <application-form-row>
                 <application-form-field
+                  :error="$store.state.name.error"
+                  :value="$store.state.name.value"
+                  @update="
+                    (e) =>
+                      $store.commit('SET_FIELD_VALUE', {
+                        name: 'name',
+                        value: e
+                      })
+                  "
                   placeholder="Представьтесь*"
                 ></application-form-field>
               </application-form-row>
 
               <application-form-row>
                 <application-form-field
+                  :error="$store.state.phone.error"
+                  :value="$store.state.phone.value"
+                  @update="
+                    (e) =>
+                      $store.commit('SET_FIELD_VALUE', {
+                        name: 'phone',
+                        value: e
+                      })
+                  "
                   type="tel"
                   placeholder="Контактный телефон*"
                 ></application-form-field>
 
                 <application-form-field
+                  :error="$store.state.email.error"
+                  :value="$store.state.email.value"
+                  @update="
+                    (e) =>
+                      $store.commit('SET_FIELD_VALUE', {
+                        name: 'email',
+                        value: e
+                      })
+                  "
                   type="email"
                   placeholder="Контактный e-mail"
                 ></application-form-field>
@@ -149,12 +198,21 @@
 
               <application-form-row>
                 <application-form-textarea
+                  :error="$store.state.message.error"
+                  :value="$store.state.message.value"
+                  @update="
+                    (e) =>
+                      $store.commit('SET_FIELD_VALUE', {
+                        name: 'message',
+                        value: e
+                      })
+                  "
                   placeholder="Сообщение*"
                 ></application-form-textarea>
               </application-form-row>
 
               <div class="button-wrapper">
-                <base-button color="light" large>
+                <base-button @click.prevent="sendForm" color="light" large>
                   {{ $t('form.submit') }}
                   <svg-icon slot="icon" name="ArrowRight" />
                 </base-button>
@@ -229,6 +287,10 @@ export default {
       } else {
         this.collapseSlider = false;
       }
+    },
+
+    sendForm() {
+      this.$store.dispatch('sendForm', this);
     }
   }
 };
@@ -492,6 +554,14 @@ export default {
     @media (max-width: $sm) {
       font-size: 20px;
     }
+  }
+}
+
+.page-products-inner-big-advantages-item {
+  &:not(:last-of-type) {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #a1a8c2;
   }
 }
 </style>

@@ -48,8 +48,15 @@
       </container>
     </section>
 
-    <section class="s-partner-program">
-      <img
+    <section
+      :style="{
+        backgroundImage: `url(${
+          this.$i18n.locale === 'ru' ? PartnerProgramBg : PartnerProgramBgEn
+        })`
+      }"
+      class="s-partner-program"
+    >
+      <!-- <img
         :src="
           this.$i18n.locale === 'ru' ? PartnerProgramBg : PartnerProgramBgEn
         "
@@ -57,7 +64,7 @@
         alt="alt"
         data-aos="fade"
         data-aos-delay="300"
-      />
+      /> -->
       <container>
         <a-row :gutter="{ md: 20 }">
           <a-col :xl="{ offset: 2, span: 22 }">

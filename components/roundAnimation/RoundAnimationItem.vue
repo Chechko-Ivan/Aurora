@@ -80,18 +80,18 @@ export default {
   max-width: 252px;
   padding-left: 30px;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 16px;
   color: $color-black;
   opacity: 0;
   visibility: hidden;
 
   @media (max-width: $xl) {
-    font-size: 17px;
+    font-size: 14px;
     padding-left: 20px;
   }
 
   @media (max-width: $lg) {
-    font-size: 14px;
+    font-size: 12px;
     padding-left: 15px;
   }
 }

@@ -74,6 +74,65 @@ import Burger from '~/components/Burger.vue';
 import LangSwitcher from '~/components/LangSwitcher.vue';
 
 export default {
+  head() {
+    const i18nSeo = this.$nuxtI18nSeo();
+
+    return {
+      htmlAttrs: {
+        lang: this.$i18n.locale,
+        ...i18nSeo.htmlAttrs
+      },
+      title: this.$t('seo.title'),
+      meta: [
+        {
+          charset: 'utf-8'
+        },
+        {
+          name: 'viewport',
+          content: 'width=device-width, initial-scale=1'
+        },
+        {
+          hid: 'description',
+          name: 'description',
+          content: process.env.npm_package_description || ''
+        },
+        ...i18nSeo.meta
+      ],
+      link: [
+        {
+          rel: 'apple-touch-icon',
+          href: '/favicons/apple-touch-icon.png'
+        },
+        {
+          rel: 'icon',
+          type: 'image/png',
+          sizes: '32x32',
+          href: '/favicons/favicon-32x32.png'
+        },
+        {
+          rel: 'icon',
+          type: 'image/png',
+          sizes: '16x16',
+          href: '/favicons/favicon-16x16.png'
+        },
+        {
+          rel: 'mask-icon',
+          color: '#5bbad5',
+          href: '/favicons/safari-pinned-tab.svg'
+        },
+        {
+          rel: 'msapplication-TileColor',
+          content: '#2b5797'
+        },
+        {
+          rel: 'theme-color',
+          content: '#ffffff'
+        },
+        ...i18nSeo.link
+      ]
+    };
+  },
+
   components: {
     Navbar,
     NavbarDrawer,

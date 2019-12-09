@@ -2,6 +2,7 @@ export default {
   mode: 'spa',
 
   generate: {
+    fallback: true,
     routes: [
       '/products/sandwich_panel',
       '/products/pvc_sheet',
@@ -15,55 +16,6 @@ export default {
       '/en/products/stand_profile',
       '/en/products/start_and_finish_profiles',
       '/en/products/pvc_thermal_inserts'
-    ]
-  },
-
-  head: {
-    title: 'АВРОРАПЛАСТ',
-    meta: [
-      {
-        charset: 'utf-8'
-      },
-      {
-        name: 'viewport',
-        content: 'width=device-width, initial-scale=1'
-      },
-      {
-        hid: 'description',
-        name: 'description',
-        content: process.env.npm_package_description || ''
-      }
-    ],
-    link: [
-      {
-        rel: 'apple-touch-icon',
-        href: '/favicons/apple-touch-icon.png'
-      },
-      {
-        rel: 'icon',
-        type: 'image/png',
-        sizes: '32x32',
-        href: '/favicons/favicon-32x32.png'
-      },
-      {
-        rel: 'icon',
-        type: 'image/png',
-        sizes: '16x16',
-        href: '/favicons/favicon-16x16.png'
-      },
-      {
-        rel: 'mask-icon',
-        color: '#5bbad5',
-        href: '/favicons/safari-pinned-tab.svg'
-      },
-      {
-        rel: 'msapplication-TileColor',
-        content: '#2b5797'
-      },
-      {
-        rel: 'theme-color',
-        content: '#ffffff'
-      }
     ]
   },
 
@@ -110,13 +62,21 @@ export default {
         ],
         strategy: 'prefix_except_default',
         lazy: true,
+        seo: true,
         langDir: 'locales/'
       }
     ],
     [
       '@nuxtjs/sitemap',
       {
-        hostname: 'http://avroraplast.ru'
+        gzip: true,
+        hostname: 'https://avroraplast.ru',
+        defaults: {
+          lastmod: new Date(),
+          lastmodrealtime: true,
+          changefreq: 'daily',
+          priority: 1
+        }
       }
     ]
   ],
@@ -134,10 +94,7 @@ export default {
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: [
-    // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module'
-  ],
+  buildModules: ['@nuxtjs/eslint-module'],
 
   /*
    ** Build configuration

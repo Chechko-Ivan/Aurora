@@ -4,6 +4,10 @@
   padding: 140px 0 200px 0;
   background-color: #ffffff;
   background-color: $color-dark-blue;
+  background-repeat: no-repeat;
+  background-position: right 45%;
+  background-size: 61%;
+  background-attachment: fixed;
 
   @media (max-width: $osx) {
     padding: 100px 0 160px 0;
@@ -35,17 +39,17 @@
 }
 
 .s-partner-program-bg-image {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 61%;
-  max-width: 1160px;
+  // position: absolute;
+  // top: 0;
+  // right: 0;
+  // width: 61%;
+  // max-width: 1160px;
 
-  @media (max-width: $lg) {
-    width: 80%;
-  }
+  // @media (max-width: $lg) {
+  //   width: 80%;
+  // }
 
-  @media (max-width: $sm) {
-    width: 90%;
-  }
+  // @media (max-width: $sm) {
+  //   width: 90%;
+  // }
 }

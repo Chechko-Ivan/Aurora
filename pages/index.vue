@@ -63,7 +63,7 @@
                     alt="Gear Icon"
                   />
                   <template slot="text">
-                    Мы подходим к каждому клиенту индивидуально
+                    Собственные производственные площади
                   </template>
                 </round-animation-item>
                 <round-animation-circle>
@@ -75,7 +75,8 @@
                       alt="Medal Icon"
                     />
                     <template slot="text">
-                      Мы подходим к каждому клиенту индивидуально
+                      Работаем по индивидуальным заказам любых объемов и
+                      сложности
                     </template>
                   </round-animation-item>
                   <round-animation-circle>
@@ -87,17 +88,19 @@
                         alt="Honeycombs Icon"
                       />
                       <template slot="text">
-                        Мы подходим к каждому клиенту индивидуально
+                        Оперативно выполняем все заказы клиента
                       </template>
                     </round-animation-item>
-                    <round-animation-inner>
-                      <img
-                        src="~/static/images/contentImage/Windowsill.png"
+                    <round-animation-inner
+                      style="backgroundImage: url(images/designPicture/designPicture2.jpg)"
+                    >
+                      <!-- <img
+                        src="~/static/images/designPicture/designPicture2.jpg"
                         alt="Windowsill"
                         data-aos="zoom-out"
                         data-aos-duration="1500"
                         data-aos-delay="1150"
-                      />
+                      /> -->
                     </round-animation-inner>
                   </round-animation-circle>
                 </round-animation-circle>
@@ -111,18 +114,71 @@
         <div v-swiper:mySwiper="productSwiperOption">
           <div class="swiper-pagination swiper-pagination-bullets"></div>
           <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <product-card-base></product-card-base>
-            </div>
-            <div class="swiper-slide">
-              <product-card-base></product-card-base>
-            </div>
-            <div class="swiper-slide">
-              <product-card-base></product-card-base>
+            <div
+              v-for="(product, index) in $t('products')"
+              :key="index"
+              class="swiper-slide"
+            >
+              <product-card-base
+                :title="product.title"
+                :to="
+                  localePath({
+                    path: `/products/${product.link}`
+                  })
+                "
+                :text="product.summary.summaryText"
+              ></product-card-base>
             </div>
           </div>
         </div>
       </div>
+    </section>
+
+    <section class="s-page-home-about">
+      <container>
+        <a-row :gutter="20">
+          <a-col :xl="{ offset: 2, span: 20 }" class="s-page-home-about-col">
+            <button class="swiper-arrow swiper-arrow-prev">
+              <svg-icon name="ArrowLeft" />
+            </button>
+            <button class="swiper-arrow swiper-arrow-next">
+              <svg-icon name="ArrowRight" />
+            </button>
+
+            <div v-swiper:mySswiper="aboutSwiperOption">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="s-page-home-about-slide">
+                    <h2>
+                      Собственные производственные площади
+                    </h2>
+                    <p class="text-xxl">
+                      Производственные мощности компании позволяют изготавливать
+                      лист ПВХ, сэндвич панели ПВХ, подоконную доску,
+                      подставочный профиль, термовставки ПВХ, профили для
+                      отделки оконных и дверных проемов в широком ассортименте.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="s-page-home-about-slide">
+                    <h2>
+                      Собственные производственные площади
+                    </h2>
+                    <p class="text-xxl">
+                      Производственные мощности компании позволяют изготавливать
+                      лист ПВХ, сэндвич панели ПВХ, подоконную доску,
+                      подставочный профиль, термовставки ПВХ, профили для
+                      отделки оконных и дверных проемов в широком ассортименте.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a-col>
+        </a-row>
+      </container>
     </section>
 
     <section class="s-products">
@@ -161,8 +217,15 @@
       </container>
     </section>
 
-    <section class="s-partner-program">
-      <img
+    <section
+      :style="{
+        backgroundImage: `url(${
+          this.$i18n.locale === 'ru' ? PartnerProgramBg : PartnerProgramBgEn
+        })`
+      }"
+      class="s-partner-program"
+    >
+      <!-- <img
         :src="
           this.$i18n.locale === 'ru' ? PartnerProgramBg : PartnerProgramBgEn
         "
@@ -170,7 +233,7 @@
         alt="alt"
         data-aos="fade"
         data-aos-delay="300"
-      />
+      /> -->
       <container>
         <a-row :gutter="{ md: 20 }">
           <a-col :xl="{ offset: 2, span: 22 }">
@@ -294,8 +357,6 @@
 </template>
 
 <script>
-// import validateEmail from '~/assets/js/validateEmail.js';
-
 import Container from '~/components/Container.vue';
 import RoundAnimation from '~/components/roundAnimation/RoundAnimation.vue';
 import RoundAnimationCircle from '~/components/roundAnimation/RoundAnimationCircle.vue';
@@ -341,6 +402,14 @@ export default {
           768: {
             slidesPerView: 'auto'
           }
+        }
+      },
+      aboutSwiperOption: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        navigation: {
+          prevEl: '.swiper-arrow-prev',
+          nextEl: '.swiper-arrow-next'
         }
       },
       windowWidth: null,
@@ -681,6 +750,39 @@ export default {
     &:not(:first-of-type) {
       margin-top: 120px;
     }
+  }
+}
+
+.s-page-home-about {
+  margin-top: 180px;
+  margin-bottom: 90px;
+
+  @media (max-width: $md) {
+    margin-top: 35px;
+    margin-bottom: 35px;
+  }
+
+  @media (max-width: $sm) {
+    margin-top: 0px;
+    margin-bottom: 20px;
+  }
+
+  .swiper-container {
+    max-width: 670px;
+  }
+}
+
+.s-page-home-about-col {
+  position: relative;
+}
+
+.s-page-home-about-slide {
+  @media (max-width: $lg) {
+    padding: 0 60px;
+  }
+
+  @media (max-width: $md) {
+    padding: 0 30px;
   }
 }
 </style>

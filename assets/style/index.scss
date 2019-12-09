@@ -163,13 +163,41 @@ img {
   overflow: hidden;
 }
 
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
+// Swiper Arrow
+.swiper-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 55px;
+  height: 55px;
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+
+  @media (max-width: $md) {
+    width: 30px;
+    height: 30px;
   }
 
-  100% {
-    transform: rotate(360deg);
+  &.swiper-arrow-prev {
+    left: 0;
+  }
+
+  &.swiper-arrow-next {
+    right: 0;
+  }
+
+  .icon {
+    width: 36px;
+    height: 36px;
+
+    @media (max-width: $md) {
+      width: 15px;
+      height: 15px;
+    }
   }
 }
 
@@ -320,8 +348,8 @@ img {
 
     &-num {
       font-size: 50px;
-      color: $color-black;
       line-height: 1;
+      color: $color-black;
     }
   }
 }
@@ -333,15 +361,15 @@ img {
 
 .custome-ant-notification {
   .ant-notification-notice-message {
-    font-size: 18px;
     font-weight: 600;
+    font-size: 18px;
   }
 
   .ant-notification-notice-description {
     font-size: 16px;
     line-height: var(--line-height);
-    color: var(--text-color);
     font-family: var(--font-family);
+    color: var(--text-color);
   }
 }
 
@@ -350,3 +378,13 @@ img {
 @import './s-advantages.scss';
 @import './s-form.scss';
 @import './dot.scss';
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
