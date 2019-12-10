@@ -52,6 +52,15 @@
               </div>
               <div class="page-contacts-item-desc">
                 <span class="page-contacts-item-title">Телефон/факс</span>
+                <a href="tel:+375225485556 ">(+375 225) 48 55 56</a>
+                <a href="tel:+375225496767">(+375 225) 49 67 67</a>
+                <br />
+                <span class="page-contacts-item-title">
+                  {{ $t('p_contacts.title_second') }}
+                </span>
+                <span class="page-contacts-item-title">
+                  {{ $t('p_contacts.subtitle_second') }}
+                </span>
                 <a href="tel:+74959751214">+7 (495) 975 12 14</a>
                 <a href="tel:+74956404886">+7 (495) 640 48 86</a>
                 <a href="tel:+79206616576">+7 (920) 661 65 76</a>
@@ -146,7 +155,11 @@
               </application-form-row>
 
               <div class="button-wrapper">
-                <base-button @click.prevent="sendForm" color="light" large>
+                <base-button
+                  @click.prevent="$store.state.formLoked ? null : sendForm()"
+                  color="light"
+                  large
+                >
                   {{ $t('form.submit') }}
                   <svg-icon slot="icon" name="ArrowRight" />
                 </base-button>

@@ -2,7 +2,11 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 
-import { SET_FIELD_VALUE, SET_FIELD_ERROR } from './mutations.js';
+import {
+  SET_FIELD_VALUE,
+  SET_FIELD_ERROR,
+  TOGGLE_LOCK_FORM
+} from './mutations.js';
 import validateEmail from '~/assets/js/validateEmail.js';
 
 Vue.use(Vuex);
@@ -30,7 +34,8 @@ const store = () =>
         error: false
       },
 
-      formValid: true
+      formValid: true,
+      formLoked: false
     },
 
     mutations: {
@@ -46,6 +51,10 @@ const store = () =>
         }
 
         state[name].error = payload;
+      },
+
+      [TOGGLE_LOCK_FORM]: (state) => {
+        state.formLoked = true;
       }
     },
 
@@ -104,6 +113,7 @@ const store = () =>
       },
 
       sendForm: ({ dispatch, state, commit }, vm) => {
+        commit(TOGGLE_LOCK_FORM);
         dispatch('validate');
 
         if (state.formValid) {
@@ -160,6 +170,8 @@ const store = () =>
                   description: res.error
                 });
               }
+
+              commit(TOGGLE_LOCK_FORM);
             });
         } else {
           vm.$notification.open({

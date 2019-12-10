@@ -147,30 +147,17 @@
 
             <div v-swiper:mySswiper="aboutSwiperOption">
               <div class="swiper-wrapper">
-                <div class="swiper-slide">
+                <div
+                  v-for="(item, index) in $t('p_home.advantages2')"
+                  :key="index"
+                  class="swiper-slide"
+                >
                   <div class="s-page-home-about-slide">
                     <h2>
-                      Собственные производственные площади
+                      {{ item.title }}
                     </h2>
                     <p class="text-xxl">
-                      Производственные мощности компании позволяют изготавливать
-                      лист ПВХ, сэндвич панели ПВХ, подоконную доску,
-                      подставочный профиль, термовставки ПВХ, профили для
-                      отделки оконных и дверных проемов в широком ассортименте.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="swiper-slide">
-                  <div class="s-page-home-about-slide">
-                    <h2>
-                      Собственные производственные площади
-                    </h2>
-                    <p class="text-xxl">
-                      Производственные мощности компании позволяют изготавливать
-                      лист ПВХ, сэндвич панели ПВХ, подоконную доску,
-                      подставочный профиль, термовставки ПВХ, профили для
-                      отделки оконных и дверных проемов в широком ассортименте.
+                      {{ item.text }}
                     </p>
                   </div>
                 </div>
@@ -758,8 +745,8 @@ export default {
 }
 
 .s-page-home-about {
-  margin-top: 180px;
-  margin-bottom: 90px;
+  margin-top: 100px;
+  margin-bottom: 45px;
 
   @media (max-width: $md) {
     margin-top: 35px;

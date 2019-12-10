@@ -53,6 +53,24 @@
 
                 <ul>
                   <li>
+                    <action-link scheme="tel" href="+375225485556">
+                      <svg-icon slot="icon" name="Tel" />
+                      (+375 225) 48 55 56
+                    </action-link>
+                  </li>
+                  <li>
+                    <action-link scheme="tel" href="+375225496767">
+                      <svg-icon slot="icon" name="Tel" />
+                      (+375 225) 49 67 67
+                    </action-link>
+                  </li>
+                  <li>
+                    <h3 class="footer-list-title small">
+                      {{ $t('p_contacts.title_second') }}<br />
+                      {{ $t('p_contacts.subtitle_second') }}
+                    </h3>
+                  </li>
+                  <li>
                     <action-link scheme="tel" href="+74959751214">
                       <svg-icon slot="icon" name="Tel" />
                       +7 (495) 975 12 14
@@ -197,6 +215,12 @@ export default {
         color: $color-primary;
       }
     }
+
+    .footer-list-title.small {
+      font-size: 13px;
+      font-weight: 400;
+      max-width: 250px;
+    }
   }
 
   &.center {
@@ -204,6 +228,7 @@ export default {
     justify-content: center;
     align-items: center;
     background-color: $color-white;
+    border-radius: 20px;
 
     .logo {
       position: absolute;
@@ -233,6 +258,7 @@ export default {
 }
 
 .footer-bottom {
+  padding-top: 30px;
   padding-bottom: 30px;
   display: flex;
   align-items: center;

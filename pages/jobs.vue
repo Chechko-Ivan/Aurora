@@ -289,7 +289,11 @@
               </application-form-row>
 
               <div class="button-wrapper">
-                <base-button @click.prevent="sendForm" color="light" large>
+                <base-button
+                  @click.prevent="$store.state.formLoked ? null : sendForm()"
+                  color="light"
+                  large
+                >
                   {{ $t('form.submit') }}
                   <svg-icon slot="icon" name="ArrowRight" />
                 </base-button>

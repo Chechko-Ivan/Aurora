@@ -182,6 +182,12 @@ img {
     height: 30px;
   }
 
+  &:hover {
+    .icon {
+      fill: $color-primary;
+    }
+  }
+
   &.swiper-arrow-prev {
     left: 0;
   }
