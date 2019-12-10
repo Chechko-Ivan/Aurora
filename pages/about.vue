@@ -13,7 +13,7 @@
           <round-animation-circle class="round-animation-second">
             <round-animation-circle class="round-animation-third">
               <round-animation-inner
-                :style="`background-image: url(${designPicture1});`"
+                :style="`background-image: url(${designPicture2});`"
               ></round-animation-inner>
             </round-animation-circle>
           </round-animation-circle>
@@ -37,7 +37,7 @@
 
             <div class="link-wrapper">
               <div
-                :style="`background-image: url(${designPicture2});`"
+                :style="`background-image: url(${designPicture3});`"
                 class="page-about-header-image"
                 data-aos="fade"
                 data-aos-delay="600"
@@ -294,7 +294,7 @@ import BaseNuxtLink from '~/components/baseComponents/BaseNuxtLink.vue';
 import Adventages from '~/components/adventages/Adventages.vue';
 import AdventagesItem from '~/components/adventages/AdventagesItem.vue';
 
-import designPicture1 from '~/static/images/designPicture/designPicture1.jpg';
+import designPicture3 from '~/static/images/designPicture/designPicture3.jpg';
 import designPicture2 from '~/static/images/designPicture/designPicture2.jpg';
 import VideoPreview from '~/static/images/PageAboutVideoPreview.jpg';
 import MarkSettings from '~/static/images/MarkSettings.svg';
@@ -318,7 +318,7 @@ export default {
 
   data() {
     return {
-      designPicture1,
+      designPicture3,
       designPicture2,
       VideoPreview,
       MarkSettings,

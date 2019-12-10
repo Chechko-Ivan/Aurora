@@ -277,6 +277,10 @@
       <container>
         <a-row :gutter="{ md: 20 }">
           <a-col :xl="{ offset: 2, span: 22 }">
+            <div class="s-title">
+              <h2 data-aos="fade">Поставщикам</h2>
+            </div>
+
             <a-tabs
               :tabPosition="windowWidth > 575 ? 'left' : 'top'"
               v-model="activeAdvanatagePaneKey"
