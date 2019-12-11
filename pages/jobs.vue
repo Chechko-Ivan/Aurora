@@ -37,10 +37,12 @@
                   </round-animation-circle>
                 </round-animation-circle>
               </round-animation>
-              <img
-                src="~/static/images/designPicture/girl.png"
-                alt="employer"
-              />
+              <div>
+                <img
+                  src="~/static/images/designPicture/girl.png"
+                  alt="employer"
+                />
+              </div>
             </div>
           </a-col>
         </a-row>

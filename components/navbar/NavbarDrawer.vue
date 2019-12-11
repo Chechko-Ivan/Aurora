@@ -33,7 +33,7 @@
           {{ $t('navbar.links.about') }}
         </navbar-link>
       </li>
-      <li>
+      <li v-if="$store.state.location === 'Belarus'">
         <navbar-link :to="localePath('jobs')">
           {{ $t('navbar.links.jobs') }}
         </navbar-link>

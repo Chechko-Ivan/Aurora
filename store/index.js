@@ -3,6 +3,7 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 
 import {
+  SET_LOCATION,
   SET_FIELD_VALUE,
   SET_FIELD_ERROR,
   TOGGLE_LOCK_FORM
@@ -35,7 +36,8 @@ const store = () =>
       },
 
       formValid: true,
-      formLoked: false
+      formLoked: false,
+      location: ''
     },
 
     mutations: {
@@ -55,10 +57,24 @@ const store = () =>
 
       [TOGGLE_LOCK_FORM]: (state) => {
         state.formLoked = true;
+      },
+
+      [SET_LOCATION]: (state, location) => {
+        state.location = location;
       }
     },
 
     actions: {
+      getLocation: ({ commit }) => {
+        fetch('http://ip-api.com/json')
+          .then((data) => data.json())
+          .then((res) => {
+            if (res.country) {
+              commit(SET_LOCATION, res.country);
+            }
+          });
+      },
+
       validate: ({ state, commit }) => {
         const { name, phone, email, message } = state;
 

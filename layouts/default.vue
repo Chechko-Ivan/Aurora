@@ -178,6 +178,10 @@ export default {
     }
   },
 
+  created() {
+    this.$store.dispatch('getLocation');
+  },
+
   methods: {
     toggleDrawer() {
       this.drawerOpend = false;
