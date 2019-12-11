@@ -55,6 +55,10 @@ $button-height: 50px;
   border-radius: 4px;
   transition: all 0.25s ease;
 
+  @media (max-width: $sm) {
+    font-size: 12px;
+  }
+
   svg {
     width: 15px;
     height: 15px;

@@ -66,7 +66,7 @@ const store = () =>
 
     actions: {
       getLocation: ({ commit }) => {
-        fetch('http://ip-api.com/json')
+        fetch('https://ip-api.com/json')
           .then((data) => data.json())
           .then((res) => {
             if (res.country) {

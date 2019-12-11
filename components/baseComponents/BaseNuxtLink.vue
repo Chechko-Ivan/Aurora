@@ -49,6 +49,10 @@ $button-height: 50px;
   border-radius: 4px;
   transition: all 0.25s $base-easing;
 
+  @media (max-width: $sm) {
+    font-size: 12px;
+  }
+
   &:not(:last-of-type) {
     margin-right: 10px;
 
