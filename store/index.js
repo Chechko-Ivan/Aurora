@@ -66,7 +66,7 @@ const store = () =>
 
     actions: {
       getLocation: ({ commit }) => {
-        fetch('https://ip-api.com/json')
+        fetch('https://avroraplast.ru/getRegion.php')
           .then((data) => data.json())
           .then((res) => {
             if (res.country) {

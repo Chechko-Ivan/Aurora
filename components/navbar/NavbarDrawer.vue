@@ -66,6 +66,18 @@
           </action-link>
         </li>
         <li>
+          <action-link scheme="tel" href="+375225485556">
+            <svg-icon slot="icon" name="Tel" />
+            +375 (225) 48 55 56
+          </action-link>
+        </li>
+        <li>
+          <action-link scheme="tel" href="+375225496767">
+            <svg-icon slot="icon" name="Tel" />
+            +375 (225) 49 67 67
+          </action-link>
+        </li>
+        <li>
           <action-link scheme="mailto" href="info@avroraplast.ru">
             <svg-icon slot="icon" name="Mail" />
             info@avroraplast.ru

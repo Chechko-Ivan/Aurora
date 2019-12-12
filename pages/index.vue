@@ -156,9 +156,6 @@
                     <h2>
                       {{ item.title }}
                     </h2>
-                    <p class="text-xxl">
-                      {{ item.text }}
-                    </p>
                   </div>
                 </div>
               </div>
@@ -761,6 +758,10 @@ export default {
   .swiper-container {
     max-width: 670px;
   }
+
+  .swiper-wrapper {
+    align-items: center;
+  }
 }
 
 .s-page-home-about-col {
@@ -768,6 +769,8 @@ export default {
 }
 
 .s-page-home-about-slide {
+  text-align: center;
+
   @media (max-width: $lg) {
     padding: 0 60px;
   }
