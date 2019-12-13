@@ -5,7 +5,7 @@
         <a-row :gutter="20">
           <a-col :span="24">
             <h1 class="title-h1" data-aos="fade" data-aos-delay="200">
-              Продукция Аврорапласт
+              {{ $t('p_products.title') }}
             </h1>
           </a-col>
         </a-row>
@@ -76,22 +76,21 @@
               data-aos="fade"
             />
             <h2 class="s-partner-program-title title-h2" data-aos="fade">
-              Партнерская программа
+              {{ $t('b_partner_program.title') }}
             </h2>
             <div class="s-partner-program-text" data-aos="fade">
-              <p class="text-xxl">
-                Мы заинтересованы в территориальном расширении нашей сети и
-                увеличения круга наших покупателей.
-              </p>
-              <p class="text-xxl">
-                Приглашаем к сотрудничеству дилеров по регионам в странах
-                Российской Федерации, Украины и стран ЕС.
+              <p
+                v-for="(text, index) in $t('b_partner_program.texts')"
+                :key="index"
+                class="text-xxl"
+              >
+                {{ text }}
               </p>
             </div>
 
             <div class="link-wrapper">
               <base-nuxt-link :to="localePath('contacts')">
-                Отправить заявку
+                {{ $t('form.send_aplication') }}
                 <svg-icon slot="icon" name="ArrowRight" />
               </base-nuxt-link>
             </div>

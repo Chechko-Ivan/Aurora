@@ -30,9 +30,7 @@
             </h1>
 
             <p class="text-xxxl" data-aos="fade" data-aos-delay="400">
-              Чтобы достичь результатов и доверия наших клиентов, мы должны
-              работать в команде, уважать друг друга, выполнять обещания и
-              постоянно совершенствоваться
+              {{ $t('p_about.text') }}
             </p>
 
             <div class="link-wrapper">
@@ -49,7 +47,7 @@
                   data-aos-delay="600"
                 >
                   <svg-icon slot="icon-before" name="SearchPeople" />
-                  Работа в аврорапласт
+                  {{ $t('p_jobs.title') }}
                 </base-nuxt-link>
 
                 <base-nuxt-link
@@ -58,7 +56,7 @@
                   data-aos-delay="800"
                 >
                   <svg-icon slot="icon-before" name="UserInfo" />
-                  Контакты
+                  {{ $t('footer.contacts') }}
                 </base-nuxt-link>
               </div>
             </div>
@@ -77,8 +75,9 @@
         <a-row :gutter="20">
           <a-col :xl="{ offset: 2, span: 20 }">
             <h2 class="title-h2" data-aos="fade" data-aos-delay="200">
-              Аврорапласт является крупнейшим производителем изделий из ПВХ в
-              Беларуси уже более <b class="text-accent">15</b> лет.
+              {{ $t('p_about.advantages.title') }}
+              <b class="text-accent">15</b>
+              {{ $t('p_about.advantages.years') }}
             </h2>
             <div
               class="s-page-about-advantages-message"
@@ -87,8 +86,7 @@
             >
               <svg-icon slot="icon-before" name="Info" />
               <p class="text-xxxl">
-                С момента создания компании мы сделали ставку на такие аспекты,
-                как:
+                {{ $t('p_about.advantages.subtitle') }}
               </p>
             </div>
 
@@ -100,8 +98,7 @@
               >
                 <img src="../static/images/Plant.svg" alt="Icon" />
                 <p class="text-xxl text-black">
-                  Производство качественной продукции отвечающей всем
-                  требованиям заказчика
+                  {{ $t('p_about.advantages.items[0]') }}
                 </p>
               </div>
 
@@ -112,9 +109,7 @@
               >
                 <img src="../static/images/Gears.svg" alt="Icon" />
                 <p class="text-xxl text-black">
-                  Современный технический уровень оснащения предприятия,
-                  квалифицированный персонал, высокая культура и организация
-                  производства.
+                  {{ $t('p_about.advantages.items[1]') }}
                 </p>
               </div>
             </div>
@@ -131,9 +126,11 @@
     >
       <div class="s-video-informer" data-aos="zoom-left" data-aos-delay="200">
         <span class="s-video-informer-subtitle">
-          Основное направление деятельности компании
+          {{ $t('p_about.company_direction.title') }}
         </span>
-        <h2 class="s-video-informer-title">производство изделий из ПВХ</h2>
+        <h2 class="s-video-informer-title">
+          {{ $t('p_about.company_direction.text') }}
+        </h2>
       </div>
     </section>
 

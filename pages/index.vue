@@ -9,10 +9,10 @@
             :md="{ span: 15 }"
           >
             <span class="title-top" data-aos="fade" data-aos-delay="800">
-              с 2003 года
+              {{ $t('p_home.header.title_sup') }}
             </span>
             <h1 class="title-h1" data-aos="zoom-out" data-aos-delay="200">
-              Производим качественные изделия из ПВХ
+              {{ $t('p_home.header.title_h1') }}
             </h1>
           </a-col>
 
@@ -23,8 +23,7 @@
             data-aos-delay="400"
           >
             <p class="text-xxl my-0">
-              Специалисты Аврорапласт постоянно работают над обновлением и
-              расширением ассортимента, повышением качества производимых изделий
+              {{ $t('p_home.header.text') }}
             </p>
           </a-col>
         </a-row>
@@ -38,8 +37,9 @@
       >
         <div class="video-line-inner" data-aos="fade" data-aos-delay="2500">
           <a href="/" class="video-line-button">
-            Смотреть
-            <svg-icon name="Play" />Видео
+            {{ $t('p_home.header.watch') }}
+            <svg-icon name="Play" />
+            {{ $t('p_home.header.video') }}
           </a>
         </div>
       </div>
@@ -63,7 +63,7 @@
                     alt="Gear Icon"
                   />
                   <template slot="text">
-                    Собственные производственные площади
+                    {{ $t('p_home.advantages2[0].title') }}
                   </template>
                 </round-animation-item>
                 <round-animation-circle>
@@ -75,8 +75,7 @@
                       alt="Medal Icon"
                     />
                     <template slot="text">
-                      Работаем по индивидуальным заказам любых объемов и
-                      сложности
+                      {{ $t('p_home.advantages2[1].title') }}
                     </template>
                   </round-animation-item>
                   <round-animation-circle>
@@ -88,19 +87,12 @@
                         alt="Honeycombs Icon"
                       />
                       <template slot="text">
-                        Оперативно выполняем все заказы клиента
+                        {{ $t('p_home.advantages2[2].title') }}
                       </template>
                     </round-animation-item>
                     <round-animation-inner
                       style="backgroundImage: url(images/designPicture/designPicture2.jpg)"
                     >
-                      <!-- <img
-                        src="~/static/images/designPicture/designPicture2.jpg"
-                        alt="Windowsill"
-                        data-aos="zoom-out"
-                        data-aos-duration="1500"
-                        data-aos-delay="1150"
-                      /> -->
                     </round-animation-inner>
                   </round-animation-circle>
                 </round-animation-circle>
@@ -229,22 +221,21 @@
               data-aos="fade"
             />
             <h2 class="s-partner-program-title title-h2" data-aos="fade">
-              Партнерская программа
+              {{ $t('b_partner_program.title') }}
             </h2>
             <div class="s-partner-program-text" data-aos="fade">
-              <p class="text-xxl">
-                Мы заинтересованы в территориальном расширении нашей сети и
-                увеличения круга наших покупателей.
-              </p>
-              <p class="text-xxl">
-                Приглашаем к сотрудничеству дилеров по регионам в странах
-                Российской Федерации, Украины и стран ЕС.
+              <p
+                v-for="(text, index) in $t('b_partner_program.texts')"
+                :key="index"
+                class="text-xxl"
+              >
+                {{ text }}
               </p>
             </div>
 
             <div class="link-wrapper">
               <base-nuxt-link :to="localePath('contacts')">
-                Отправить заявку
+                {{ $t('form.send_aplication') }}
                 <svg-icon slot="icon" name="ArrowRight" />
               </base-nuxt-link>
             </div>
@@ -262,7 +253,9 @@
         <a-row :gutter="{ md: 20 }">
           <a-col :xl="{ offset: 2, span: 22 }">
             <div class="s-title">
-              <h2 data-aos="fade">Поставщикам</h2>
+              <h2 data-aos="fade">
+                {{ $t('p_home.suppliers_title') }}
+              </h2>
             </div>
 
             <a-tabs
@@ -270,27 +263,21 @@
               v-model="activeAdvanatagePaneKey"
             >
               <a-tab-pane
-                v-for="(advantage, index) in $t('p_home_advantages')"
+                v-for="(advantage, index) in $t('p_home.advantages')"
                 :key="index"
                 :tab="advantage.title"
               >
                 <h2>{{ advantage.title }}</h2>
                 <p class="text-xxxl text-black">
-                  Чтобы обеспечить бесперебойную работу нашего предприятия, мы
-                  заинтересованы в сотрудничестве с поставщиками качественных
-                  товаров.
+                  {{ advantage.subtitle }}
                 </p>
                 <p class="text-xxl">
-                  На постоянной основе ведём закупку: защитной пленки для
-                  сэндвич панелей и подоконника, ламинационной пленки для
-                  подоконника, ПВХ-С, добавки для переработки ПВХ в широком
-                  ассортименте,микрокальциты,однослойный полиуретанновый клей
-                  для сэндвич панелей, рециклат.
+                  {{ advantage.text }}
                 </p>
 
                 <div class="link-wrapper">
                   <base-nuxt-link :to="localePath('contacts')">
-                    Прислать коммерческое предложение
+                    {{ $t('p_home.suppliers_link') }}
                     <svg-icon slot="icon" name="ArrowRight" />
                   </base-nuxt-link>
                 </div>
@@ -306,13 +293,15 @@
         <a-row :gutter="{ md: 20 }">
           <a-col>
             <div class="s-title center">
-              <h2 data-aos="fade">Остались вопросы?</h2>
+              <h2 data-aos="fade">
+                {{ $t('p_home.form.title') }}
+              </h2>
               <span
                 class="s-title-sub text-xxl"
                 data-aos="fade"
                 data-aos-delay="250"
               >
-                Оставьте свой номер телефона и мы свяжемся с вами
+                {{ $t('p_home.form.subtitle') }}
               </span>
             </div>
 
@@ -322,8 +311,8 @@
                   :error="phone.error"
                   :value="phone.value"
                   @update="(e) => (phone.value = e)"
+                  :placeholder="$t('p_home.form.input_phone_placeholder')"
                   type="tel"
-                  placeholder="Введите номер телефона"
                 >
                   <base-button
                     slot="root"
