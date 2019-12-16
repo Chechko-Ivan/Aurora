@@ -10,6 +10,11 @@
         <p class="text-s">
           {{ text }}
         </p>
+        <ul class="product-card-base-list">
+          <li v-for="(item, index) in listItems" :key="index">
+            {{ `- ${item}` }}
+          </li>
+        </ul>
       </div>
     </div>
   </nuxt-link>
@@ -33,6 +38,11 @@ export default {
     text: {
       type: String,
       default: ''
+    },
+
+    listItems: {
+      type: Array,
+      default: () => []
     }
   }
 };
@@ -74,22 +84,38 @@ export default {
   margin-bottom: 10px;
 
   svg {
+    flex-shrink: 0;
     width: 16px;
     height: 16px;
     margin-left: 10px;
     fill: $color-primary;
-    flex-shrink: 0;
   }
 }
 
 .product-card-base-title {
   margin: 0;
   font-weight: 600;
-  font-size: 24px;
+  font-size: 22px;
   color: #000000;
 
   @media (max-width: $xl) {
     font-size: 20px;
+  }
+}
+
+.product-card-base-list {
+  @include list-reset;
+
+  li {
+    color: $color-text-primary;
+
+    @media (max-width: $xl) {
+      font-size: 15px;
+    }
+
+    @media (max-width: $md) {
+      font-size: 14px;
+    }
   }
 }
 

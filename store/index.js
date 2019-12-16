@@ -66,6 +66,8 @@ const store = () =>
 
     actions: {
       getLocation: ({ commit }) => {
+        if (process.env.NODE_ENV === 'development') return;
+
         fetch('https://avroraplast.ru/getRegion.php')
           .then((data) => data.json())
           .then((res) => {

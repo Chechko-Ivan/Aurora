@@ -53,15 +53,15 @@
 
                 <ul>
                   <li>
-                    <action-link scheme="tel" href="+375225485556">
+                    <action-link scheme="tel" href="+375225745556">
                       <svg-icon slot="icon" name="Tel" />
-                      (+375 225) 48 55 56
+                      +375 (225) 74 55 56
                     </action-link>
                   </li>
                   <li>
-                    <action-link scheme="tel" href="+375225496767">
+                    <action-link scheme="tel" href="+375225786767">
                       <svg-icon slot="icon" name="Tel" />
-                      (+375 225) 49 67 67
+                      +375 (225) 78 67 67
                     </action-link>
                   </li>
                   <li>

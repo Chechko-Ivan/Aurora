@@ -49,6 +49,7 @@ export default {
     font-size: 16px;
     background-color: transparent;
     border: 0;
+    border-radius: 0;
     color: $color-white;
     border-bottom: 1px solid $color-white;
 

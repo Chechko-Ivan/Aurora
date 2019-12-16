@@ -48,15 +48,15 @@
     <div class="navbar-drawer-contact">
       <ul class="navbar-drawer-contact-list">
         <li>
-          <action-link scheme="tel" href="+74959751214">
+          <action-link scheme="tel" href="+375225745556">
             <svg-icon slot="icon" name="Tel" />
-            +7 (495) 975 12 14
+            +375 (225) 74 55 56
           </action-link>
         </li>
         <li>
-          <action-link scheme="tel" href="+74956404886">
+          <action-link scheme="tel" href="+375225786767">
             <svg-icon slot="icon" name="Tel" />
-            +7 (495) 640 48 86
+            +375 (225) 78 67 67
           </action-link>
         </li>
         <li>

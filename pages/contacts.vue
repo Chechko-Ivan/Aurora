@@ -52,8 +52,8 @@
               </div>
               <div class="page-contacts-item-desc">
                 <span class="page-contacts-item-title">Телефон/факс</span>
-                <a href="tel:+375225485556 ">(+375 225) 48 55 56</a>
-                <a href="tel:+375225496767">(+375 225) 49 67 67</a>
+                <a href="tel:+375225745556">+375 (225) 74 55 56</a>
+                <a href="tel:+375225786767">+375 (225) 78 67 67</a>
                 <br />
                 <span class="page-contacts-item-title">
                   {{ $t('p_contacts.title_second') }}

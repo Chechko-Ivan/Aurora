@@ -164,7 +164,7 @@
                         value: e
                       })
                   "
-                  :placeholder="`${form.input.name.placeholder}*`"
+                  :placeholder="`${$t('form.input.name.placeholder')}*`"
                 ></application-form-field>
               </application-form-row>
 
@@ -179,7 +179,7 @@
                         value: e
                       })
                   "
-                  :placeholder="`${form.input.phone.placeholder}*`"
+                  :placeholder="`${$t('form.input.phone.placeholder')}*`"
                   type="tel"
                 ></application-form-field>
 
@@ -193,7 +193,7 @@
                         value: e
                       })
                   "
-                  :placeholder="`${form.input.email.placeholder}*`"
+                  :placeholder="`${$t('form.input.email.placeholder')}*`"
                   type="email"
                 ></application-form-field>
               </application-form-row>
@@ -209,7 +209,7 @@
                         value: e
                       })
                   "
-                  :placeholder="form.input.message.placeholder"
+                  :placeholder="$t('form.input.message.placeholder')"
                 ></application-form-textarea>
               </application-form-row>
 

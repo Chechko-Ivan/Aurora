@@ -119,6 +119,7 @@
                   })
                 "
                 :text="product.summary.summaryText"
+                :listItems="product.summary.summaryList"
               ></product-card-base>
             </div>
           </div>
@@ -267,12 +268,12 @@
                 :key="index"
                 :tab="advantage.title"
               >
-                <h2>{{ advantage.title }}</h2>
+                <h2>{{ advantage.content.title }}</h2>
                 <p class="text-xxxl text-black">
-                  {{ advantage.subtitle }}
+                  {{ advantage.content.subtitle }}
                 </p>
                 <p class="text-xxl">
-                  {{ advantage.text }}
+                  {{ advantage.content.text }}
                 </p>
 
                 <div class="link-wrapper">
@@ -384,6 +385,7 @@ export default {
       aboutSwiperOption: {
         slidesPerView: 1,
         spaceBetween: 20,
+        loop: true,
         navigation: {
           prevEl: '.swiper-arrow-prev',
           nextEl: '.swiper-arrow-next'
