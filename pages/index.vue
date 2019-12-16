@@ -268,7 +268,7 @@
                 :key="index"
                 :tab="advantage.title"
               >
-                <h2>{{ advantage.content.title }}</h2>
+                <h2>{{ advantage.title }}</h2>
                 <p class="text-xxxl text-black">
                   {{ advantage.content.subtitle }}
                 </p>

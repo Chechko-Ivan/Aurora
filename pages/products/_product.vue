@@ -193,7 +193,7 @@
                         value: e
                       })
                   "
-                  :placeholder="`${$t('form.input.email.placeholder')}*`"
+                  :placeholder="$t('form.input.email.placeholder')"
                   type="email"
                 ></application-form-field>
               </application-form-row>
@@ -209,7 +209,7 @@
                         value: e
                       })
                   "
-                  :placeholder="$t('form.input.message.placeholder')"
+                  :placeholder="`${$t('form.input.message.placeholder')}*`"
                 ></application-form-textarea>
               </application-form-row>
 

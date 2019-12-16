@@ -163,7 +163,9 @@
         <a-row :gutter="{ md: 20 }">
           <a-col>
             <application-form accent data-aos="zoom-out" data-aos-delay="200">
-              <h2 slot="title">Напишите нам</h2>
+              <h2 slot="title">
+                {{ $t('form.write_to_us') }}
+              </h2>
 
               <application-form-row>
                 <application-form-field
@@ -176,7 +178,7 @@
                         value: e
                       })
                   "
-                  placeholder="Представьтесь*"
+                  :placeholder="`${$t('form.input.name.placeholder')}*`"
                 ></application-form-field>
               </application-form-row>
 
@@ -191,8 +193,8 @@
                         value: e
                       })
                   "
+                  :placeholder="`${$t('form.input.phone.placeholder')}*`"
                   type="tel"
-                  placeholder="Контактный телефон*"
                 ></application-form-field>
 
                 <application-form-field
@@ -205,8 +207,8 @@
                         value: e
                       })
                   "
+                  :placeholder="$t('form.input.email.placeholder')"
                   type="email"
-                  placeholder="Контактный e-mail"
                 ></application-form-field>
               </application-form-row>
 
@@ -221,7 +223,7 @@
                         value: e
                       })
                   "
-                  placeholder="Сообщение*"
+                  :placeholder="`${$t('form.input.message.placeholder')}*`"
                 ></application-form-textarea>
               </application-form-row>
 

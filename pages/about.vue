@@ -42,6 +42,7 @@
               ></div>
               <div class="link-wrapper-inner">
                 <base-nuxt-link
+                  v-if="$store.state.location === 'Belarus'"
                   :to="localePath('jobs')"
                   data-aos="fade"
                   data-aos-delay="600"
