@@ -59,7 +59,7 @@
                 <round-animation-item class="first">
                   <img
                     slot="icon"
-                    src="~/static/images/Gear.svg"
+                    src="~/static/images/conveyor.svg"
                     alt="Gear Icon"
                   />
                   <template slot="text">
@@ -71,7 +71,7 @@
                   <round-animation-item class="second">
                     <img
                       slot="icon"
-                      src="~/static/images/Medal.svg"
+                      src="~/static/images/box.svg"
                       alt="Medal Icon"
                     />
                     <template slot="text">
@@ -83,7 +83,7 @@
                     <round-animation-item class="third">
                       <img
                         slot="icon"
-                        src="~/static/images/Honeycombs.svg"
+                        src="~/static/images/running.svg"
                         alt="Honeycombs Icon"
                       />
                       <template slot="text">

@@ -201,6 +201,7 @@ const store = () =>
               commit(TOGGLE_LOCK_FORM, false);
             });
         } else {
+          commit(TOGGLE_LOCK_FORM, false);
           vm.$notification.open({
             class: 'custome-ant-notification',
             message: 'ООО СЕКВОЙЯ',
