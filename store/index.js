@@ -55,8 +55,8 @@ const store = () =>
         state[name].error = payload;
       },
 
-      [TOGGLE_LOCK_FORM]: (state) => {
-        state.formLoked = true;
+      [TOGGLE_LOCK_FORM]: (state, payload) => {
+        state.formLoked = payload;
       },
 
       [SET_LOCATION]: (state, location) => {
@@ -131,7 +131,7 @@ const store = () =>
       },
 
       sendForm: ({ dispatch, state, commit }, vm) => {
-        commit(TOGGLE_LOCK_FORM);
+        commit(TOGGLE_LOCK_FORM, true);
         dispatch('validate');
 
         if (state.formValid) {
@@ -148,11 +148,12 @@ const store = () =>
             body
           };
 
-          fetch('./mail.php', options)
+          fetch('/mail.php', options)
             .then((data) => {
               return data.json();
             })
             .then((res) => {
+              commit(TOGGLE_LOCK_FORM, false);
               if (res.success) {
                 vm.$notification.open({
                   class: 'custome-ant-notification',
@@ -188,8 +189,16 @@ const store = () =>
                   description: res.error
                 });
               }
-
-              commit(TOGGLE_LOCK_FORM);
+            })
+            .catch(() => {
+              vm.$notification.open({
+                class: 'custome-ant-notification',
+                message: 'ООО СЕКВОЙЯ',
+                duration: 7,
+                description:
+                  'Что-то пошло не так 🤯, попробуйте еще раз отправить форму.'
+              });
+              commit(TOGGLE_LOCK_FORM, false);
             });
         } else {
           vm.$notification.open({
