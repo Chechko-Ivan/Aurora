@@ -20,7 +20,7 @@
 
     <div class="product-card-button">
       <base-button collapsed>
-        Посмотреть
+        {{ $t('p_products.card_button_text') }}
         <svg-icon slot="icon" name="ArrowRight" />
       </base-button>
     </div>

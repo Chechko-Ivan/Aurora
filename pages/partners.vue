@@ -33,8 +33,7 @@
             data-aos="fade"
             data-aos-delay="200"
           >
-            Мы заинтересованы в территориальном расширении нашей сети и
-            увеличении круга наших покупателей
+            {{ $t('p_partners.items[0]') }}
           </p>
           <round-animation-circle class="round-animation-second">
             <p
@@ -42,8 +41,7 @@
               data-aos="fade"
               data-aos-delay="300"
             >
-              Приглашаем к сотрудничеству дилеров по регионам в странах
-              Российской федерации, Украины и стран ЕС
+              {{ $t('p_partners.items[1]') }}
             </p>
             <round-animation-circle class="round-animation-third">
               <p
@@ -51,10 +49,7 @@
                 data-aos="fade"
                 data-aos-delay="400"
               >
-                Компания Аврорапласт поставляет свою продукцию в
-                товаропроводящие сети, производителям окон ПВХ, другим компаниям
-                рынка ПВХ в Беларуси, России, Украины и стран ЕС уже более 15
-                лет
+                {{ $t('p_partners.items[2]') }}
               </p>
               <round-animation-inner data-aos="fade" data-aos-delay="700">
                 <img
@@ -76,7 +71,7 @@
         data-aos-delay="200"
       >
         <span class="page-partners-message accent-border text-black">
-          Мы предлагаем взаимовыгодное сотрудничество
+          {{ $t('p_partners.message') }}
         </span>
       </div>
     </section>

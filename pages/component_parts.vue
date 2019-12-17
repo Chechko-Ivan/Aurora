@@ -14,7 +14,7 @@
         <a-row :gutter="20">
           <a-col :xl="{ offset: 2, span: 22 }">
             <h1 class="title-h1" data-aos="fade" data-aos-delay="200">
-              {{ $t('component_parts.title') }}
+              {{ $t('component_parts.header.title') }}
             </h1>
           </a-col>
         </a-row>
@@ -30,11 +30,10 @@
             :md="{ span: 12 }"
           >
             <h2 class="text-black" data-aos="fade" data-aos-delay="400">
-              Для экструзионных линий
+              {{ $t('component_parts.header.subtitle') }}
             </h2>
             <p class="text-xxxl" data-aos="fade" data-aos-delay="500">
-              Полный спектр оборудования и запасных частей для Ваших
-              экструзионных линий по производству изделий из ПВХ
+              {{ $t('component_parts.header.text') }}
             </p>
           </a-col>
 
@@ -90,7 +89,7 @@
             :sm="{ span: 24 }"
           >
             <h2 class="text-black" data-aos="fade" data-aos-delay="200">
-              Системы автоматического смешивания
+              {{ $t('component_parts.mixing_systems') }}
             </h2>
           </a-col>
 

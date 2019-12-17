@@ -157,9 +157,9 @@ const store = () =>
               if (res.success) {
                 vm.$notification.open({
                   class: 'custome-ant-notification',
-                  message: 'ООО СЕКВОЙЯ',
+                  message: vm.$t('footer.organization_name'),
                   duration: 7,
-                  description: res.success
+                  description: vm.$t('form.messages.success_message')
                 });
 
                 commit(SET_FIELD_VALUE, {
@@ -184,7 +184,7 @@ const store = () =>
               } else {
                 vm.$notification.open({
                   class: 'custome-ant-notification',
-                  message: 'ООО СЕКВОЙЯ',
+                  message: vm.$t('footer.organization_name'),
                   duration: 7,
                   description: res.error
                 });
@@ -193,10 +193,9 @@ const store = () =>
             .catch(() => {
               vm.$notification.open({
                 class: 'custome-ant-notification',
-                message: 'ООО СЕКВОЙЯ',
+                message: vm.$t('footer.organization_name'),
                 duration: 7,
-                description:
-                  'Что-то пошло не так 🤯, попробуйте еще раз отправить форму.'
+                description: vm.$t('form.messages.error_message')
               });
               commit(TOGGLE_LOCK_FORM, false);
             });
@@ -204,10 +203,9 @@ const store = () =>
           commit(TOGGLE_LOCK_FORM, false);
           vm.$notification.open({
             class: 'custome-ant-notification',
-            message: 'ООО СЕКВОЙЯ',
+            message: vm.$t('footer.organization_name'),
             duration: 7,
-            description:
-              'Проверьте правильность введенных данных и попробуйте еще раз.'
+            description: vm.$t('form.messages.invalid_form')
           });
         }
       }

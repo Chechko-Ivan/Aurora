@@ -27,7 +27,9 @@
                 <img src="~/static/images/Pin.svg" alt="Pin" />
               </div>
               <div class="page-contacts-item-desc">
-                <span class="page-contacts-item-title">Адрес</span>
+                <span class="page-contacts-item-title">
+                  {{ $t('p_contacts.address') }}
+                </span>
                 <a
                   :href="`http://maps.yandex.ru/?text=53.126592,29.186461`"
                   target="_blank"
@@ -35,7 +37,7 @@
                   noreferrer
                   noopener
                 >
-                  Республика Беларусь, г. Бобруйск, ул. Бахарова, 206.
+                  {{ $t('p_contacts.bel_address') }}
                 </a>
               </div>
             </div>
@@ -51,7 +53,9 @@
                 <img src="~/static/images/Phone.svg" alt="Phone" />
               </div>
               <div class="page-contacts-item-desc">
-                <span class="page-contacts-item-title">Телефон/факс</span>
+                <span class="page-contacts-item-title">
+                  {{ $t('p_contacts.tel_label') }}
+                </span>
                 <a href="tel:+375225745556">+375 (225) 74 55 56</a>
                 <a href="tel:+375225786767">+375 (225) 78 67 67</a>
                 <br />

@@ -140,7 +140,9 @@
         <a-row :gutter="20">
           <a-col :span="24">
             <div class="s-title center">
-              <h2 data-aos="fade" data-aos-delay="200">Наши продукты</h2>
+              <h2 data-aos="fade" data-aos-delay="200">
+                {{ $t('p_products.our_products') }}
+              </h2>
             </div>
           </a-col>
         </a-row>
@@ -265,15 +267,13 @@
               data-aos="fade"
               data-aos-delay="200"
             >
-              Аврорапласт остается надёжным партнёром и поставщиком
-              конкурентоспособной продукции для обеспечения бесперебойной
-              работы. В своей деятельности наша компания ориентирована на
-              производство качественной продукции отвечающей всем требованиям
-              заказчика.
+              {{ $t('p_products.footer.message') }}
             </p>
             <h2 data-aos="zoom-out" data-aos-delay="400">
-              С надеждой на взаимовыгодное
-              <b class="text-accent">сотрудничество!</b>
+              {{ $t('p_products.footer.title') }}
+              <b class="text-accent">
+                {{ $t('p_products.footer.title2') }}
+              </b>
             </h2>
           </a-col>
         </a-row>

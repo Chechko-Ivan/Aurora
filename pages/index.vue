@@ -439,10 +439,9 @@ export default {
         this.phone.error = true;
         this.$notification.open({
           class: 'custome-ant-notification',
-          message: 'АВРОРАПЛАСТ',
+          message: this.$t('footer.organization_name'),
           duration: 7,
-          description:
-            'Проверьте правильность введенных данных и попробуйте еще раз.'
+          description: this.$t('form.messages.invalid_form')
         });
         return;
       }
@@ -465,18 +464,18 @@ export default {
           if (res.success) {
             this.$notification.open({
               class: 'custome-ant-notification',
-              message: 'АВРОРАПЛАСТ',
+              message: this.$t('footer.organization_name'),
               duration: 7,
-              description: res.success
+              description: this.$t('form.messages.success_message')
             });
 
             this.phone.value = '';
           } else {
             this.$notification.open({
               class: 'custome-ant-notification',
-              message: 'АВРОРАПЛАСТ',
+              message: this.$t('footer.organization_name'),
               duration: 7,
-              description: res.error
+              description: this.$t('form.messages.invalid_form')
             });
           }
         });

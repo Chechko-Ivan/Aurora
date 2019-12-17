@@ -10,12 +10,10 @@
           >
             <div class="page-jobs-header-title">
               <h1 class="title-h1" data-aos="fade" data-aos-delay="500">
-                {{ $t('p_jobs.title') }}
+                {{ $t('p_jobs.header.title') }}
               </h1>
               <p class="text-xxxl" data-aos="fade" data-aos-delay="800">
-                Чтобы достичь результатов и доверия наших клиентов, мы должны
-                работать в команде, уважать друг друга, выполнять обещания и
-                постоянно совершенствоваться
+                {{ $t('p_jobs.header.text') }}
               </p>
             </div>
           </a-col>
@@ -67,8 +65,7 @@
                   data-aos="fade"
                 >
                   <span>
-                    Организуем системный подход к работе с персоналом (найм,
-                    адаптация, обучение, перемещение)
+                    {{ $t('p_jobs.advantages[0].title') }}
                   </span>
                 </div>
 
@@ -82,7 +79,7 @@
                   data-aos-delay="400"
                 >
                   <span>
-                    Поддерживаем комфортный психологический климат
+                    {{ $t('p_jobs.advantages[1].title') }}
                   </span>
                 </div>
 
@@ -96,7 +93,7 @@
                   data-aos-delay="600"
                 >
                   <span>
-                    Ежегодно проводим тренинги и курсы
+                    {{ $t('p_jobs.advantages[2].title') }}
                   </span>
                 </div>
               </div>
@@ -120,8 +117,7 @@
                     ></div>
                     <div class="s-jobs-advantages-card-desc">
                       <p>
-                        Организуем системный подход к работе с персоналом (найм,
-                        адаптация, обучение, перемещение)
+                        {{ $t('p_jobs.advantages[0].title') }}
                       </p>
                     </div>
                   </div>
@@ -135,7 +131,7 @@
                     ></div>
                     <div class="s-jobs-advantages-card-desc">
                       <p>
-                        Поддерживаем комфортный психологический климат
+                        {{ $t('p_jobs.advantages[1].title') }}
                       </p>
                     </div>
                   </div>
@@ -149,7 +145,7 @@
                     ></div>
                     <div class="s-jobs-advantages-card-desc">
                       <p>
-                        Ежегодно проводим тренинги и курсы
+                        {{ $t('p_jobs.advantages[2].title') }}
                       </p>
                     </div>
                   </div>
@@ -167,18 +163,17 @@
           <a-col :xl="{ offset: 4, span: 16 }">
             <div class="page-jobs-statistic-title">
               <div class="page-jobs-statistic-title-top">
-                <span data-aos="fade">Если</span>
+                <span data-aos="fade">
+                  {{ $t('p_jobs.statistic.if_a') }}
+                </span>
                 <p class="text-xxxl" data-aos="fade" data-aos-delay="400">
-                  Вам нравится своя профессия и Вы не хотите на ней скучать; Вам
-                  нравятся интересные, нестандартные задачи; Вы желаете
-                  двигаться вперёд, постоянно развиваться
+                  {{ $t('p_jobs.statistic.message') }}
                 </p>
               </div>
             </div>
             <div class="page-jobs-statistic-title-bottom">
               <h2 data-aos="fade" data-aos-delay="600">
-                то работа в компании Аврорапласт принесет вам удовлетворение,
-                самореализацию и достаток
+                {{ $t('p_jobs.statistic.title') }}
               </h2>
             </div>
           </a-col>
@@ -193,7 +188,7 @@
               data-aos-delay="400"
             >
               <a-tab-pane
-                v-for="(statistic, index) in $t('p_jobs.statistic')"
+                v-for="(statistic, index) in $t('p_jobs.statistic.items')"
                 :key="index"
                 :tab="statistic.title"
               >

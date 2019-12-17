@@ -19,15 +19,13 @@
         <a-row :gutter="20">
           <a-col :xl="{ offset: 2, span: 22 }">
             <h1 class="title-h1" data-aos="fade" data-aos-delay="200">
-              {{ $t('p_suppliers.title') }}
+              {{ $t('p_suppliers.header.title') }}
             </h1>
           </a-col>
 
           <a-col :xl="{ offset: 2, span: 14 }">
             <p class="text-xxxl" data-aos="fade" data-aos-delay="400">
-              Мы всегда готовы к взаимовыгодному сотрудничеству. Если вы можете
-              предложить качественные материалы и готовы к долгосрочному
-              сотрудничеству - свяжитесь с нами и мы найдем общий язык.
+              {{ $t('p_suppliers.header.text') }}
             </p>
           </a-col>
         </a-row>
@@ -43,9 +41,7 @@
               data-aos="fade"
               data-aos-delay="400"
             >
-              Чтобы обеспечить бесперебойную работу нашего предприятия, мы
-              заинтересованы в сотрудничестве с поставщиками качественных
-              товаров.
+              {{ $t('p_suppliers.content.title') }}
             </p>
 
             <div
@@ -53,20 +49,19 @@
               data-aos="fade"
               data-aos-delay="600"
             >
-              На постоянной основе ведём закупку:
+              {{ $t('p_suppliers.content.subtitle') }}
             </div>
             <ul
               class="s-suppliers-content-list list-style-dots"
               data-aos="fade"
               data-aos-delay="600"
             >
-              <li>Защитной пленки для сэндвич панелей и подоконника ПВХ.</li>
-              <li>Микрокальциты.</li>
-              <li>Ламинационной пленки для подоконника.</li>
-              <li>Однокомпонентный полиуретановый клей для сэндвич панелей.</li>
-              <li>ПВХ-С.</li>
-              <li>Рециклат.</li>
-              <li>Добавки для переработки ПВХ в широком ассортименте.</li>
+              <li
+                v-for="(item, index) in $t('p_suppliers.content.list')"
+                :key="index"
+              >
+                {{ item }}
+              </li>
             </ul>
             <div class="link-wrapper">
               <base-nuxt-link
@@ -74,7 +69,7 @@
                 data-aos="zoom-out"
                 data-aos-delay="200"
               >
-                Прислать коммерческое предложение
+                {{ $t('p_home.suppliers_link') }}
                 <svg-icon slot="icon" name="ArrowRight" />
               </base-nuxt-link>
             </div>
