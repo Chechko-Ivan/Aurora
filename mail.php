@@ -9,7 +9,7 @@ if($phone){
 
   $subject = "Заявка с сайта othodi-pvh.ru";
 
-  $message = "Пользователь: {$name} <br>";
+  $message.= "Пользователь: {$name} <br>";
   $message.="Телефон: {$phone}<br>";
   $message.="Эл.почта: {$email}<br>";
   $message.="Сообщение: {$comment}<br>";

@@ -127,11 +127,15 @@ export default {
   }
 
   &:not(:last-of-type) {
-    margin-right: 10px;
+    // margin-right: 10px;
 
-    @media (max-width: $sm) {
-      margin-right: 5px;
-    }
+    // @media (max-width: $sm) {
+    //   margin-right: 5px;
+    // }
+  }
+
+  &:last-of-type {
+    display: none;
   }
 
   &.active,

@@ -189,7 +189,7 @@ export default {
       height: auto !important;
     }
 
-    @media (max-height: 610px) {
+    @media (max-height: 815px) {
       height: auto !important;
     }
 

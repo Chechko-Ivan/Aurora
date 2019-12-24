@@ -240,6 +240,34 @@ import ApplicationFormField from '~/components/form/ApplicationFormField.vue';
 import ApplicationFormTextarea from '~/components/form/ApplicationFormTextarea.vue';
 
 export default {
+  head() {
+    const title = `${this.data.title} | ${this.$t('seo.title')}`;
+    const description = this.data.detail.description.length
+      ? this.data.detail.description[0]
+      : this.data.summary.summaryText;
+
+    return {
+      title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: description
+        },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: title
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: description
+        }
+      ]
+    };
+  },
+
   components: {
     Container,
     BaseButton,
