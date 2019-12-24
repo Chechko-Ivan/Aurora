@@ -63,13 +63,13 @@ export default {
           {
             code: 'ru',
             name: 'рус',
-            iso: 'ru-RU',
+            iso: 'ru',
             file: 'ru.js'
           },
           {
             code: 'en',
             name: 'eng',
-            iso: 'en-US',
+            iso: 'en',
             file: 'en.js'
           }
         ],
@@ -77,6 +77,7 @@ export default {
         strategy: 'prefix_except_default',
         lazy: true,
         seo: false,
+        vueI18nLoader: true,
         langDir: 'locales/'
       }
     ],
