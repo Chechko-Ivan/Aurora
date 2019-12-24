@@ -48,7 +48,7 @@
                   data-aos-delay="600"
                 >
                   <svg-icon slot="icon-before" name="SearchPeople" />
-                  {{ $t('p_jobs.title') }}
+                  {{ $t('p_jobs.header.title') }}
                 </base-nuxt-link>
 
                 <base-nuxt-link
