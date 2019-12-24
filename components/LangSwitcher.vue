@@ -13,6 +13,7 @@
     <nuxt-link
       v-for="locale in availableLocales"
       :key="locale.code"
+      :event="locale.code === 'en' ? '' : 'click'"
       :to="switchLocalePath(locale.code)"
       class="lang-switcher-link"
       >{{ locale.name }}</nuxt-link
@@ -127,15 +128,11 @@ export default {
   }
 
   &:not(:last-of-type) {
-    // margin-right: 10px;
+    margin-right: 10px;
 
-    // @media (max-width: $sm) {
-    //   margin-right: 5px;
-    // }
-  }
-
-  &:last-of-type {
-    display: none;
+    @media (max-width: $sm) {
+      margin-right: 5px;
+    }
   }
 
   &.active,

@@ -175,7 +175,9 @@
                 })
               "
               :title="product.title"
-              :image-src="`images/contentImage/${product.summary.summaryImage}`"
+              :image-src="
+                `/images/contentImage/${product.summary.summaryImage}`
+              "
               :text="product.summary.summaryText"
               :list-items="product.summary.summaryList"
               :data-aos-delay="

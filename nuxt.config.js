@@ -59,22 +59,24 @@ export default {
     [
       'nuxt-i18n',
       {
-        defaultLocale: 'ru',
         locales: [
           {
             code: 'ru',
             name: 'рус',
+            iso: 'ru-RU',
             file: 'ru.js'
           },
           {
             code: 'en',
             name: 'eng',
+            iso: 'en-US',
             file: 'en.js'
           }
         ],
+        defaultLocale: 'ru',
         strategy: 'prefix_except_default',
         lazy: true,
-        seo: true,
+        seo: false,
         langDir: 'locales/'
       }
     ],

@@ -25,7 +25,7 @@
                       class="swiper-slide"
                     >
                       <img
-                        :src="`../images/contentImage/${image}`"
+                        :src="`/images/contentImage/${image}`"
                         alt="data.title"
                       />
                     </div>
