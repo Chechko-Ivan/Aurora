@@ -80,10 +80,36 @@ export default {
     return {
       htmlAttrs: {
         lang: this.$i18n.locale,
+        prefix: 'og: http://ogp.me/ns#',
         ...i18nSeo.htmlAttrs
       },
       title: this.$t('seo.title'),
-      meta: [...i18nSeo.meta],
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.$t('seo.description')
+        },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: this.$t('seo.title')
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: this.$t('seo.description')
+        },
+        {
+          property: 'og:site_name',
+          content: this.$t('seo.title')
+        },
+        {
+          property: 'og:image',
+          content: 'https://avroraplast.ru/favicons/apple-touch-icon.png'
+        },
+        ...i18nSeo.meta
+      ],
       link: [
         {
           rel: 'apple-touch-icon',

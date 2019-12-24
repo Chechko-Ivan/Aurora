@@ -110,6 +110,36 @@ import PartnerProgramBg from '~/static/images/PartnerProgramBg.png';
 import PartnerProgramBgEn from '~/static/images/PartnerProgramBgEn.png';
 
 export default {
+  head() {
+    return {
+      title: `${this.$t('navbar.links.products')} | ${this.$t('seo.title')}`,
+
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: `${this.$t('p_products.seo_description')} ${this.$t(
+            'products'
+          ).map((product) => product.title)}`
+        },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: `${this.$t('navbar.links.products')} | ${this.$t(
+            'seo.title'
+          )}`
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: `${this.$t('p_products.seo_description')} ${this.$t(
+            'products'
+          ).map((product) => product.title)}`
+        }
+      ]
+    };
+  },
+
   components: {
     Container,
     ProductCard,

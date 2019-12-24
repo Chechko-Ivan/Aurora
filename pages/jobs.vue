@@ -316,6 +316,30 @@ import ApplicationFormField from '~/components/form/ApplicationFormField.vue';
 import ApplicationFormTextarea from '~/components/form/ApplicationFormTextarea.vue';
 
 export default {
+  head() {
+    return {
+      title: `${this.$t('navbar.links.jobs')} | ${this.$t('seo.title')}`,
+
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.$t('p_jobs.header.text')
+        },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: `${this.$t('navbar.links.jobs')} | ${this.$t('seo.title')}`
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: this.$t('p_jobs.header.text')
+        }
+      ]
+    };
+  },
+
   components: {
     Container,
     BaseButton,

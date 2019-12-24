@@ -263,6 +263,32 @@ import Social from '~/static/images/Social.svg';
 import Defend from '~/static/images/Defend.svg';
 
 export default {
+  head() {
+    return {
+      title: `${this.$t('navbar.links.partners')} | ${this.$t('seo.title')}`,
+
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.$t('p_partners.items').map((text) => text)
+        },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: `${this.$t('navbar.links.partners')} | ${this.$t(
+            'seo.title'
+          )}`
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: this.$t('p_partners.items').map((text) => text)
+        }
+      ]
+    };
+  },
+
   components: {
     Container,
     RoundAnimation,
