@@ -68,6 +68,10 @@
                 <a href="tel:+74959751214">+7 (495) 975 12 14</a>
                 <a href="tel:+74956404886">+7 (495) 640 48 86</a>
                 <a href="tel:+79206616576">+7 (920) 661 65 76</a>
+                <span class="page-contacts-item-title">
+                  {{ $t('p_contacts.subtitle_third') }}
+                </span>
+                <a href="tel:+79206612931">+7 (920) 661 29 31</a>
               </div>
             </div>
           </a-col>
