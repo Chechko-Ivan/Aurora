@@ -44,6 +44,7 @@ export default {
   plugins: [
     '~/plugins/aos.js',
     '~/plugins/antd.js',
+    '~/plugins/metrika.js',
     {
       src: '~/plugins/swiper.js',
       ssr: false

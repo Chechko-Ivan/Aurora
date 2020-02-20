@@ -48,37 +48,61 @@
     <div class="navbar-drawer-contact">
       <ul class="navbar-drawer-contact-list">
         <li>
-          <action-link scheme="tel" href="+375225745556">
+          <action-link
+            @click="sendTelMetriks('email')"
+            scheme="tel"
+            href="+375225745556"
+          >
             <svg-icon slot="icon" name="Tel" />
             +375 (225) 74 55 56
           </action-link>
         </li>
         <li>
-          <action-link scheme="tel" href="+375225786767">
+          <action-link
+            @click="sendTelMetriks('tel')"
+            scheme="tel"
+            href="+375225786767"
+          >
             <svg-icon slot="icon" name="Tel" />
             +375 (225) 78 67 67
           </action-link>
         </li>
         <li>
-          <action-link scheme="tel" href="+74959751214">
+          <action-link
+            @click="sendTelMetriks('tel')"
+            scheme="tel"
+            href="+74959751214"
+          >
             <svg-icon slot="icon" name="Tel" />
             +7 (495) 975 12 14
           </action-link>
         </li>
         <li>
-          <action-link scheme="tel" href="+74956404886">
+          <action-link
+            @click="sendTelMetriks('tel')"
+            scheme="tel"
+            href="+74956404886"
+          >
             <svg-icon slot="icon" name="Tel" />
             +7 (495) 640 48 86
           </action-link>
         </li>
         <li>
-          <action-link scheme="tel" href="+79206616576">
+          <action-link
+            @click="sendTelMetriks('tel')"
+            scheme="tel"
+            href="+79206616576"
+          >
             <svg-icon slot="icon" name="Tel" />
             +7 (920) 661 65 76
           </action-link>
         </li>
         <li>
-          <action-link scheme="mailto" href="info@avroraplast.ru">
+          <action-link
+            @click="sendTelMetriks('email')"
+            scheme="mailto"
+            href="info@avroraplast.ru"
+          >
             <svg-icon slot="icon" name="Mail" />
             info@avroraplast.ru
           </action-link>
@@ -106,6 +130,16 @@ export default {
     opened: {
       type: Boolean,
       default: false
+    }
+  },
+
+  methods: {
+    sendTelMetriks(action) {
+      this.$metrika.reachGoal(action);
+      this.$gtag.event('formasend', {
+        event_category: 'send',
+        event_action: action
+      });
     }
   }
 };

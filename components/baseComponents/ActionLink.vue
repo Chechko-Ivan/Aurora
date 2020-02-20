@@ -3,6 +3,7 @@
     :href="`${scheme ? `${scheme}:` : ''}${href}`"
     :target="target"
     :rel="rel"
+    @click="$emit('click')"
     class="action-link"
   >
     <div class="action-link-icon">

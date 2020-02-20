@@ -162,6 +162,12 @@ const store = () =>
                   description: vm.$t('form.messages.success_message')
                 });
 
+                vm.$metrika.reachGoal('zayavka');
+                vm.$gtag.event('formasend', {
+                  event_category: 'send',
+                  event_action: 'zayavka'
+                });
+
                 commit(SET_FIELD_VALUE, {
                   name: 'name',
                   value: ''

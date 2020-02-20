@@ -56,8 +56,12 @@
                 <span class="page-contacts-item-title">
                   {{ $t('p_contacts.tel_label') }}
                 </span>
-                <a href="tel:+375225745556">+375 (225) 74 55 56</a>
-                <a href="tel:+375225786767">+375 (225) 78 67 67</a>
+                <a @click="sendTelMetriks('tel')" href="tel:+375225745556">
+                  +375 (225) 74 55 56
+                </a>
+                <a @click="sendTelMetriks('tel')" href="tel:+375225786767">
+                  +375 (225) 78 67 67
+                </a>
                 <br />
                 <span class="page-contacts-item-title">
                   {{ $t('p_contacts.title_second') }}
@@ -65,13 +69,21 @@
                 <span class="page-contacts-item-title">
                   {{ $t('p_contacts.subtitle_second') }}
                 </span>
-                <a href="tel:+74959751214">+7 (495) 975 12 14</a>
-                <a href="tel:+74956404886">+7 (495) 640 48 86</a>
-                <a href="tel:+79206616576">+7 (920) 661 65 76</a>
+                <a @click="sendTelMetriks('tel')" href="tel:+74959751214">
+                  +7 (495) 975 12 14
+                </a>
+                <a @click="sendTelMetriks('tel')" href="tel:+74956404886">
+                  +7 (495) 640 48 86
+                </a>
+                <a @click="sendTelMetriks('tel')" href="tel:+79206616576">
+                  +7 (920) 661 65 76
+                </a>
                 <span class="page-contacts-item-title">
                   {{ $t('p_contacts.subtitle_third') }}
                 </span>
-                <a href="tel:+79206612931">+7 (920) 661 29 31</a>
+                <a @click="sendTelMetriks('tel')" href="tel:+79206612931">
+                  +7 (920) 661 29 31
+                </a>
               </div>
             </div>
           </a-col>
@@ -87,7 +99,12 @@
               </div>
               <div class="page-contacts-item-desc">
                 <span class="page-contacts-item-title">E-mail</span>
-                <a href="mailto:info@avroraplast.ru">info@avroraplast.ru</a>
+                <a
+                  @click="sendTelMetriks('email')"
+                  href="mailto:info@avroraplast.ru"
+                >
+                  info@avroraplast.ru
+                </a>
               </div>
             </div>
           </a-col>
@@ -237,6 +254,14 @@ export default {
   methods: {
     sendForm() {
       this.$store.dispatch('sendForm', this);
+    },
+
+    sendTelMetriks(action) {
+      this.$metrika.reachGoal(action);
+      this.$gtag.event('formasend', {
+        event_category: 'send',
+        event_action: action
+      });
     }
   }
 };
