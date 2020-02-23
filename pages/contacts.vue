@@ -258,8 +258,8 @@ export default {
 
     sendTelMetriks(action) {
       this.$metrika.reachGoal(action);
-      this.$gtag.event('formasend', {
-        event_category: 'send',
+      this.$gtag.event('zvonok', {
+        event_category: 'click',
         event_action: action
       });
     }
