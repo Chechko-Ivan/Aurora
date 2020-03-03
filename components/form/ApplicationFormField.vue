@@ -64,6 +64,7 @@ $border-color-error: #f85352;
     font-size: 18px;
     color: $color-black;
     background: $bg;
+    font-family: inherit;
     border: 1px solid $border-color;
     border-radius: 6px;
     transition: all 0.25s $base-easing;

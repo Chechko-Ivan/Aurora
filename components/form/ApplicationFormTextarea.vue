@@ -32,6 +32,7 @@ export default {
   border: 1px solid #cfd4e9;
   border-radius: 6px;
   font-size: 18px;
+  font-family: inherit;
   color: #000000;
   transition: all 0.25s ease;
   box-sizing: border-box;

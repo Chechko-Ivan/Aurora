@@ -78,12 +78,12 @@
                 <a @click="sendTelMetriks('tel')" href="tel:+79206616576">
                   +7 (920) 661 65 76
                 </a>
-                <span class="page-contacts-item-title">
+                <!-- <span class="page-contacts-item-title">
                   {{ $t('p_contacts.subtitle_third') }}
-                </span>
-                <a @click="sendTelMetriks('tel')" href="tel:+79206612931">
+                </span> -->
+                <!-- <a @click="sendTelMetriks('tel')" href="tel:+79206612931">
                   +7 (920) 661 29 31
-                </a>
+                </a> -->
               </div>
             </div>
           </a-col>
