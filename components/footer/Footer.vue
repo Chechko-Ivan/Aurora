@@ -82,10 +82,10 @@
                     <action-link
                       @click="sendTelMetriks('tel')"
                       scheme="tel"
-                      href="+74959751214"
+                      href="+79261991597"
                     >
                       <svg-icon slot="icon" name="Tel" />
-                      +7 (495) 975 12 14
+                      +7 (926) 199 15 97
                     </action-link>
                   </li>
                   <li>
@@ -102,10 +102,10 @@
                     <action-link
                       @click="sendTelMetriks('tel')"
                       scheme="tel"
-                      href="+79206616576"
+                      href="+74959751214"
                     >
                       <svg-icon slot="icon" name="Tel" />
-                      +7 (920) 661 65 76
+                      +7 (495) 975 12 14
                     </action-link>
                   </li>
                   <li>
@@ -116,6 +116,14 @@
                     >
                       <svg-icon slot="icon" name="Mail" />
                       info@avroraplast.ru
+                    </action-link>
+                  </li>
+                  <li>
+                    <action-link
+                      href="https://www.instagram.com/avroraplast/?hl=ru"
+                    >
+                      <svg-icon slot="icon" name="Instagram" />
+                      Мы в Instagram
                     </action-link>
                   </li>
                 </ul>

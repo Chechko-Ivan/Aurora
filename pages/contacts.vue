@@ -69,14 +69,14 @@
                 <span class="page-contacts-item-title">
                   {{ $t('p_contacts.subtitle_second') }}
                 </span>
-                <a @click="sendTelMetriks('tel')" href="tel:+74959751214">
-                  +7 (495) 975 12 14
+                <a @click="sendTelMetriks('tel')" href="tel:+79261991597">
+                  +7 (926) 199 15 97
                 </a>
                 <a @click="sendTelMetriks('tel')" href="tel:+74956404886">
                   +7 (495) 640 48 86
                 </a>
-                <a @click="sendTelMetriks('tel')" href="tel:+79206616576">
-                  +7 (920) 661 65 76
+                <a @click="sendTelMetriks('tel')" href="tel:+74959751214">
+                  +7 (495) 975 12 14
                 </a>
                 <!-- <span class="page-contacts-item-title">
                   {{ $t('p_contacts.subtitle_third') }}

@@ -49,32 +49,12 @@
       <ul class="navbar-drawer-contact-list">
         <li>
           <action-link
-            @click="sendTelMetriks('email')"
-            scheme="tel"
-            href="+375225745556"
-          >
-            <svg-icon slot="icon" name="Tel" />
-            +375 (225) 74 55 56
-          </action-link>
-        </li>
-        <li>
-          <action-link
             @click="sendTelMetriks('tel')"
             scheme="tel"
-            href="+375225786767"
+            href="+79261991597"
           >
             <svg-icon slot="icon" name="Tel" />
-            +375 (225) 78 67 67
-          </action-link>
-        </li>
-        <li>
-          <action-link
-            @click="sendTelMetriks('tel')"
-            scheme="tel"
-            href="+74959751214"
-          >
-            <svg-icon slot="icon" name="Tel" />
-            +7 (495) 975 12 14
+            +7 (926) 199 15 97
           </action-link>
         </li>
         <li>
@@ -91,10 +71,20 @@
           <action-link
             @click="sendTelMetriks('tel')"
             scheme="tel"
-            href="+79206616576"
+            href="+375225745556"
           >
             <svg-icon slot="icon" name="Tel" />
-            +7 (920) 661 65 76
+            +375 (225) 74 55 56
+          </action-link>
+        </li>
+        <li>
+          <action-link
+            @click="sendTelMetriks('tel')"
+            scheme="tel"
+            href="+375225786767"
+          >
+            <svg-icon slot="icon" name="Tel" />
+            +375 (225) 78 67 67
           </action-link>
         </li>
         <li>
