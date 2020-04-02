@@ -66,15 +66,19 @@ const store = () =>
 
     actions: {
       getLocation: ({ commit }) => {
+        // eslint-disable-next-line no-useless-return
         if (process.env.NODE_ENV === 'development') return;
 
-        fetch('https://avroraplast.ru/getRegion.php')
-          .then((data) => data.json())
-          .then((res) => {
-            if (res.country) {
-              commit(SET_LOCATION, res.country);
-            }
-          });
+        // fetch('https://avroraplast.ru/getRegion.php')
+        //   .then((data) => data.json())
+        //   .then((res) => {
+        //     if (res.country) {
+        //       commit(SET_LOCATION, res.country);
+        //     }
+        //   })
+        //   .catch((error) => {
+        //     console.error('ERROR: GET REGION', error);
+        //   });
       },
 
       validate: ({ state, commit }) => {

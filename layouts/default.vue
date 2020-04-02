@@ -58,7 +58,7 @@
         }
       ]"
     >
-      <nuxt />
+      <nuxt v-if="init" />
     </div>
     <Footer></Footer>
   </div>
@@ -157,7 +157,8 @@ export default {
 
   data() {
     return {
-      drawerOpend: false
+      drawerOpend: false,
+      init: false
     };
   },
 
@@ -206,6 +207,12 @@ export default {
 
   created() {
     this.$store.dispatch('getLocation');
+  },
+
+  mounted() {
+    this.$nextTick(() => {
+      this.init = true;
+    });
   },
 
   methods: {

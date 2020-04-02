@@ -60,7 +60,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .lang-switcher {
   position: relative;
   display: flex;
@@ -142,7 +142,7 @@ export default {
 }
 
 .lang-switcher-round-animation {
-  position: absolute;
+  position: absolute !important;
   opacity: 0;
   visibility: hidden;
 
