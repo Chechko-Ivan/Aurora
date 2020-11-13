@@ -56,11 +56,11 @@
                 <span class="page-contacts-item-title">
                   {{ $t('p_contacts.tel_label') }}
                 </span>
+                <a @click="sendTelMetriks('tel')" href="tel:+375225786767">
+                  +375 (225) 79 67 67
+                </a>
                 <a @click="sendTelMetriks('tel')" href="tel:+375225745556">
                   +375 (225) 74 55 56
-                </a>
-                <a @click="sendTelMetriks('tel')" href="tel:+375225786767">
-                  +375 (225) 78 67 67
                 </a>
                 <br />
                 <span class="page-contacts-item-title">
@@ -75,9 +75,9 @@
                 <a @click="sendTelMetriks('tel')" href="tel:+74956404886">
                   +7 (495) 640 48 86
                 </a>
-                <a @click="sendTelMetriks('tel')" href="tel:+74959751214">
+                <!-- <a @click="sendTelMetriks('tel')" href="tel:+74959751214">
                   +7 (495) 975 12 14
-                </a>
+                </a> -->
                 <!-- <span class="page-contacts-item-title">
                   {{ $t('p_contacts.subtitle_third') }}
                 </span> -->

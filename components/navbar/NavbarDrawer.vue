@@ -84,7 +84,7 @@
             href="+375225786767"
           >
             <svg-icon slot="icon" name="Tel" />
-            +375 (225) 78 67 67
+            +375 (225) 79 67 67
           </action-link>
         </li>
         <li>
